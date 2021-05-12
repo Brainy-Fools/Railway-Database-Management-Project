@@ -1,5 +1,4 @@
---dual table in oracle
-SELECT * FROM DUAL;
+SELECT * FROM DUAL;  --dual table in oracle
 SELECT 'Duck' FROM DUAL;
 --to show date from dual
 SELECT SYSDATE FROM DUAL;
