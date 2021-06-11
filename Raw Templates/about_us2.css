@@ -1,0 +1,51 @@
+html {
+    height: 100%;
+}
+body {
+    background: #fff;
+    font: 400 1.5em/1.5 "Droid Serif", serif;
+    color: #111;
+    text-align: center;
+    height: 100%;
+}
+
+h1 {
+    font: 700 2.8em/1.2 "Droid Sans", sans-serif;
+}
+h2 {
+    font: 700 1.5em/1.5 "Droid Sans", sans-serif;
+    margin: 1em 0;
+}
+
+#banner {
+    background: url(https://i.ibb.co/3SNpSdc/IMG-1489.jpg) no-repeat fixed 100%
+    100%;
+    background-size: cover;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+#bannertext {
+    width: 24em;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    border: 0.5em solid #fff;
+    margin-left: -12em;
+    padding: 2em 0;
+}
+
+#content {
+    max-width: 28em;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 2em;
+}
+
+#content p {
+    margin: 0 0 2em;
+}
+<!--/*-->
+<!--selector: MasumBhai-->
+<!--*/-->

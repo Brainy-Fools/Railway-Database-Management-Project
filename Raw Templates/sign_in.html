@@ -1,0 +1,79 @@
+<!--/*-->
+<!--selector: MasumBhai-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="sign_in.css">
+    <title>MasumBhai</title>
+</head>
+<body>
+<div class='container'>
+    <div class='main'>
+
+        <div class='sign_up'>
+
+            <div class='w_s_u_content'>
+                <h1 class='w_title'>Don't have an account?</h1>
+                <p class='text'>Discover the best bars, shops and sights <br /> in any city in the world. Get access to more <br /> than 75 million short tips</p>
+                <a href='#' class='w_button'>Sign Up now</a>
+            </div>
+        </div>
+
+        <div class='sign_in'>
+
+            <div class='w_s_i_content'>
+                <h1 class='w_title'>Have an account?</h1>
+                <p class='text'>Do you want to meet up with friends? <br /> Any idea how to make the meeting more <br /> interesting? Sign in now</p>
+                <a href='#' class='w_button'>Sign in</a>
+            </div>
+        </div>
+
+        <div class='s_i_modal'>
+
+            <div class='y_s_i_content'>
+                <h1 class='y_title'>Sign In, my friend</h1>
+                <form>
+                    <input class='login_field' name='login' placeholder='your name' />
+                    <input class='login_field' type='password' name='pass' placeholder='password' />
+                </form>
+                <a href='#' class='y_button'>Yeap dude</a>
+                <p class='lil_text'>For every check in you get a coin. You'll get <br /> more coins if tackiness with friends, as mayor, <br /> will perform a series of check-ins and much <br /> more! Take a high place in the leaderboard <br /> to get cool prizes</p>
+            </div>
+
+            <div class='y_s_u_content'>
+                <h1 class='y_title'>Sign Up immediately</h1>
+                <form action="#">
+                    <input class='login_field' name='login' placeholder='your name' />
+                    <input class='login_field' name='mail' placeholder='mail address' />
+                    <input class='login_field' name='phone' placeholder='mobile phone' />
+                    <input class='login_field' type='password' name='pass' placeholder='password' />
+                    <input class='login_field' type='password' name='pass' placeholder='repeat please' />
+                </form>
+                <a href='#' class='y_button'>Done yeah</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.w_button').on('click', function() {
+
+            $('.s_i_modal').toggleClass('s_i_modal_anim');
+            $('.y_s_i_content').toggleClass('y_s_i_content_anim');
+            $('.w_s_i_content').toggleClass('w_s_i_content_anim');
+            $('.w_s_u_content').toggleClass('w_s_u_content_anim');
+            $('.y_s_u_content').toggleClass('y_s_u_content_anim');
+            return false;
+
+        });
+
+    });
+
+</script>
+    </body>
+</html>

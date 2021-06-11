@@ -1,0 +1,124 @@
+<!--/*-->
+<!--auther: MasumBhai-->
+<!--*/-->
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+*:focus,
+*:active {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/*html,*/
+/*body {*/
+/*    display: grid;*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*    font-family: "Poppins", sans-serif;*/
+/*    place-items: center;*/
+/*    background: linear-gradient(315deg, #ffffff, #d7e1ec);*/
+/*}*/
+
+#get_social {
+    display: inline-flex;
+    place-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+#get_social > .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#get_social > .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#get_social > .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#get_social .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+#get_social .icon:hover span,
+#get_social .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+#get_social .facebook:hover,
+#get_social .facebook:hover .tooltip,
+#get_social .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+
+#get_social .twitter:hover,
+#get_social .twitter:hover .tooltip,
+#get_social .twitter:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+
+#get_social .instagram:hover,
+#get_social .instagram:hover .tooltip,
+#get_social .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+}
+
+#get_social .github:hover,
+#get_social .github:hover .tooltip,
+#get_social .github:hover .tooltip::before {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+#get_social .youtube:hover,
+#get_social .youtube:hover .tooltip,
+#get_social .youtube:hover .tooltip::before {
+    background-color: #de463b;
+    color: #ffffff;
+}

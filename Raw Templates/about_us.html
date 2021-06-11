@@ -1,0 +1,216 @@
+<!--/*-->
+<!--selector: MasumBhai-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="about_us.css">
+    <title>about us</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function customWayPoint(className, addClassName, customOffset) {
+            var waypoints = $(className).waypoint({
+                handler: function (direction) {
+                    if (direction == "down") {
+                        $(className).addClass(addClassName);
+                    } else {
+                        $(className).removeClass(addClassName);
+                    }
+                },
+                offset: customOffset
+            });
+        }
+
+        var defaultOffset = "50%";
+
+        for (i = 0; i < 17; i++) {
+            customWayPoint(".timeline__item--" + i, "timeline__item-bg", defaultOffset);
+        }
+
+    </script>
+</head>
+<body>
+<div id="main-background-image"></div>
+<div id="address-bar"></div>
+<div id="menu-bar"></div>
+<div id="page-name-bar"></div>
+<div id="footer-back"></div>
+<div id="footer-back2"></div>
+
+<div id="main-wrap">
+
+    <a href="#"><i class="fa fa-facebook-square"></i></a>
+    <a href="#"><i class="fa fa-twitter-square"></i></a>
+    <div id="phone-sec">
+        <i class="fa fa-phone"></i>
+        <i class="fa fa-home"></i>
+        <i class="fa fa-clock-o"></i>
+        <div id="large-p">(03) 9465 9639</div>
+        <div id="large-p2">14/350 Settlement Road</div>
+        <div id="large-p3">Mon-Sat 8.00 - 18.00</div>
+
+        <div id="small-p">admin@cmtpanels.com</div>
+        <div id="small-p2">Thomastown, VIC 3074</div>
+        <div id="small-p3">Sunday CLOSED</div>
+
+    </div>
+    <!--<a href="#"><i class="fa fa-youtube-square"></i></a>-->
+
+    <div id="adress-bar-text">14/350 Settlement Rd
+        Thomastown, Victoria. Locate us on the <a href="">map here.</a></div>
+    <div id="menu-bar2"></div>
+    <div id="logo"><img src="https://images.discordapp.net/.eJwFwUtygjAAANC7sJeQhBB0BwJDmaqt1tCuOggY6IAJJOFjp3fve7-WGTtrZzVaS7UDoGpVKcbKVlqMBa9tLgTv6kK2yi5FDwqti7Lp64dWABEfIp9g6HoUUQS3LkDUd7HreoRQTD0CEQR1NrM1iU98DQ7BcU_LIBhCdneiVxW_s6yq9rmzgRJt_U-8uVFzcDxsNFLePMwpk90tIcezSfv86-ONTUMzKZEsxfP6ncvp6gck9JdndOrCS9jmYczJUvemj9JzzPumnk12f1R4ishavjDX_pHc-vsHI29O9Q.m7a6WeXDiUw56NXKm3ws3d73xfg" /></div>
+    <div id="nav-one">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">about us</a></li>
+            <li><a href="#">contact</a></li>
+        </ul>
+    </div>
+
+    <div id="about-us-text">CMT panels have been in the industry for over 30 years. Our aim is to bring your project vision to reality.
+
+        With unrivaled experience in the sandwich panel and cool room industry, you can rest assured knowing
+
+        that our team of accredited builders, installers and project managers will assist you with your project
+
+        from start to finish no matter how big or small.
+
+        CMT panels is leading the industry by staying abreast with technology using the latest in panel installing
+
+        techniques, we have been trusted to play a large part in installing some of Australasia&#39;s biggest projects.
+
+        Using only the best available materials on the market and a focus on quality, you can be at ease knowing
+
+        that you are in good hands at CMT panels.</div>
+
+    <div id="page-name-bar-heading">
+
+        <p id="p-n-b-h">About Us</p>
+        <p id="p-n-b-h2">A LITTLE SOMETHING ABOUT US</p>
+        <p id="p-n-b-h3">OUR HISTORY AND ACHIEVEMENTS</p>
+
+    </div>
+
+    <section class="timeline">
+        <div class="wrapper">
+            <div class="timeline__item timeline__item--0">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">1987 Aug. 20</h2>
+                    <p class="timeline__item__content__description">Began learning in the panel industry by working with some of Australia biggest companies including pacesetter, portacom, Ausco and James Hardies.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--1">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">1998 Sept. 5</h2>
+                    <p class="timeline__item__content__description">Started installing various cool rooms and freezers around the country.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--2">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">1995 Mar. 5</h2>
+                    <p class="timeline__item__content__description">As well as contracting for ALL the major sandwich panel building companies, we began to take a
+                        keen interest in cool room construction.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--3">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2000 July 9</h2>
+                    <p class="timeline__item__content__description">On top of cool room, chassis and portable building fabrication , we begin a partnership with one of Australia's largest manufacturer of switch rooms, temperature controlled shelters and specific designed transportable rooms furthering our knowledge in this field. To date close to 9000 sandwich panel buildings have been manufactured by CMT panels with our partner.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--4">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2003 Nov. 12</h2>
+                    <p class="timeline__item__content__description">We become what we are now known as CMT Panels.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--5">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2009 Aug. 25</h2>
+                    <p class="timeline__item__content__description">We begin our part in the Gorgon project, Barrow Island WA. This was at the time one of the largest construction jobs hapenning in the world.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--6">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2011 Aug. 03</h2>
+                    <p class="timeline__item__content__description">We move premises to Thomaston in Victoria to help accommodate larger projects and expand.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--7">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2012 Jan. 24</h2>
+                    <p class="timeline__item__content__description">We begin our part on the Wheatstone project, Onslow WA, also one of the largest construction jobs in the world.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--8">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2014 Apr. 28</h2>
+                    <p class="timeline__item__content__description">Our crew of guys help with the south Melbourne market relocation.</p>
+                </div>
+            </div>
+            <div class="timeline__item timeline__item--9">
+                <div class="timeline__item__station"></div>
+                <div class="timeline__item__content">
+                    <h2 class="timeline__item__content__date">2017 +</h2>
+                    <p class="timeline__item__content__description">Our company continues to grow and make marks in the construction industry.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="logo-bottom"><img src="https://images.discordapp.net/.eJwFwUtygjAAANC7sJeQhBB0BwJDmaqt1tCuOggY6IAJJOFjp3fve7-WGTtrZzVaS7UDoGpVKcbKVlqMBa9tLgTv6kK2yi5FDwqti7Lp64dWABEfIp9g6HoUUQS3LkDUd7HreoRQTD0CEQR1NrM1iU98DQ7BcU_LIBhCdneiVxW_s6yq9rmzgRJt_U-8uVFzcDxsNFLePMwpk90tIcezSfv86-ONTUMzKZEsxfP6ncvp6gck9JdndOrCS9jmYczJUvemj9JzzPumnk12f1R4ishavjDX_pHc-vsHI29O9Q.m7a6WeXDiUw56NXKm3ws3d73xfg" /></div>
+
+    <div id="cpyright-txt">
+        <p>Copyright @ 2017 CMT Panels. All Rights Reserved. </p>
+    </div>
+
+    <div id="footer-menub">
+
+        <p id="footer-menu2b">Contact</p>
+
+        <p id="footer-menu3b">
+
+            14/350 Settlement Rd,
+            Thomastown VIC 3074<br>
+            (03) 9465 9639</a><br>
+            admin@cmtpanels.com</a><br>
+
+        </p>
+
+    </div>
+
+    <div id="footer-menu">
+
+        <p id="footer-menu2">Navigation</p>
+
+        <p id="footer-menu3b">
+            <a href="">- Home</a><br>
+            <a href="">- Services</a><br>
+            <a href="">- Gallery</a><br>
+            <a href="">- About Us</a><br>
+            <a href="">- Contact Us</a><br>
+
+        </p>
+
+    </div>
+
+    <div id="right-border-grey"></div>
+
+</div>
+
+</body>
+</html>

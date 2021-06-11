@@ -1,7 +1,4 @@
-/**
- * @author MasumBhai
- */
-
+<!--selector: MasumBhai-->
 (function () {
     if (!window.addEventListener) {
         return;

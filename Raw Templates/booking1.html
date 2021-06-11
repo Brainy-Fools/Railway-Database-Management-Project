@@ -1,0 +1,115 @@
+<!--/*-->
+<!--selector: MasumBhai-->
+<!--*/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Device size responsiveness-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--SEO stuff-->
+    <meta name="description" content="Nearest Hospital can be found">
+    <meta name="keywords"
+          content="Masum,MasumBhai,Abdullah,Abdullah Al Masum,Hero Masum,Zero Masum,Kopa Masum">
+    <meta name="author" content="Abdullah Al Masum">
+    <!--for custom-css-->
+    <link rel="stylesheet" type="text/css" href="booking1.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+    <!--for font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--for ajax-jquery-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!-- for sweet-alert-->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--for Google Recptcha-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>booking</title>
+
+</head>
+<body>
+<!--Card-->
+<div class="card shadow mb-5 bg-white rounded">
+    <!--Card-Body-->
+    <div class="card-body">
+        <!--Card-Title-->
+        <p class="card-title text-center shadow mb-5 rounded">Travel Booking Form</p>
+        <div class="icons text-center">
+            <i class="fa fa-plane fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-taxi fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-train fa-2x" aria-hidden="true"></i></div>
+        <hr>
+        <p class="searchText"><strong>Search For Cheap Flights</strong></p>
+        <!--First Row-->
+        <div class="row mb-3 mt-3"><label class="radiobtn"><input type="radio" name="gender" value="male">One
+            Way</label> <label class="radiobtn"><input type="radio" name="gender" value="male">Round Trip</label></div>
+        <!--Second Row-->
+        <div class="row">
+            <div class="col-sm-6"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">From City/Airport</option>
+                <option value="1">New Delhi</option>
+                <option value="2">Mumbai</option>
+                <option value="3">Bangalore</option>
+            </select></div>
+            <div class="col-sm-6"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">To City/Airport</option>
+                <option value="1">New Delhi</option>
+                <option value="2">Mumbai</option>
+                <option value="3">Bangalore</option>
+            </select></div>
+        </div>
+        <!--Third Row-->
+        <div class="row">
+            <div class="col-sm-6"><input placeholder="&#xf073; Departing" type="text" id="date-picker-example"
+                                         class="form-control datepicker mb-4" style="font-family:Arial, FontAwesome">
+            </div>
+            <div class="col-sm-6"><input placeholder="&#xf073; Arriving" type="text" id="date-picker-example"
+                                         class="form-control datepicker" style="font-family:Arial, FontAwesome"></div>
+        </div>
+        <!--Fourth Row-->
+        <div class="row mt-4">
+            <div class="col-sm-6"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">Anytime</option>
+                <option value="1">6:00 AM</option>
+                <option value="2">3:00 PM</option>
+                <option value="3">6:00 PM</option>
+            </select></div>
+            <div class="col-sm-6"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">Anytime</option>
+                <option value="1">6:00 AM</option>
+                <option value="2">3:00 PM</option>
+                <option value="3">6:00 PM</option>
+            </select></div>
+        </div>
+        <!--Fifth Row-->
+        <div class="row">
+            <div class="col-sm-4"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">Kids(0-14)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select></div>
+            <div class="col-sm-4"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">Adults(15-64)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select></div>
+            <div class="col-sm-4"><select class="browser-default custom-select mb-4" id="select">
+                <option value="" disabled="" selected="">Seniors(65+)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select></div>
+        </div>
+        <a href="#" class="btn btn-primary float-right mt-5">Find Flights</a>
+    </div>
+</div>
+</body>
+</html>
