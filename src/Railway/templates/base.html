@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!--Device size responsiveness-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!--SEO stuff-->
@@ -29,12 +29,12 @@
     {% endblock head_css_site %}
     {% block head_css_section %}{% endblock head_css_section %}
     {% block head_css_page %}
-        <!--for custom-css-page-->
-    {% endblock head_css_page %}
-    {% endblock head_css %}
+    <!--for custom-css-page-->
     <!--    <link rel="stylesheet" type="text/css" href="footer.css">-->
     <!--    <link rel="stylesheet" type="text/css" href="menu.css">-->
     <!--    <link rel="stylesheet" type="text/css" href="side_bar3.css">-->
+    {% endblock head_css_page %}
+    {% endblock head_css %}
     <!--    for sideBar-->
     <!--for title-->
     <title>{% block title %} MasumBahi {% endblock title %}</title>
@@ -44,13 +44,9 @@
     {% block header_nav_bar %}
 
     {% endblock header_nav_bar %}
-    {% if self.header_nav_bar() | trim %}
-    {% block head_css_page %}
-    <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}menu.css">
-    {% endblock head_css_page %}
-    {% endif %}
-    {% block sidebar_nav_bar %}
+
     <div class="row min-vh-100 flex-column flex-md-row">
+        {% block sidebar_nav_bar %}
 
         {% endblock sidebar_nav_bar %}
         <main class="col bg-faded py-3 flex-grow-1">
@@ -195,9 +191,9 @@
     >
         &copy
         {% now 'Y ' %}
-        Copyright:
+        All rights reserved to:
         <a class="text-white" href="https://github.com/Brainy-Fools/"
-        >Brainy_Fools.org</a> All rights reserved
+        >Brainy_Fools.org</a>
     </div>
     <!-- Copyright -->
 </footer>
@@ -224,7 +220,7 @@
 {% block footer_javascript_section %}{% endblock footer_javascript_section %}
 {% block footer_javascript_page %}
 <!--for custom js file-->
-<script src="{{ STATIC_URL }}js/side_bar3.js"></script>
+<!--<script src="{{ STATIC_URL }}js/side_bar3.js"></script>-->
 {% endblock footer_javascript_page %}
 {% endblock footer_javascript %}
 </html>

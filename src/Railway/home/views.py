@@ -5,4 +5,4 @@ from datetime import date
 def home(request):
     todays_date = date.today();
     # return HttpResponse('<h1>Tooth Pain is real pain</h1>')
-    return render(request,'base.html')
+    return render(request,'home.html')
