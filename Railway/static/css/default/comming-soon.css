@@ -1,0 +1,143 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master comming-soon Stylesheet]
+-------------------------------------------------------------------*/
+.Travelite_coming_soon_wrapper{
+		
+}
+.comming_soon_logo, .coming_soon_heading, .newsletter_wrapper_main{
+		padding-left:25px;
+}
+
+.coming_soon_heading p {
+    color: #808b8d;
+    line-height: 18px;
+}
+#counter_comming_soon {
+    text-align: center;
+    float: left;
+    width: 100%;
+    padding-top: 54px;
+}
+#counter_comming_soon .counter-box{
+		float:left;
+}
+
+#counter_comming_soon .counter-box .number_time_c{
+		font:700 72px Lato;
+		color:#2c3e50;
+		padding-right:25px;
+		padding-left:25px;
+		
+}
+
+
+#counter_comming_soon .counter-box span{
+		font-size:16px;
+		color:#2c3e50;
+		
+		
+}
+.left_image_coming_soon svg {
+	width:100%;
+}
+.right_side_coming_soon {
+    padding-top: 30px;
+}
+.coming_soon_heading h2 {
+    font-family: Montserrat !important;
+    text-transform: uppercase;
+    color: #282828;
+    margin-top: 15px;
+}
+.newsletter_wrapper_main p {
+    color: #808b8d;
+}
+.newsletter_wrapper_main {
+    padding-top: 45px;
+}
+.email_newsletter {
+		position:relative;
+}
+.email_newsletter .news_email {
+    width: 100%;
+    height: 37px;
+    border: 1px solid #cccccc;
+    padding-left: 13px;
+    color: #bbbbbb;
+	border-radius:5px;
+    font-style: italic;
+}
+
+.email_newsletter input#news_send {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background: #fdb714;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    height: 31px;
+    width: 88px;
+    text-align: center;
+}
+.main_coming_soon{
+		padding:240px 0px;
+		float:left;
+		width:100%;
+}
+.coming_social_icons {
+    padding-top: 23px;
+    float: right;
+}
+.coming_social_icons a i.fa {
+    width: 28px;
+    height: 28px;
+    background: #eeeeee;
+    text-align: center;
+    line-height: 28px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    color: #999999;
+    margin-left: 9px;
+}
+.coming_social_icons a i.fa:hover{
+		border-color:#fdbc24;
+}
+
+.map_main #bigth_googleMap{
+		
+	width:100%;
+    height:550px;	
+}
+
+/*------------media query start----------*/
+
+@media (max-width:767px){
+	.coming_social_icons {
+		float: none;
+		text-align: center;
+	}
+}
+
+
+
+@media (max-width:991px){
+	.right_side_coming_soon {
+		margin-top: 40px;
+	}
+	.left_image_coming_soon svg {
+		margin: 0 auto;
+	}
+}
+@media (min-width:992px) and (max-width:1200px){
+	#counter_comming_soon .counter-box .number_time_c{
+		font:700 60px Lato;
+		color:#2c3e50;
+		padding-right:20px;
+		padding-left:20px;
+		
+	}
+		
+}

@@ -1,0 +1,232 @@
+/*
+Copyright (c) 2021 Abdullah Al Masum
+------------------------------------------------------------------
+Project:	Railway Management System
+-------------------------------------------------------------------*/
+.check_lists ul li label{
+		word-break: break-all;
+}
+
+
+/* Large desktop */
+@media (max-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.offer_wrapper .offer .text_wrapper h3{
+    font-size: 14px;	
+}
+.offer_wrapper{
+	width:100% !important; 
+}
+
+/* offer page style start */
+.offer_hex_item{
+	float:none;
+	display:inline-block;
+    margin-left: -20px !important;	
+	}	
+.offer_hex_wrapper .blog-4s-first{
+	margin-left:0;
+	}		
+.offer_hex_wrapper .offer_hex_item:nth-child(n+2){
+	margin-top:0;
+	}	
+.offer_detail_wrapper ul{
+	width:100%;
+	}	
+/* offer page style end */
+
+}
+
+/*---404 error page css start---*/
+@media (max-width:320px){
+	.error_next_prev_links a {
+			margin-bottom:10px;
+	}	
+}
+
+
+@media (max-width:767px){
+.error_text_with_icon ul li {
+    font-size: 30px !important;
+}
+.vehicle_img img{
+		width:70% !important;
+}
+	.error_text_with_icon ul li:nth-child(1), .error_text_with_icon ul li:nth-child(3) {
+		top: 0 !important;
+	}
+}
+
+@media (max-width:393px){
+.error_text_with_icon ul li {
+    font-size:15px !important;
+}
+.vehicle_img img{
+		width:40% !important;
+}
+	
+}
+/*---404 error page css end---*/
+
+/*---comming soon page css start---*/
+
+@media (max-width:600px){
+	#counter_comming_soon .counter-box .number_time_c{
+	font-size:50px !important;
+		
+	}
+	#counter_comming_soon{
+			text-align:center !important;
+	}
+	#counter_comming_soon .counter-box {
+			float:none !important;
+			display:inline-block;
+	}
+		
+}
+@media (max-width:480px){
+	#counter_comming_soon .counter-box .number_time_c{
+	    font-size:20px !important;
+		padding-right:15px !important;
+		padding-left:15px !important;
+		
+	}
+	#counter_comming_soon .counter-box span{
+		font-size:13px !important;	
+	}
+	.coming_soon_heading h2{
+			font-size:20px !important;
+	}
+	.error_next_prev_links a {
+		margin-bottom: 10px !important;
+	}
+		
+	.email_newsletter input#news_send {
+		position: relative !important;
+		margin-top: 10px;
+		width: 100% !important;
+	}
+}
+@media (max-width:240px){
+	#counter_comming_soon .counter-box .number_time_c{
+	    font-size:17px !important;
+		padding-right:10px !important;
+		padding-left:10px !important;
+		
+	}
+	#counter_comming_soon .counter-box span{
+		font-size:10px !important;	
+	}
+}
+/*---comming soon page css end---*/
+
+/*---About page css start---*/
+@media (max-width:320px){
+.check_lists ul li label {
+    font-size: 14px;
+    width: 50% !important;
+    padding-right: 5px;
+}
+.check_lists ul li p {
+    float: left;
+    width: 50%;
+    font-size: 12px;
+}
+.check_lists ul li label::before {
+		margin-right:1px !important;
+}
+	/*---special offer css start---*/
+	.offer_detail_wrapper ul li {
+		width:100%;
+		text-align: center;
+	}
+	.travel_heading::before {top: 57px !important;}
+	.travel_heading::after {top: 61px !important;}
+	/*---special offer css end---*/
+}
+/*---About page css end---*/
+
+/*---Event page css start---*/
+@media (min-width:992px) and (max-width:1200px){
+.slide_right_thumb img {
+    width: 100px !important;
+}
+	.events_thumb_slider .owl-nav div {
+		bottom: -23px !important;
+	}
+	.events_thumb_slider .owl-nav .owl-next {
+		left: 67% !important;
+	}
+}
+
+@media (max-width:767px){
+	.events_thumb_slider .owl-nav div {
+		bottom: -23px !important;
+	}
+
+}
+@media (max-width:667px){
+	.events_thumb_slider .owl-nav .owl-prev {
+		left: 0;
+	}
+	.events_thumb_slider .owl-nav .owl-next {
+		left:auto !important;
+		right: 0;
+	}
+}
+@media(max-width:480px){
+	.doller_pricing {
+		float: left !important;
+		margin-top: 10px !important;
+	}
+	.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td div {
+	    width: 30px !important;
+		height: 25px !important;
+		line-height: 25px !important;
+	}
+}
+@media(max-width:240px){
+	.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td div {
+	    width: 25px !important;
+	}
+}
+
+@media (min-width:992px){
+	.booking_form_bg .main_content_form .pullleft:first-child {
+		margin-left: 7.5%;
+	}
+}
+/*---Event page css end---*/
+
+/* service page css */
+
+@media (max-width:767px){
+.service_wrapper, .service_wrapper .item  {
+    width: 100% !important;
+}
+
+.service_wrapper .item.style1 .text_wrapper, .service_wrapper .item .image_wrapper  {
+    width: 100%;
+}
+
+.service_wrapper .item.style1 .image_wrapper img {
+    width: 100%;
+}
+	.service_wrapper .item .text_wrapper {
+		width: 100%;
+	}
+}
+
+/* service page css */

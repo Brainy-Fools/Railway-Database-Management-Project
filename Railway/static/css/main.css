@@ -1,0 +1,61 @@
+/*
+Copyright (c) 2016 Abullah Al Masum
+------------------------------------------------------------------
+Project:	Railway Management System
+-------------------------------------------------------------------*/
+@import url("Travelite-style.css");
+
+@import url("woocommerce.css");
+@import url("responsive.css");
+@import url("fonts.css");
+@import url("bootstrap.css");
+@import url("bootstrap-theme.css");
+@import url("font-awesome.css");
+@import url("animate.css");
+
+@import url("bootstrap-select.css");
+@import url("jquery.datetimepicker.css");
+
+	
+/*Default css start*/
+@import url("default/blog.css");
+@import url("default/call-to-action.css");
+@import url("default/footer.css");
+@import url("default/header.css");
+@import url("default/portfolio.css");
+@import url("default/widget.css");
+@import url("default/typography.css");
+@import url("default/content-section.css");
+@import url("default/rtl.css");
+@import url("default/customer-says.css");
+@import url("default/services.css");
+@import url("default/margin-padding.css");
+@import url("default/about.css");
+@import url("default/contact_page.css");
+@import url("default/event.css");
+@import url("default/login-signup.css");
+@import url("default/404.css");
+@import url("default/comming-soon.css");
+/*Default css end*/
+
+
+/*Plugin css start*/
+@import url("../js/plugin/owl/owl.carousel.css");
+@import url("../js/plugin/owl/owl.theme.css"); 
+@import url("../js/plugin/bxslider/jquery.bxslider.css");
+@import url("../js/plugin/revolution/css/layers.css");
+@import url("../js/plugin/revolution/css/settings.css");
+@import url("../js/plugin/video-popup/magnific-popup.css");
+@import url("../js/plugin/slick/slick.css");
+@import url("../js/plugin/slick/slick-theme.css");
+@import url("../js/plugin/video_player/css/mediaelementplayer.min.css");
+@import url("../js/plugin/jquery-ui/jquery-ui.css");
+/*Plugin css end*/
+
+
+/* @import url("Travelite_dark.css"); */ 
+
+
+/* Color css start */
+/* @import url("color/color1.css"); */
+/* Color css end */

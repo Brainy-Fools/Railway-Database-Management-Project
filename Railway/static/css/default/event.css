@@ -1,0 +1,479 @@
+
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master Event Stylesheet]
+
+Project:	Travelite - Tours and Travels Online Booking HTML
+Version:	1.0.0
+Assigned to:	Themeforest
+-------------------------------------------------------------------*/
+/*------------------------- event calendar start --------------------------- */
+.travel_event_calendar{
+ width:100%;
+ float:left;
+ }
+.travel_event_calendar .xdsoft_datetimepicker{
+ width:100%;
+ padding:0;
+ border:none;
+ }
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_datepicker{
+ width:100%;
+ margin-left:0;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker{
+    width: 100%;
+    float: left; 
+ background-color:#86b817;
+ color:#fff;
+ text-align:center;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_next, 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_prev{
+ height: 39px;
+ background-image: none;
+ width: 30px;
+ position: relative;
+ overflow: visible; 
+ }
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_prev:after{
+ content: "\f100";
+ display: inline-block;
+ font: normal normal normal 14px/1 FontAwesome;
+ font-size: inherit;
+ text-rendering: auto;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ font-size: 14px;
+ color: #fff;
+ padding: 0;
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ line-height: 39px;
+ z-index: 99999;
+ width: 30px;
+ text-align: center;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_next:after{
+ content: "\f101";
+ display: inline-block;
+ font: normal normal normal 14px/1 FontAwesome;
+ font-size: inherit;
+ text-rendering: auto;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ font-size: 14px;
+ color: #fff;
+ padding: 0;
+ position: absolute;
+ top: 0;
+ left: 0;
+ bottom: 0;
+ line-height: 39px;
+ z-index: 99999;
+ width: 30px;
+ text-align: center;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_next{
+    margin-right: 30px; 
+ }  
+
+
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker button.xdsoft_today_button{
+ display:none;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_label{
+ background-color:transparent;
+ float:none;
+ display:inline-block;
+ font-weight:400;
+ text-transform:uppercase;
+    padding: 9.5px 0; 
+ font-family: 'Montserrat', sans-serif;
+ }
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_label.xdsoft_year{
+ width:auto;
+ }  
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_label:hover > span{
+ text-decoration:none;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_label > i{ 
+ display:none;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_mounthpicker .xdsoft_label .xdsoft_select{
+ display:none !important;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar th{
+ width:47px !important;
+ height:31px;
+ line-height:31px;
+ text-align:center;
+ padding-right:0;
+ margin-bottom:5px;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td, 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar th{
+ border:none;
+ width:auto;
+ background:none;
+ }
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td:hover div{
+ background-color:#86b817 !important;
+ }
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today{
+ color:#fff;
+ }  
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current div{
+ background-color:#fdb714;
+ }
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today div{
+ background-color:#86b817;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td:hover{
+ background:none !important;
+ } 
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td div{
+ width: 48px;
+ height: 31px;
+ line-height: 31px;
+ text-align: center;
+ display: block;
+ padding-right: 0;
+ border: 1px solid #ececec;
+ margin-bottom: 5px;
+ margin-right: 4px;
+ }  
+ 
+  
+/*------------------------- event calendar end --------------------------- */
+a:focus {
+
+    text-decoration: none;
+}
+ul{
+		padding:0px;
+}
+.events_thumb_slider {
+    float: left;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 23px;
+}
+ul.social_reviews li a {
+    color: #999999;
+    font-size: 12px;
+    line-height: 20px;
+    margin-right: 4px;
+}
+.slide_timing {
+    color: #999999;
+}
+.containt_container ul.social_reviews {
+    padding: 0px;
+	margin:0px;
+}
+.containt_container ul.social_reviews li {
+    display:inline-block;
+}
+.containt_container {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eeeeee;
+}
+.Travelite_slide_title {
+    text-transform: uppercase;
+    color: #2c3e50;
+}
+.slide_right_thumb img{
+		display:inline-block;
+		width:50%;
+}
+.slide_right_thumb img:first-child {
+    margin-right: 12px;
+}
+.slide_right_thumb img {
+    float: left;
+    width: 116px !important;
+}
+.slide_paragraph {
+    color: #808b8d;
+    line-height: 22px;
+    padding-top: 25px;
+    float: left;
+}
+
+/*------slide navigation---*/
+.events_thumb_slider .owl-nav div {
+    position: absolute;
+    left: 61%;
+    margin-right: 9px;
+    bottom: 12px;
+}
+.events_thumb_slider .owl-nav .owl-next{
+		    left: 66%;
+}
+.events_thumb_slider .owl-nav div .fa {
+    padding: 5px;
+    border: 3px solid #cecece;
+    border-radius: 5em;
+    color: #cecece;
+	width:30px;
+}
+
+.events_thumb_slider .owl-nav div .fa:hover{
+		color:#86b817;
+		border-color:#86b817;
+}
+#syncro_slide .owl-item .active .owl-nav div .fa{
+	color:#86b817;
+	border-color:#86b817;
+}
+.Travelite_event_form {
+    background: #f4f4f4;
+    padding: 28px;
+    border: 1px solid #d8d8d8;
+    margin-top: 27px;
+}
+.Travelite_event_form .input_wrapper label {
+    color: #999999;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: capitalize;
+    line-height: 20px;
+}
+.Travelite_event_form .input_wrapper{
+		position:relative;
+}
+.Travelite_event_form .input_wrapper input{
+		
+}
+.Travelite_event_form .input_wrapper .fa {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    color: #dddddd;
+    line-height: 20px;
+}
+.Travelite_event_form .input_wrapper input {
+    border: 1px solid #eeeeee;
+    height: 34px;
+    padding-left: 7px;
+}
+.submit_input_wrapper button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 7px 30px;
+}
+
+.event_recent_posts ul li {
+    float: left;
+    list-style: none;
+    padding-right: 15px;
+    color: #999999;
+    line-height: 24px;
+}
+.rec_cat_title {
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+.event_recent_posts ul li .fa {
+    padding-right: 12px;
+}
+.doller_pricing {
+    background: #86b817;
+    color: #ffffff;
+    font-family: Montserrat;
+    width: 55px;
+    height: 34px;
+    float: right;
+    line-height: 34px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: -13px;
+}
+.event_page_section {
+    padding: 99px 0px;
+}
+.main_recent_wrap {
+    padding-top: 20px;
+}
+.right_content a {
+    border-bottom: 1px solid #e8e8e8;
+    margin-top: 10px;
+    float: left;
+}
+
+.event_recent_posts .right_content p {
+    line-height: 22px;
+    color: #808b8d;
+
+}
+.main_recent_wrap .left_thumb {
+    float: left;
+    margin-right: 35px;
+}
+.event_recent_posts {
+    padding-top: 50px;
+}
+
+.event_posts_section {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 66px;
+}
+
+.next_prev_event_links a {
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 700;
+    color: #999999;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.next_prev_event_links .prev_event {
+    float: left;
+}
+.next_prev_event_links .next_event {
+    float: right;
+}
+.next_prev_event_links {
+    padding-top: 25px;
+}
+.prev_event .fa {
+    padding-right: 17px;
+}
+ .next_event .fa{
+		padding-left:17px;
+ }
+.next_prev_event_links a:hover {
+    color: #86b817;
+}
+.right_event_title {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 0;
+    padding-bottom: 15px;
+}
+.calendar_events ul li {
+    list-style: none;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+    padding-top: 29px;
+    padding-bottom: 31px;
+}
+.calendar_events ul li .circle_event {
+    float: left;
+    width: 102px;
+    height: 100px;
+    background: #86b817;
+    border-radius: 5em;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 28px;
+    padding-top: 19px;
+	    margin-right: 25px;
+}
+.calendar_events ul li:last-child {
+    border-bottom: none;
+}
+.travalite_latest_event {
+    padding-top: 55px;
+}
+.circle_event span {
+    width: 100%;
+    float: left;
+}
+.circle_event .circle_date {
+    font-size: 30px;
+}
+.calendar_events ul li p {
+    line-height: 20px;
+}
+.calendar_events .doller_event, .calendar_events ul li p  {
+    font-size: 16px;
+    color: #999999;
+}
+.calendar_events ul li h4 {
+    text-transform: uppercase;
+    color: #282828;
+    margin-top: 5px;
+	font-weight: 700;
+}
+.calendar_part, .calendar_events, .travalite_latest_event{
+		float:left;
+		width:100%;
+}
+.travalite_latest_event ul li{
+		float:left;
+		width:100%;
+		list-style:none;
+		margin-bottom: 25px;
+}
+.travalite_latest_event .right_event_title {
+    padding-bottom: 35px;
+}
+.left_latest_thumb {
+    width: 135px;
+    float: left;
+    margin-right: 35px;
+}
+.travalite_latest_event ul li .left_latest_thumb img{
+		float:left;
+		 width: 135px;
+		 height:105px;
+		
+}
+.calendar_events {
+    padding-top: 38px;
+}
+.latest_event_date span {
+	font-size: 12px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #fdb714;
+    line-height: 23px;
+    width: 70px;
+    height: 23px;
+    display: inline-block;
+    margin-bottom: 9px;
+    text-align: center;
+}
+.lates_event_right_side h4 {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin-top: 0px;
+}
+.lates_event_right_side p {
+    color: #808b8d;
+    line-height: 20px;
+}
+.lates_event_right_side .doller_event {
+    color: #2c3e50;
+    font-size: 16px;
+}
+/*-----media query start------*/
+
+@media (max-width:767px){
+.Travelite_event_form .input_wrapper input {
+    width: 100%;
+	 margin-bottom: 6px;
+}
+	.Travelite_event_form .input_wrapper .fa {
+		right: 10px;
+	}
+	.events_thumb_slider .item .slide_right_thumb{margin-top:15px;}
+}
+@media (max-width:340px){
+	.slide_right_thumb img {
+	margin-right:0px !important;
+	margin-bottom:10px;}
+}

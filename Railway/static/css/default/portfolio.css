@@ -1,0 +1,300 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master Portfolio Stylesheet]
+-------------------------------------------------------------------*/
+#portfolio-filter{
+	list-style:none;
+	margin: 80px 0 50px;
+	padding:0;
+}
+#portfolio-filter li{
+	display:inline-block;
+}
+#portfolio-filter li a{
+	padding:10px 15px;
+	display:block;
+	text-decoration:none;
+}
+#portfolio-filter li a span.dot{
+	width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1px solid #D2D2D2;
+    position: relative;
+    display: inline-block;
+    float: left;
+    margin-top: 1px;
+    margin-right: 10px;
+}
+#portfolio-filter li a span.dot:after{
+	content:"";
+	width:9px;
+	height:9px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	border-radius:3px;
+	background-color:#808b8d;
+}
+#portfolio-filter li a:hover span.dot:after,
+#portfolio-filter li.active a span.dot:after{
+	background-color:#86b817;
+}
+
+/* Tour Gallery 1 Columns start */
+.max-col-1 .portfolio-item{
+	width:100%;
+	position:relative;
+	margin-bottom:31px;
+	overflow:hidden;
+}
+.max-col-1 .portfolio-item .portfolio-content{
+	position:absolute;
+	top:0;
+	left:-363px;
+	bottom:0;
+	background-color:rgba(34, 34, 34, 0.9);
+	max-width:363px;
+	border-left:7px solid #86b817;
+    padding: 160px 60px;
+    color: #fff;	
+	z-index:10;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.3s ease;
+}
+.max-col-1 .portfolio-item:hover .portfolio-content{
+	left:0;
+	opacity:1;
+	visibility:visible;
+	transition:all 0.3s ease;
+}
+.max-col-1 .portfolio-item .portfolio-content a{
+	color:#fff;
+	text-decoration:none;
+}
+.max-col-1 .portfolio-item .portfolio-content .portfolio-meta h2{
+	font-size:18px;
+	text-transform:uppercase;
+}
+
+.max-col-1 .portfolio-item .portfolio-content .customNavigation a{
+	width:25px;
+	height:25px;
+	border-radius:3px;
+	line-height:25px;
+	text-align:center;
+	background-color:#fff;
+	display:inline-block;
+	cursor:pointer;
+	color:#0c2535;
+}
+.max-col-1 .portfolio-item .portfolio-content .customNavigation a:hover{
+	color:#fff;
+	background-color:#fdb714;
+}
+/* Tour Gallery 1 Columns end */
+
+/* Tour Gallery 2 Columns start */
+.max-col-2 .portfolio-item{
+	position:relative;
+	margin-bottom:31px;
+	overflow:hidden;
+}
+.max-col-2 .portfolio-item .portfolio-content{
+	position:absolute;
+	top:0;
+	left:15px;
+	bottom:0;
+	right:15px;
+	background-color:rgba(34, 34, 34, 0.65);
+	border:7px solid #86b817;
+    color: #fff;	
+	z-index:10;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.3s ease;
+	text-align:center;
+	width:auto;
+	padding: 20% 27%;	
+}
+.max-col-2 .portfolio-item:hover .portfolio-content{
+	opacity:1;
+	visibility:visible;
+	transition:all 0.3s ease;
+}
+.max-col-2 .portfolio-item .portfolio-content a{
+	color:#fff;
+	text-decoration:none;
+}
+.max-col-2 .portfolio-item .portfolio-content .portfolio-meta h2{
+	font-size:18px;
+	text-transform:uppercase;
+	position:relative;
+	padding-bottom: 10px;	
+}
+.max-col-2 .portfolio-item .portfolio-content .portfolio-meta h2:after{
+	content:"";
+	position:absolute;
+	top:100%;
+	left:50%;
+	margin-left:-14px;
+	width:28px;
+	height:1px;
+	background-color:#fff;
+}
+
+.max-col-2 .portfolio-item .portfolio-content .customNavigation a{
+	width:25px;
+	height:25px;
+	border-radius:3px;
+	line-height:25px;
+	text-align:center;
+	background-color:#fff;
+	display:inline-block;
+	cursor:pointer;
+	color:#0c2535;
+}
+.max-col-2 .portfolio-item .portfolio-content .customNavigation a:hover{
+	color:#fff;
+	background-color:#fdb714;
+}
+/* Tour Gallery 2 Columns end */
+
+
+/* Tour Gallery 3 Columns start */
+
+.max-col-3 .portfolio-item{
+	position:relative;
+	margin-bottom:31px;
+	overflow:hidden;
+}
+.max-col-3 .portfolio-item .portfolio-content{
+	position:absolute;
+	top:0;
+	left:15px;
+	bottom:0;
+	right:15px;
+	background-color:rgba(34, 34, 34, 0.65);
+	border:7px solid #86b817;
+    color: #fff;	
+	z-index:10;
+	opacity:0;
+	visibility:hidden;
+	transition:all 0.3s ease;
+	text-align:center;
+	width:auto;
+	padding: 25% 27%;	
+}
+.max-col-3 .portfolio-item:hover .portfolio-content{
+	opacity:1;
+	visibility:visible;
+	transition:all 0.3s ease;
+}
+.max-col-3 .portfolio-item .portfolio-content a{
+	color:#fff;
+	text-decoration:none;
+}
+.max-col-3 .portfolio-item .portfolio-content .portfolio-meta h2{
+	font-size:18px;
+	text-transform:uppercase;
+	position:relative;
+	padding-bottom: 10px;	
+}
+.max-col-3 .portfolio-item .portfolio-content .portfolio-meta h2:after{
+	content:"";
+	position:absolute;
+	top:100%;
+	left:50%;
+	margin-left:-14px;
+	width:28px;
+	height:1px;
+	background-color:#fff;
+}
+
+.max-col-3 .portfolio-item .portfolio-content .customNavigation a{
+	width:25px;
+	height:25px;
+	border-radius:3px;
+	line-height:25px;
+	text-align:center;
+	background-color:#fff;
+	display:inline-block;
+	cursor:pointer;
+	color:#0c2535;
+}
+.max-col-3 .portfolio-item .portfolio-content .customNavigation a:hover{
+	color:#fff;
+	background-color:#fdb714;
+}
+/* Tour Gallery 3 Columns end */
+
+
+
+
+/* Large desktop */
+@media (max-width: 1200px) {
+.max-col-1 .portfolio-item .portfolio-content {
+    padding: 100px 40px;	
+}
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+.max-col-1 .portfolio-item .portfolio-content {
+    padding: 60px 40px;	
+}
+.max-col-2 .portfolio-item .portfolio-content,
+.max-col-3 .portfolio-item .portfolio-content{
+    padding: 10% 15%;	
+}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+.max-col-1 .portfolio-item .portfolio-content .portfolio-meta h2{
+	margin-top:0;
+}	
+.max-col-1 .portfolio-item .portfolio-content {
+    position: relative;
+    left: 0;
+    background-color: rgba(34, 34, 34, 0.9);
+	max-width:100%;
+    width: 100%;
+    float: left;
+    border-left: 7px solid rgba(134, 184, 23, 0);
+    padding: 15px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.max-col-2 .portfolio-item .portfolio-content,
+.max-col-3 .portfolio-item .portfolio-content{
+    padding: 20% 15%;	
+}
+	
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.max-col-2 .portfolio-item .portfolio-content,
+.max-col-3 .portfolio-item .portfolio-content{
+    padding: 5% 15%;	
+}
+}	
+
+@media (max-width:767px){
+	.portfolio_column_3_popup .portfolio-item figure img {
+	width: 100%;
+	}
+	.portfolio_column_3_popup .portfolio-item .portfolio-content .portfolio-meta {
+		position: relative;
+		top: 40px;
+	}
+	
+}

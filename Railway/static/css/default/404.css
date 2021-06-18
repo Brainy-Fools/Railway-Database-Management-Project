@@ -1,0 +1,127 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master 404 Error Page Stylesheet]
+-------------------------------------------------------------------*/
+.Travelite_error_bg{
+		background:url("../../svg/error_bg_img.svg") no-repeat;
+		background-size: cover;
+}
+.main_center_error_wrap {
+    text-align: center;
+}
+.Travelite_error_heading p {
+    font-size: 18px;
+    color: #808b8d;
+    line-height: 36px;
+}
+.Travelite_error_heading, .main_center_error_wrap, .error_text_with_icon, .error_next_prev_links, .serach_here{
+		float:left;
+		width:100%;
+}
+.error_text_with_icon ul {
+	margin:0px;	
+}
+
+.error_text_with_icon ul li {
+    display: inline-block;
+    color: #2c3e50;
+    font: 700 86.4px  "Lato",sans-serif ;
+    text-transform: uppercase;
+  
+}
+.error_text_with_icon {
+    float: left;
+    width: 100%;
+    padding-top: 70px;
+    padding-bottom: 86px;
+}
+.error_text_with_icon ul li:nth-child(1), .error_text_with_icon ul li:nth-child(3) {
+    position: relative;
+}
+
+.error_next_prev_links a {
+    text-transform: uppercase;
+    padding: 14px 0px;
+    width: 150px;
+    display: inline-block;
+    background: #fdb714;
+    color: #fff;
+    font: normal 13px Open Sans;
+    letter-spacing: .4px;
+    border-radius: 21px;
+    margin-right: 6px;
+	border: 1px solid transparent;
+}
+.error_next_prev_links a.home_page:hover {
+    border: 1px solid #fdb714;
+    background: transparent !important;
+    color: #fdb714;
+}
+
+.error_next_prev_links a.prev_page:hover {
+	border: 1px solid #86b817;
+	 background: transparent !important;
+    color: #86b817;
+}
+
+.main_center_error_wrap {
+    padding-top: 75px;
+    padding-bottom: 57px;
+}
+.error_next_prev_links a.home_page{
+		 background: #fdb714;
+}
+.error_next_prev_links a.prev_page{
+		 background: #86b817;
+}
+.serach_here h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin-left: 5px;
+	display: inline-block;
+}
+.serach_here {
+	line-height: 36px;
+    font-size: 16px;
+    color: #808b8d;
+	padding: 15px 0px;
+}
+
+.bottom_searching_part{
+    display: inline-block;
+    width: 374px;
+    position:relative;
+}
+.bottom_searching_part input.search_page {
+    width: 100%;
+    height: 47px;
+    border: 2px solid #eeeeee;
+    border-radius: 5px;
+	padding-left: 10px;
+    color: #aaaaaa;
+	padding-right: 40px;
+}
+.bottom_searching_part button {
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #aaaaaa;
+}
+
+/* responsive media query start */
+@media (max-width:480px){
+	.bottom_searching_part {
+		width: 80%;
+	}
+	.Travelite_error_heading h3 {
+		font-size: 16px;
+	}
+}
+
+
+/* responsive media query end */

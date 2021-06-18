@@ -1,0 +1,111 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master contact Stylesheet]
+
+Project:	Travelite - Tours and Travels Online Booking HTML
+Version:	1.0.0
+Assigned to:	Themeforest
+-------------------------------------------------------------------*/
+
+
+ /*contact page css start*/
+.map_main iframe {
+    width: 100%;
+    height: 550px;
+    border: 0;
+}
+
+.tr_contact_detais_section {
+    padding: 97px 0px;
+}
+.conatact_form_ds form .input_c, .text_area_c{
+    width: 100%;
+    border: 1px solid #e4e2e2;
+    margin-bottom: 10px;
+    padding: 15px 19px;
+    font-style: italic;
+}
+.text_area_c {
+    height: 211px;
+}
+#form_submit {
+    border: none;
+    width: 100%;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    height: 54px;
+}
+
+.address_contact_details ul {
+    padding: 25px 0px;
+    margin: 0;
+}
+.address_contact_details ul li {
+    line-height: 29px;
+    list-style: none;
+    color: #808b8d;
+    font-size: 16px;
+}
+.address_contact_details ul li .fa {
+    float: left;
+    line-height: 29px;
+    width: 30px;
+	    color: #888888;
+}
+.address_detais_city {
+    font-size: 20px;
+    color: #86b817;
+    font-weight: 700;
+
+}
+.social_box {
+    text-align: center;
+    padding: 20px 0px;
+    width: 170px;
+    color: #fff;
+	margin-bottom:4px;
+}
+.facebook_b_wrap{
+		background: #4d6daa;
+}
+.twitter_b_wrap, .social_box:nth-child(2) {
+    background: #1c9ddf;
+}
+.rss_b_wrap, .social_box:nth-child(3) {
+    background: #fe8d00;
+}
+.linkedin_b_wrap, .social_box:nth-child(4) {
+    background: #0177b5;
+}
+.social_box .fa {
+    font-size: 24px;
+    color: #fff;
+}
+
+.social_box .shares_and_likes {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+.social_box .social_likes {
+    font-size: 16px;
+    padding-top: 3px;
+}
+
+/*----------media query start---------*/
+@media (min-width:768px) and (max-width:991px){
+.conatact_form_ds {
+    padding-bottom: 30px;
+}
+}
+
+@media (max-width:767px)
+{
+	.address_contact_details {
+    margin-top: 20px;
+}
+.address_contact_details ul {
+    padding: 15px 0px;
+    margin: 0;
+}
+}

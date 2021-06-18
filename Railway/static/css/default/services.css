@@ -1,0 +1,83 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master Services Stylesheet]
+
+Project:	Travelite - Tours and Travels Online Booking HTML
+Version:	1.0.0
+Assigned to:	Themeforest
+-------------------------------------------------------------------*/
+.service_wrapper{
+	width:100%;
+	float:left;
+	position:relative;
+    margin-left: -15px;
+	}
+.service_wrapper .item{
+	float:left;
+	width:50%;
+	}	
+.service_wrapper .item .text_wrapper{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:#222222;
+	padding:20px 50px;
+	text-align:center;
+	width:285px;
+	height:260px;
+	color:#999999;
+    padding-top: 60px;
+	}	
+.service_wrapper .item .text_wrapper i{
+	color:#fdb714;
+	font-size:30px;
+	margin-bottom:23px;
+	}	
+.service_wrapper .item .text_wrapper h3{
+	font-size:17px;
+	font-weight:bold;
+	text-transform:uppercase;
+	margin-bottom:15px;
+	color:#fff;
+	margin-top:0;
+	}
+.service_wrapper .item .image_wrapper{
+	float:left;
+	overflow:hidden;
+	}	
+.service_wrapper .item .image_wrapper img{
+	transition:linear 1s;
+	}	
+.service_wrapper .item:hover .image_wrapper img{
+	transform:scale(1.2) rotate(5deg);
+	transition:linear 1s;
+	}	
+	
+	
+	
+	
+.service_wrapper .item.style1 .text_wrapper{
+	position:relative;
+	float:left;
+	}		
+.service_wrapper .item.style1 .image_wrapper img{
+	float:left;
+	}
+
+
+.service_wrapper .item.style3 .text_wrapper{
+	display:none;
+	}		
+
+
+.service_wrapper .item.style4{
+	height:236px;
+	}	
+.service_wrapper .item.style4 .text_wrapper{
+	height:236px;
+	width:100%;
+	background-color:transparent;
+	color:#fff;
+	padding-top:50px;
+	}		

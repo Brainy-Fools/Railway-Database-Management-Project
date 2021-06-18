@@ -1,0 +1,44 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master Call-to-action Stylesheet]
+-------------------------------------------------------------------*/
+
+.offer_call_to_action{
+	color:#fff;
+	font-size:18px;
+}
+.offer_call_to_action h3{
+	font-size:36px;
+	text-transform:uppercase;
+	margin-bottom:40px;
+}
+.offer_call_to_action h3 span{
+	color:#86b817;
+}
+.offer_call_to_action h4{
+	font-size:30px;
+	font-weight:bold;
+	color:#fdb714;
+	text-transform:uppercase;
+	margin-bottom:30px;
+}
+.offer_call_to_action p{
+	margin-bottom:25px;
+}
+.offer_call_to_action .btn-travel{
+	margin-bottom:25px;
+	background-color:rgba(12, 37, 53, 0.76);
+	color:#fff;
+	border:1px solid;
+    padding: 12px 50px;
+    font-size: 14px;
+    text-transform: uppercase;	
+	
+}
+.offer_call_to_action .btn-travel:hover{
+	background-color:#0c2535;
+}
+.offer_call_to_action .btn-travel:after{
+	display:none;
+}

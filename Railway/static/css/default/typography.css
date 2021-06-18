@@ -1,0 +1,251 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master Typography Stylesheet]
+-------------------------------------------------------------------*/
+.travel_heading{
+	text-align:center;
+	color:#2c3e50;
+	text-transform:uppercase;
+	font-weight:bold;
+	position:relative;
+	margin-top:100px;
+	margin-bottom:40px;
+}
+.travel_heading:before{
+	content: "\f107\f107\f107\f107\f107\f107\f107\f107\f107\f107\f107\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: 100px;
+    height: 3px;
+    color: #86b817;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    letter-spacing: -1px;
+}
+.travel_heading:after{
+	content: "\f107\f107\f107\f107\f107\f107\f107\f107\f107\f107\f107\f107";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: 14px;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    width: 100px;
+    height: 3px;
+    color: #86b817;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 31px;
+    margin: 0 auto;
+    letter-spacing: -1px;
+}
+.travel_heading.center{
+	text-align:center;
+}
+.travel_heading.center:after,
+.travel_heading.center:before{
+	right: 0;
+    left: 0;
+}
+.travel_heading.left{
+	text-align:left;
+}
+.travel_heading.left:after,
+.travel_heading.left:before{
+	right: auto;
+    left: 0;
+}
+.travel_heading.right{
+	text-align:right;
+}
+.travel_heading.right:after,
+.travel_heading.right:before{
+	right: 0;
+    left: auto;
+}
+
+
+.btn-travel{
+	display: inline-block;
+	padding: 10px 30px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	text-transform:capitalize;
+	text-decoration:none;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	background-color: #F0F0F0;
+	color: #2C3E50;
+	-webkit-transition:ease-in-out 0.2s;
+	-moz-transition:ease-in-out 0.2s;
+	-ms-transition:ease-in-out 0.2s;
+	-o-transition:ease-in-out 0.2s;
+	transition:ease-in-out 0.2s;
+	outline: 0;
+	position:relative;
+	overflow: hidden;
+	border:none;
+	}
+.btn-travel:after{
+	content:'';
+	position:absolute;
+	left:50%;
+	right:50%;
+	top:0;
+	bottom:0;
+	display:inline-block;
+	background-color:rgba(255,255,255,0.2);
+	-webkit-transform:skew(20deg);
+	-moz-transform:skew(20deg);
+	-ms-transform:skew(20deg);
+	-o-transform:skew(20deg);
+	transform:skew(20deg);
+
+	-webkit-transition:all 0.2s;
+	-moz-transition:all 0.2s;
+	-ms-transition:all 0.2s;
+	-o-transition:all 0.2s;
+	transition:all 0.2s;
+	
+	}	
+.btn-travel:focus,
+.btn-travel:hover{
+	text-decoration:none;
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	color: #fff;
+	}	
+.btn-travel:hover:after{
+	right:-10px;
+	left:-10px;
+	}	
+.btn-green{
+	background-color:#86b817;
+	color:#fff;
+	}	
+.btn-green:hover{
+	color:#fff;
+	}
+.btn-yellow{
+	background-color:#fdb714;
+	color:#fff;
+	}	
+.btn-yellow:hover{
+	color:#fff;
+	}		
+
+.push-down-100{
+	margin-top:100px;
+	}
+	
+	
+.travel_loader{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:rgba(255,255,255,0.8);
+	display:none;
+	z-index:1;
+	}
+
+.load_post .travel_loader{
+	display:block;
+	-webkit-animation:fadeIn 0.3s;
+	-moz-animation:fadeIn 0.3s;
+	-ms-animation:fadeIn 0.3s;
+	-o-animation:fadeIn 0.3s;
+	animation:fadeIn 0.3s;
+	}
+
+.travel_loader img {
+	position: absolute;
+	top: 10%;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	margin-left: 35px;
+}
+
+blockquote {
+	padding: 10px 0px;
+	margin: 0 0 20px;
+	font-size: 16px;
+	font-style:italic;
+}
+blockquote i.fa{
+	color:#86b817;
+	font-size:24px;
+	margin-right:18px;
+	}
+blockquote p:last-child, blockquote ul:last-child, blockquote ol:last-child {
+	margin-bottom: 0;
+}
+blockquote footer, blockquote small, blockquote .small {
+	display: block;
+	font-size: 80%;
+	line-height: 1.42857143;
+	color: #777;
+}
+blockquote footer:before, blockquote small:before, blockquote .small:before {
+	content: '\2014 \00A0';
+}
+.blockquote-reverse, blockquote.pull-right {
+	padding-right: 15px;
+	padding-left: 0;
+	text-align: right;
+	border-right: 5px solid #eee;
+	border-left: 0;
+}
+.blockquote-reverse footer:before, blockquote.pull-right footer:before, .blockquote-reverse small:before, blockquote.pull-right small:before, .blockquote-reverse .small:before, blockquote.pull-right .small:before {
+	content: '';
+}
+.blockquote-reverse footer:after, blockquote.pull-right footer:after, .blockquote-reverse small:after, blockquote.pull-right small:after, .blockquote-reverse .small:after, blockquote.pull-right .small:after {
+	content: '\00A0 \2014';
+}
+
+
+
+/* Large desktop */
+@media (max-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+.travel_loader .spinner{
+	margin-left:-15px;
+	}	
+}	

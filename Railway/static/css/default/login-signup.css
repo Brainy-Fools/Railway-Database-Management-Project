@@ -1,0 +1,265 @@
+/*
+Copyright (c) 2016 Himanshu Softtech
+------------------------------------------------------------------
+[Master Login signup Stylesheet]
+-------------------------------------------------------------------*/
+
+/*-------login css start-------*/
+
+.social_links_login ul li:after, .sub_signup {
+	-webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.Travelite_login_form{
+		
+}
+.login_wrapper {
+    position: relative;
+	width:98%;
+}
+.login_heading {
+    text-align: center;
+    background: #86b817;
+    color: #ffffff;
+    padding: 34px 0px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: Lato;
+	position: relative;
+}
+.popup_alert_main {
+    float: left;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+	background: #ffffff;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.16);
+}
+.popup_inner {
+    padding: 44px 29px;
+}
+.popup_inner form .input_login{
+    width: 100%;
+    margin-bottom:10px;
+    border: 1px solid #e4e2e2;
+    height: 50px;
+    padding: 0px 17px;
+	color: #999999;
+    font-style: italic;
+}
+a.forgot_link {
+    float: right;
+    color: #86b817;
+    line-height: 18px;
+    text-decoration: underline;
+    padding-top: 5px;
+}	
+.remember_me {
+    font-weight: normal;
+    color: #797979;
+    padding-left: 5px;
+}
+.popup_inner label.remember_me {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+.popup_inner form {
+    border-bottom: 1px solid #e4e2e2;
+    padding-bottom: 6px;
+}
+.have_an_acnt p {
+    color: #797979;
+}
+.have_an_acnt p a{
+		color: #86b817;
+}
+.have_an_acnt {
+    padding: 11px 0px;
+}
+
+.or_line {
+		text-align:center;
+		position:relative;
+}
+
+.or_line span:before, .or_line span:after {
+    position: absolute;
+    content: "";
+    display: block;
+    background: #e4e2e2;
+    width: 44%;
+    top: 11px;
+    height: 1px;
+}
+
+.or_line span:after {
+ right:0;
+}
+.or_line span {
+    font-family: Lato;
+    font-size: 12px;
+    color: #999999;
+}
+.social_links_login ul li {
+    float: left;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+    margin-bottom: 19px;
+    box-shadow: 0px 0px 1px 2px #e4e2e2;
+	position:relative;
+}
+
+.social_links_login ul li:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    bottom: 0;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.2);
+    -webkit-transform: skew(20deg);
+    -moz-transform: skew(20deg);
+    -ms-transform: skew(20deg);
+    -o-transform: skew(20deg);
+    transform: skew(20deg);
+  
+}
+
+
+.sub_signup:hover {
+      opacity: .8;
+}
+
+.social_links_login ul li:hover:after {
+    right: -10px;
+    left: -10px;
+}
+.social_links_login ul li:hover {
+   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
+.social_links_login ul li a {
+    font-size: 16px;
+    color: #ffffff;
+	width: 100%;
+    float: left;
+	padding-top: 13px;
+    padding-bottom: 14px;
+	font-family: Lato;
+	z-index: 11;
+    position: relative;
+}
+.social_links_login ul li.facebook_login {
+		background:#4d6daa;
+		}
+.social_links_login ul li.gplus_login {
+		background:#d13535;
+}
+.social_links_login ul li a i.fa {
+    font-size: 24px;
+    padding-right: 17px;
+    position: relative;
+    top: 4px;
+}
+.social_links_login {
+    padding: 30px 0px;
+    float: left;
+    width: 100%;
+}
+
+.login_heading .close_btn {
+    background: #fdb714;
+    padding: 13px 21px;
+    position: absolute;
+    top: 0;
+    right: -61px;
+    box-shadow: 0px -2px 1px 0px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+.Travelite_login_form{
+		display:none;
+}
+
+
+/*-------login css End-------*/
+
+/*-------signup form css start-----*/
+.Travelite_signup_form .popup_inner form {
+    border-bottom: none;
+    padding-bottom: 6px;
+}
+.sub_signup {
+    width: 100%;
+    color: #ffffff;
+    background: #86b817;
+    border: none;
+    box-shadow: 0px 0px 1px 2px #e4e2e2;
+    padding: 15px 0px;
+    margin-top: 14px;
+    margin-bottom: 20px;
+	position:relative;
+}
+
+.Travelite_signup_form .social_links_login ul li.gplus_login {
+    background: #d13535;
+    margin-bottom: 5px;
+}
+
+.signup_form .checkbox_login{
+		float:left;
+}
+.signup_form label.remember_me {
+    width: 82%;
+    margin-top: 0px;
+    float: left;
+    padding-left: 30px;
+}
+.already_member {
+    text-transform: capitalize;
+    color: #999999;
+}
+.already_member a{
+		color:#2c3e50;
+}
+.already_member a:hover {
+    color: #86b817;
+}
+.Travelite_signup_form{
+		display:none;	
+}
+input.checkbox_login {
+    height: 17px;
+    width: 17px;
+    position: relative;
+    top: 4px;
+}
+.signup_form .login_check_box {
+    padding-top: 5px;
+}
+/*-------signup form css end-----*/
+
+.login_check_box {
+    float: left;
+    width: 100%;
+    padding-top: 22px;
+}
+.login_check_box .checkbox_book {
+    width: auto;
+}
+
+
+
+@media (max-width:767px){
+		.login_heading .close_btn {
+				right:16px;
+}
+.popup_alert_main{
+		left:0;
+}
+}

@@ -1,0 +1,613 @@
+body{
+    background-color: #292929;	
+}
+a{
+	color: #86B817;	
+}
+.travel_post h3{
+    color: #AFAFAF;	
+}
+.header_bottom{
+	background-color: #292929;	
+}
+.main_menu ul.sub-menu li a,
+.main_menu > ul > li > a{
+	color: #AFAFAF;	
+}
+#footer_wrapper{
+    background-color: #000000;	
+}
+.widget_categories ul li label{
+	border: 1px solid #5D5D5D;	
+}
+.widget_categories ul li:hover label{
+	color:#CCCCCC;
+}
+.widget.widget_archive ul li a{
+	border-color:#5D5D5D;
+}
+.widget.widget_archive ul li a:hover {
+    color: #FFFFFF;
+}
+.widget.widget_accordion .panel-default > .panel-heading h4 a{
+    background-color: rgb(0, 0, 0);	
+	color:#AFAFAF;
+	border: 1px solid #000000;	
+}
+.widget.widget_search_availability .wsa_tab ul li a,
+.widget.widget_search_availability .wsa_tab_content{
+    background-color: #2F2F2F;	
+}
+.widget.widget_search_availability .wsa_tab ul li a{
+	border-color:#2F2F2F;
+}
+#footer_wrapper .widget .widget-title, #footer_wrapper .widget h4{
+	color: #AFAFAF;
+}
+.widget.widget_recent_entries ul li div a{
+    color: #86B817;	
+}
+.travel_pagination li a{
+	border-color:#484848;
+}
+.post_wrapper .travel_post{
+	border-bottom: 1px solid #5D5D5D;
+}
+.load_post .travel_loader{
+	display:none;
+}
+.widget.widget_search input{
+    border: 1px solid #5D5D5D;		
+}
+.widget_categories ul li label:before{
+    background-color: #5D5D5D;	
+}
+.heading_team h3{
+    color: #AFAFAF;	
+}
+.counter_section .timer{
+	color: #AFAFAF;	
+}
+.ractangle_box_cover .ractangle_inner .inner_ovelay{
+    background: #3C3C3C;	
+}
+.ractangle_box_cover:hover .inner_ovelay{
+	background:rgba(60, 60, 60, 0.81);
+}
+.inner_ovelay h4{
+	color: #AFAFAF;	
+}
+.Travelite_feature_section{
+    background: #3C3C3C;	
+}
+
+.feature_box{
+	border-color: #AFAFAF;
+}
+.feature_box h4{
+	color: #AFAFAF;	
+}
+.feature_box:hover h4{
+	color:#fff;
+}
+.feature_box i.fa{
+    color: #AFAFAF;
+	border-color:#AFAFAF;	
+}
+.end_box_fearure h3,
+.first_box h3{
+	color: #FDB714;
+}
+.widget.widget_links ul li a{
+    border-bottom: 1px solid #50504F;	
+}
+.widget.widget_links ul li a:hover{
+	color:#fff;
+}
+.widget.widget_links ul li a:hover:before {
+    background-color: #FFFFFF;
+}
+
+.black_btn:hover {
+    color: #AFAFAF;
+    border-color: #AFAFAF;
+}
+.main_testimonials_content:before{
+	color: #3C3C3C;	
+}
+.main_testimonials_content p{
+	border-color:#808B8D;
+}
+.main_testimonials_content:after{
+	background: #808B8D;
+}
+.testimonial_img_part h4{
+    color: #86B817;	
+}
+.offer_box_wrapper .offer_inner h4{
+    color: #AFAFAF;	
+}
+.offer_box_wrapper:hover .offer_inner h4{
+	color:#fff;
+}
+.dropdown-menu{
+	background-color: #403F3F;
+}
+.dropdown-menu > li > a{
+    color: #AFAFAF;	
+}
+.booking_panel_wrapper_main div.destination_tab .bs-searchbox input{
+    color: #AFAFAF;	
+}
+.xdsoft_datetimepicker{
+	background-color: #403F3F;
+	border-bottom: 1px solid #403F3F;
+    border-left: 1px solid #403F3F;
+    border-right: 1px solid #403F3F;
+    border-top: 1px solid #403F3F;
+    color: #9A9898;	
+}
+.xdsoft_datetimepicker .xdsoft_calendar td, .xdsoft_datetimepicker .xdsoft_calendar th{
+    background: #403F3F;
+    border: 1px solid #565656;
+    color: #9A9898;	
+}
+.xdsoft_datetimepicker .xdsoft_calendar th{
+	background: #525252;
+}
+.xdsoft_datetimepicker .xdsoft_label{
+    background-color: #403F3F;	
+}
+.dropdown-menu .form-control{
+	background-color:transparent;
+	color:#fff;
+}
+.widget.widget_search_availability .wsa_tab_content .travel_form_element input[type=number], .widget.widget_search_availability .wsa_tab_content .travel_form_element input[type=text]{
+    background-color: transparent;	
+    border: 1px solid #5D5D5D;	
+}
+.widget.widget_search_availability .wsa_tab_content .travel_form_element i{
+    border-left: 1px solid #5D5D5D;	
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option{
+	text-shadow:none;
+}
+.best_feature_wrapper h3{
+    color: #AFAFAF;	
+}
+.best_feature_wrapper .best_feature_icon:before, .best_feature_wrapper .best_feature_icon:after{
+    background-color: #AFAFAF;	
+}
+.latest_news_section{
+    background: #3C3C3C;	
+}
+.latest_news_wrapper{
+    background: #505050;	
+}
+.latest_news_wrapper:hover{
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.09);
+}
+.wrapper_main{
+    background: #3C3C3C;	
+}
+.desc_main h4{
+	color: #A5A5A5;
+}
+.wrapper_main .desc_main{
+	border-color:#3C3C3C;
+}
+.customer_says_section{
+    -webkit-filter: invert(.8);
+    filter: invert(.8);	
+}
+.customer_says_section > *{
+	-webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+.slick_crousel .slick-prev, .slick_crousel .slick-next{
+	-webkit-filter: invert(100%);
+    filter: invert(100%);
+    opacity: 0.45;	
+}
+.slick_crousel .slick-prev:hover, .slick_crousel .slick-next:hover{
+	opacity:1;
+}
+.tab_search_white .slider_content_wrap{
+    background: #292929;	
+}
+.bg_white{
+    background: #292929;	
+}
+.booking_app_section{
+    background: #383838;
+    border-color:#505050;	
+}
+.secttion_first_b h3, .secttion_first_b h4{
+    color: #AFAFAF;	
+}
+.extra_text:before, .extra_text:after{
+	background: #AFAFAF;
+}
+.secttion_first_b .extra_text,
+.off_dighit span{
+    color: #AFAFAF;	
+}
+.avialable_text h4{
+	color: #92BF30;
+}
+.feature_tabs ul li.active_tab span{
+    color: #86B817;	
+}
+.our_gallery_section{
+    background: #000000;	
+}
+.our_partners_crousel_section .heading_team h3{
+    color: #AFAFAF;	
+}
+.Travelite_left_sidebar_second .widget{
+    background-color: #000;
+	border-color:#000;	
+}
+.Travelite_left_sidebar_second .widget h4.widget-title{
+	border-color:#000;	
+}
+.Travelite_left_sidebar_second .widget .text_widget h3 i,
+.Travelite_left_sidebar_second .widget .text_widget h3{
+	color: #AFAFAF;
+}
+.image_holder h4 span,
+.image_holder h5{
+	color: #AFAFAF;
+}
+.submit_query{
+	overflow:hidden;
+}
+.top_head_bar h4{
+	color: #AFAFAF;
+}
+ul.sort_place_icons li,
+.tour_packages_details_top .bottom_desc h5{
+	color: #AFAFAF;
+}
+.sidebar_search_bar form input#sidebar_search{
+    background-color: #000000;
+	border-color:#000000;
+	color:#fff;	
+}
+.package_highlight_section h4{
+    color: #AFAFAF;
+    border-bottom: 1px solid #5D5D5D;	
+}
+.cost_include_exclude h5{
+	color: #AFAFAF;
+}
+.booking_form_bg{
+    background: #444444;
+    border-color: #444444;	
+}
+.booking_form_bg .main_content_form{
+    background: #000000;		
+}
+.main_content_form input, .main_content_form select{
+    border-color:#444444;	
+    color: #A9A9A9;	
+    background-color: #444444;	
+}
+.pcg_tabs_panel{
+	background: #444444;
+}
+.Travelite_middle_tabs{
+	border-color:#444444;
+}
+.pcg_tabs_panel ul li.ui-state-active{
+    background: #292929;	
+}
+.pcg_tabs_panel ul li.ui-state-active a {
+    color: #FFFCE9;
+}
+.tour_booking_tabs > ul > li > a{
+	color: #AFAFAF;
+}
+.tour_booking_tabs > ul > li.ui-tabs-active > a{
+	color: #86b817;
+}
+.check_in .check_in_box .month,
+.check_in .check_in_box .date{
+	color: #AFAFAF;
+}
+.flight_section .country_section_box h4{
+	color: #AFAFAF;	
+}
+.btn_green.proceed_buttton{
+	overflow:hidden;
+}
+.Travelite_left_sidebar aside.widget{
+	border-color:#5D5D5D;
+}
+.Travelite_left_sidebar .widget h4.widget-title{
+	color: #AFAFAF;	
+}
+.widget.hotel_widgets ul li h4{
+	color: #AFAFAF;	
+}
+.widget.hotel_widgets ul li{
+	border-color:#5D5D5D;
+}
+.price_filter_slider .range_text #amount{
+    background-color: transparent;	
+}
+.price_filter_slider .ui-slider-handle{
+	border-color:#FDB714 !important;
+}
+.tour_heading h4,
+.grid_sorting .bottom_desc h5{
+	color: #AFAFAF;	
+}
+.tour_packages_right_section .bootstrap-select.form-control{
+	background-color:transparent;
+}
+.tour_packages_right_section .bootstrap-select .dropdown-toggle{
+	border-color:#5D5D5D;
+}
+.sorting_places_wrap{
+	border-color: #5D5D5D;
+}
+.tour_heading{
+	border-color:#AFAFAF;
+}
+.pagination_bottom .pagination li a{
+    background-color: #5D5D5D;
+    border-color: #5D5D5D;
+	color: #E4E4E4;	
+}
+.sort_list_grid i{
+    background: #5D5D5D;
+	border-color:#5D5D5D;	
+}
+.sort_list_grid i:hover,
+.sort_list_grid .active_sort {
+    border-color: #86b817;
+}
+.list_sorting_view .bottom_desc h5{
+	color: #AFAFAF;	
+}
+.gallery_btn,
+.btns{
+	overflow:hidden;	
+}
+.list_view_details{
+	color: #AFAFAF;	
+}
+.slider_booking_panel .main_content_form{
+	background: rgba(0, 0, 0, 0.74);
+	border-color:#000000;
+}
+.slider_booking_panel .main_content_form .btn-group.form-control{
+	
+    color: #A9A9A9;
+    background-color: #444444;
+}
+.slider_booking_panel .main_content_form .btn-group.form-control .btn.dropdown-toggle{
+	border-color: #444444;
+}
+.unlimited_feature_main .best_feature_wrapper h4{
+	color: #AFAFAF;	
+}
+.sidebar_form span.ui-spinner input,
+.sidebar_form .destination_field input{
+	border-color:#5D5D5D;
+    background-color: transparent;	
+}
+ul.hotel_feature_icons li,
+.distance_text span{
+    color: #AFAFAF;	
+}
+ul.hotel_feature_icons{
+	border-color:#5D5D5D;	
+}
+.hotel_facility_list ul li,
+.pullleft.submit_field label,
+.pull-right.book_now_btn button,
+.bottom_title h5{
+	color: #AFAFAF;	
+}
+.hotel_details_mdl_tab{
+	border-color:#444444;
+}
+.hotel_thumbnail_slider .bx-controls-auto{
+	display:none;
+}
+.table_bold .bold{
+    color: #AFAFAF !important;	
+}
+.select_tabs select,
+.inner_body_payment fieldset input[type="text"],
+textarea.booking_textarea,
+.package_booking_form .booking_input{
+	border-color:#3C3C3C;
+	background-color: #3C3C3C;
+}
+.payment_mathod_tabs .payment_vertical_tabs{
+    background: #3C3C3C;	
+}
+.payment_vertical_tabs ul li.ui-state-active{
+    background: #292929;	
+}
+.information_title{
+    color: #AFAFAF;
+	border-color:#5D5D5D;
+}
+.payment_table_package .table > tbody > tr > td,
+.package_table_section .border_right,
+.package_table_section,
+.tab_inner_section .tab_inner_body{
+	border-color:#5D5D5D;
+}
+.information_table_main{
+	border-color:#FDB714;
+}
+.booking_text.t_align_c span{
+	color: #AFAFAF;
+}
+.slider_tabs .wsa_tab ul li a,
+.flight_booking_tab{
+    background: #000000;
+    border-color: #000000;	
+	box-shadow:none;
+}
+.tab_search_white .slider_tabs .wsa_tab ul li a.active{
+    background: #292929 !important;	
+}
+#respond .comment-form p textarea,
+#respond .comment-form p input[type=password],
+#respond .comment-form p input[type=email],
+#respond .comment-form p input[type=text],
+.flight_booking_tab input, .flight_booking_tab select{
+    background-color: #3C3C3C;
+	border-color:#3C3C3C;	
+}
+.flight_booking_tab .pull_left label{
+	color: #AFAFAF;
+}
+.Travelite_feature_section.border_bottom{
+	border-bottom-color: #505050;	
+}
+.booking_contact .call_button{
+	border-color: #AFAFAF;
+}
+.booking_contact, .booking_contact_right{
+	color: #AFAFAF;
+}
+.booking_contact_right a{
+	color: #AFAFAF;
+	border-color: #AFAFAF;
+}
+.booking_contact:after{
+	background:#AFAFAF;
+}
+.flight_details_schedule{
+    border-color: #5D5D5D;	
+}
+.take_off_landing h5{
+    color: #FDB91E;	
+}
+.table_heding_title,
+.middle_flight_section h5,
+.main_section_flight .country_section_box h4,	
+.airline_detail_list li span,
+.list_button a{
+	color: #AFAFAF;
+}
+.conatact_form_ds form .input_c, .text_area_c{
+	border-color:#3C3C3C;
+	background-color: #3C3C3C;
+}
+.tr_team_desc h4,
+.section_main .box_title,
+.check_lists ul li label,
+.right_side_details h3{
+	color: #AFAFAF;
+}
+.section_main{
+    background: #3C3C3C;
+	border-color:#3C3C3C;	
+}
+.section_main:hover{
+    background: #000000;
+	border-color:#000000;	
+}
+.team_section{
+    background: #000000;	
+}
+.tr_team_wrapper{
+	background: #3C3C3C;
+	border-color:#3C3C3C;	
+}
+.title_tag{
+	border-bottom-color:#5D5D5D;
+}
+.customer_says_detail .csd h3{
+	color: #AFAFAF;
+}
+.customer_says_text{
+	border-color:#5D5D5D;
+}
+#comments ol ul li > div:after,
+.customer_says_text:after{
+	background-color:#5D5D5D;
+}
+.travel_section.section_overlay.light:after{
+    background-color: rgba(0, 0, 0, 0.7);	
+}
+.travel_post_switcher{
+	border-color:#5D5D5D;
+}
+.blog_single_page_wrapper .post_share span.post_share_heading,
+#respond h3,
+.author_detail .detail h4{
+	color: #AFAFAF;
+}
+#comments ol li > div > article .gravatar{
+	background-color: #292929;
+}
+#comments ol li:before{
+    background-color: #5D5D5D;	
+}
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td div,
+.calendar_events ul li,
+.right_content a,
+.event_posts_section,
+.author_detail .detail p,
+.author_detail,
+#comments ol,
+#comments ol li > div > article .comment-body{
+	border-color: #5D5D5D;
+}
+.offer_call_to_action,
+.travel_heading{
+	color: #AFAFAF;
+}
+.travel_section.section_overlay.light.mb-100:after{
+	background-color:#292929;
+}
+.hex-in2.hex-area{
+    -webkit-filter: invert(.8);
+    filter: invert(.8);	
+	
+}
+.offer_hex_wrapper *{
+	-webkit-transition:none !important;
+	-moz-transition:none !important;
+	-ms-transition:none !important;
+	-o-transition:none !important;
+	transition:none !important;
+}
+
+.hex-in2.hex-area:hover{
+	-webkit-filter: none;
+    filter: none;
+}
+.rec_cat_title,
+.lates_event_right_side h4,
+.right_event_title{
+	color: #AFAFAF;
+}
+.lates_event_right_side .doller_event{
+	color: #FDB714;	
+}
+.travel_event_calendar .xdsoft_datetimepicker{
+    background-color: #000000;
+	border-color:#000000;	
+}
+.travel_event_calendar .xdsoft_datetimepicker .xdsoft_calendar td div{
+	border-color: #000000;
+}
+.Travelite_event_form,
+.events_thumb_slider{
+    background: #3C3C3C;	
+	border-color:#3C3C3C;
+}
+.Travelite_event_form .input_wrapper input{
+	background: transparent;
+	border-color:#000000;	
+}
