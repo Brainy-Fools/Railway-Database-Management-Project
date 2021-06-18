@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="Herculean task">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/0/4/04e7ba69625288d99c0aec7d6b4822b243575c88" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/3/1/3156ad13e4d695cd526bbb7b031016ecba842270" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/c/0/c019461db37dc799e1af69d2041128a7672a80b2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/static/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/templates/base.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1toSSX58tmyp9S8JAQwFLi3VBnv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="oracle" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Railway/static/images" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Malware\PycharmProjects\Railway-Database-Management-Project\Railway\static\images" />
+      <recent name="C:\Users\Malware\PycharmProjects\Railway-Database-Management-Project\Railway\templates" />
+      <recent name="C:\Users\Malware\PycharmProjects\Railway-Database-Management-Project\Railway\static" />
+      <recent name="C:\Users\Malware\PycharmProjects\Railway-Database-Management-Project\Railway\static\js" />
+      <recent name="C:\Users\Malware\PycharmProjects\Railway-Database-Management-Project\Railway\static\css" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="" />
+      <created>1623433951204</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623433951204</updated>
+      <workItem from="1623434003583" duration="3140000" />
+      <workItem from="1623585618558" duration="3324000" />
+      <workItem from="1623589420412" duration="3800000" />
+      <workItem from="1623639150033" duration="3216000" />
+      <workItem from="1623644492730" duration="4132000" />
+      <workItem from="1623654207875" duration="4673000" />
+      <workItem from="1623670290895" duration="6711000" />
+      <workItem from="1623678910866" duration="3001000" />
+      <workItem from="1623691039848" duration="5368000" />
+      <workItem from="1623729156509" duration="146000" />
+      <workItem from="1623732257809" duration="3075000" />
+      <workItem from="1623759142463" duration="1268000" />
+      <workItem from="1623816628274" duration="12311000" />
+      <workItem from="1623836900514" duration="7697000" />
+      <workItem from="1624040982623" duration="564000" />
+      <workItem from="1624041803097" duration="629000" />
+      <workItem from="1624044962255" duration="4168000" />
+    </task>
+    <task id="LOCAL-00001" summary="Left hand holding ice_pack,Right hand holding mouse">
+      <created>1623671720759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1623671720759</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tooth pain is real pain">
+      <created>1623681058461</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623681058462</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Herculean task">
+      <created>1624046175259</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624046175259</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Left hand holding ice_pack,Right hand holding mouse" />
+    <MESSAGE value="Tooth pain is real pain (0)" />
+    <MESSAGE value="Tooth pain is real pain" />
+    <MESSAGE value="Herculean task" />
+    <option name="LAST_COMMIT_MESSAGE" value="Herculean task" />
+  </component>
+</project>
