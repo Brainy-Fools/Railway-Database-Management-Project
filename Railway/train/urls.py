@@ -15,15 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import include,re_path
 from django.conf import settings
 from django.conf.urls import include
-import debug_toolbar
+
+from . import views
+
+body_class = "travel_home"
+body_class2 = ""
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('railway/',include('train.urls')),
-    path('__debug__/',include(debug_toolbar.urls)),
+    path('booking/', views.booking, name='booking'),
+    path('booking-details/', views.booking_details, name='booking-details'),
 ]
 
 

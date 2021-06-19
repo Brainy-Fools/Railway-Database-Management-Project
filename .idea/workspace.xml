@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="Herculean task">
-      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/0/4/04e7ba69625288d99c0aec7d6b4822b243575c88" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/3/1/3156ad13e4d695cd526bbb7b031016ecba842270" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/c/0/c019461db37dc799e1af69d2041128a7672a80b2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Railway/static/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Railway/templates/base.html" afterDir="false" />
+    <list default="true" id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="Herculean tasks">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +48,6 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Railway/static/images" />
@@ -93,7 +87,8 @@
       <workItem from="1623836900514" duration="7697000" />
       <workItem from="1624040982623" duration="564000" />
       <workItem from="1624041803097" duration="629000" />
-      <workItem from="1624044962255" duration="4168000" />
+      <workItem from="1624044962255" duration="4608000" />
+      <workItem from="1624049735382" duration="772000" />
     </task>
     <task id="LOCAL-00001" summary="Left hand holding ice_pack,Right hand holding mouse">
       <created>1623671720759</created>
@@ -116,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624046175259</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Herculean tasks">
+      <created>1624049479446</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624049479446</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +142,7 @@
     <MESSAGE value="Tooth pain is real pain (0)" />
     <MESSAGE value="Tooth pain is real pain" />
     <MESSAGE value="Herculean task" />
-    <option name="LAST_COMMIT_MESSAGE" value="Herculean task" />
+    <MESSAGE value="Herculean tasks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Herculean tasks" />
   </component>
 </project>

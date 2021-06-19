@@ -36,7 +36,15 @@
     <!--for title-->
     <title>{% block title %}Railway{% endblock title %}</title>
 </head>
-<body {%  %}>
+<body class="{{ body_class }}">
+{% block page_loader %}
+
+{% endblock page_loader %}
+
+{#{% endblock bd %}#}
+
+
+
 <div class="container-fluid">
     {% block header_nav_bar %}
 
