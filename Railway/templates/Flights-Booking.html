@@ -107,7 +107,8 @@
                             <div class="login_heading"> signup <span class="close_btn"><i
                                     class="fa fa-times"></i></span></div>
                             <div class="popup_inner">
-                                <form class="signup_form">
+                                <form class="signup_form" method="post">
+                                    {% csrf_token %}
                                     <input type="text" name="emaillogin" placeholder="First Name" class="input_login">
                                     <input type="text" name="emaillogin" placeholder="Last Name" class="input_login">
                                     <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
@@ -115,9 +116,8 @@
                                     <input type="password" name="conf passlogin" placeholder="Confirm Password"
                                            class="input_login">
                                     <input type="checkbox" id="signup_check" name="checkbox" class="checkbox_login">
-                                    <label for="signup_check" class="remember_me">I agree the Terms of Service, Privacy
-                                        Policy, Guest
-                                        Refund Policy, and Host Guarantee Terms.</label>
+                                    <label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
+                                        Policy</label>
                                     <input type="submit" value="SIGN UP" class="sub_signup">
                                 </form>
                                 <div class="or_line"><span>(OR)</span></div>

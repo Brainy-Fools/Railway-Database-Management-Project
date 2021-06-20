@@ -20,6 +20,10 @@ from django.conf import settings
 from django.conf.urls import include
 import debug_toolbar
 
+admin.site.site_header = "Brainy Fools"
+admin.site.site_title = "Railway project DashBoard"
+admin.site.index_title = "Welcome MasumBhai"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('railway/',include('train.urls')),
