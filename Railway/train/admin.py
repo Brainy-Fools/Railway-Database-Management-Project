@@ -7,3 +7,6 @@ admin.site.register(user)
 admin.site.register(passenger)
 admin.site.register(ticket)
 admin.site.register(transection)
+admin.site.register(route)
+admin.site.register(train_info)
+
