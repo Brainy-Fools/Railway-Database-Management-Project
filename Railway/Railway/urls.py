@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include,re_path
 from django.conf import settings
-from django.conf.urls import include
+from django.conf.urls import include,url
 import debug_toolbar
 
 admin.site.site_header = "Brainy Fools"

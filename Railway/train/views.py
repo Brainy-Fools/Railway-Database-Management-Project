@@ -6,8 +6,7 @@ from django.shortcuts import render, redirect
 
 
 def booking(request):
-    return render(request,'Flights-Booking.html')
-
+    return render(request,'Flights-Booking2.html')
 
 def booking_details(request):
     return render(request,'Flight-Home.html')

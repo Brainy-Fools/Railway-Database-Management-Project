@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="Herculean tasks">
+      <change afterPath="$PROJECT_DIR$/Railway/templates/Flights-Booking2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/Railway/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/Railway/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/migrations/0002_alter_user_user_age.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
