@@ -26,7 +26,7 @@ admin.site.index_title = "Welcome MasumBhai"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('railway/',include('train.urls')),
+    path('',include('train.urls')),
     path('__debug__/',include(debug_toolbar.urls)),
 ]
 
