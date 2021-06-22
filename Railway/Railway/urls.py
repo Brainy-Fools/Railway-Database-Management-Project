@@ -22,7 +22,7 @@ import debug_toolbar
 
 admin.site.site_header = "Brainy Fools"
 admin.site.site_title = "Railway project DashBoard"
-admin.site.index_title = "Welcome MasumBhai"
+admin.site.index_title = "Welcome User"
 
 urlpatterns = [
     path('admin/', admin.site.urls),

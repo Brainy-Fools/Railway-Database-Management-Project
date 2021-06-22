@@ -77,13 +77,15 @@ WSGI_APPLICATION = 'Railway.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# 'USER': 'c##admin',
+# 'PASSWORD': 'admin',
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'orcl',
-        'USER': 'c##admin',
-        'PASSWORD': 'admin',
+        'USER': 'c##manager',
+        'PASSWORD': 'manager',
         'HOST': 'localhost',
         'PORT': '1521',
     }

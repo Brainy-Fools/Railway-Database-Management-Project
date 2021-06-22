@@ -1,0 +1,51 @@
+
+OWeb:BoldAndItalicTagsCheck."Replace this <i> tag by <em>.(ÂÕã¥úÿÿÿÿ8Ø§‘¿¢/
+IWeb:BoldAndItalicTagsCheck3"Replace this <i> tag by <em>.(í±í8Ø§‘¿¢/
+OWeb:BoldAndItalicTagsCheckO"Replace this <i> tag by <em>.(µØˆ–üÿÿÿÿ8Ø§‘¿¢/
+JWeb:BoldAndItalicTagsCheck_"Replace this <i> tag by <em>.(äàë±8Ø§‘¿¢/
+JWeb:BoldAndItalicTagsChecka"Replace this <i> tag by <em>.(¸™Ş‘8Ø§‘¿¢/
+OWeb:BoldAndItalicTagsCheckj"Replace this <i> tag by <em>.(ĞŠ¡‰şÿÿÿÿ8Ù§‘¿¢/
+JWeb:BoldAndItalicTagsCheck}"Replace this <i> tag by <em>.(äàë±8Ù§‘¿¢/
+JWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(¸™Ş‘8Ú§‘¿¢/
+PWeb:BoldAndItalicTagsCheckë"Replace this <i> tag by <em>.(„ñƒĞøÿÿÿÿ8Ú§‘¿¢/
+KWeb:BoldAndItalicTagsCheckì"Replace this <i> tag by <em>.(¦Ç¾§8Ú§‘¿¢/
+KWeb:BoldAndItalicTagsCheckí"Replace this <i> tag by <em>.(¦Ç¾§8Û§‘¿¢/
+KWeb:BoldAndItalicTagsCheckî"Replace this <i> tag by <em>.(¦Ç¾§8Û§‘¿¢/
+KWeb:BoldAndItalicTagsCheckï"Replace this <i> tag by <em>.(¦Ç¾§8Û§‘¿¢/
+VWeb:AvoidCommentedOutCodeCheck"Remove this commented out code.(ëèÒèûÿÿÿÿ8Û§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckŸ"$Add a <legend> tag to this fieldset.(¨Ïçñ8Û§‘¿¢/
+VWeb:FieldsetWithoutLegendCheck±"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ü§‘¿¢/
+KWeb:BoldAndItalicTagsCheck¼"Replace this <i> tag by <em>.(¼Çıì8İ§‘¿¢/
+KWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(ëå¯8İ§‘¿¢/
+KWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(ëå¯8İ§‘¿¢/
+KWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(ëå¯8İ§‘¿¢/
+KWeb:BoldAndItalicTagsCheck¾"Replace this <i> tag by <em>.(¦Ç¾§8İ§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckê"$Add a <legend> tag to this fieldset.(¨Ïçñ8İ§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckğ"$Add a <legend> tag to this fieldset.(¨Ïçñ8İ§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckş"$Add a <legend> tag to this fieldset.(¨Ïçñ8İ§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckµ"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheck»"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckÉ"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheck"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheck‡"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheck•"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckÌ"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckÒ"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckà"$Add a <legend> tag to this fieldset.(¨Ïçñ8Ş§‘¿¢/
+PWeb:BoldAndItalicTagsCheck»"Replace this <i> tag by <em>.(„ñƒĞøÿÿÿÿ8Ş§‘¿¢/
+KWeb:BoldAndItalicTagsCheck¼"Replace this <i> tag by <em>.(¦Ç¾§8ß§‘¿¢/
+KWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(¦Ç¾§8ß§‘¿¢/
+KWeb:BoldAndItalicTagsCheck¾"Replace this <i> tag by <em>.(¦Ç¾§8â§‘¿¢/
+KWeb:BoldAndItalicTagsCheck¿"Replace this <i> tag by <em>.(¦Ç¾§8â§‘¿¢/
+VWeb:AvoidCommentedOutCodeCheckİ"Remove this commented out code.(ëèÒèûÿÿÿÿ8â§‘¿¢/
+VWeb:FieldsetWithoutLegendCheckï"$Add a <legend> tag to this fieldset.(¨Ïçñ8â§‘¿¢/
+VWeb:FieldsetWithoutLegendCheck"$Add a <legend> tag to this fieldset.(¨Ïçñ8ã§‘¿¢/
+UWeb:TableWithoutCaptionCheck£" Add a description to this table.(¼ëùÏşÿÿÿÿ8ã§‘¿¢/
+G	Web:S5256£"%Add "<th>" headers to this "<table>".(¼ëùÏşÿÿÿÿ8ã§‘¿¢/
+UWeb:TableWithoutCaptionCheckº" Add a description to this table.(¼ëùÏşÿÿÿÿ8ã§‘¿¢/
+G	Web:S5256º"%Add "<th>" headers to this "<table>".(¼ëùÏşÿÿÿÿ8ã§‘¿¢/
+KWeb:BoldAndItalicTagsCheck’"Replace this <i> tag by <em>.(½ÒŠ8ä§‘¿¢/
+PWeb:BoldAndItalicTagsCheck“"Replace this <i> tag by <em>.(ßé†åüÿÿÿÿ8ä§‘¿¢/
+PWeb:BoldAndItalicTagsCheck“"Replace this <i> tag by <em>.(ßé†åüÿÿÿÿ8ä§‘¿¢/
+JWeb:BoldAndItalicTagsCheck”"Replace this <i> tag by <em>.(¼¦Ñ\8ä§‘¿¢/
+JWeb:BoldAndItalicTagsCheck”"Replace this <i> tag by <em>.(¼¦Ñ\8ä§‘¿¢/

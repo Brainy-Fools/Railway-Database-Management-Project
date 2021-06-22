@@ -1,64 +1,0 @@
-
-CWeb:BoldAndItalicTagsCheck."Replace this <i> tag by <em>.(ÙŞ¦ÿ
-BWeb:BoldAndItalicTagsCheck3"Replace this <i> tag by <em>.(í±í
-HWeb:BoldAndItalicTagsCheckP"Replace this <i> tag by <em>.(µØˆ–üÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck`"Replace this <i> tag by <em>.(äàë±
-CWeb:BoldAndItalicTagsCheckb"Replace this <i> tag by <em>.(¸™Ş‘
-HWeb:BoldAndItalicTagsCheckk"Replace this <i> tag by <em>.(ĞŠ¡‰şÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck~"Replace this <i> tag by <em>.(äàë±
-DWeb:BoldAndItalicTagsCheck€"Replace this <i> tag by <em>.(¸™Ş‘
-IWeb:BoldAndItalicTagsCheckì"Replace this <i> tag by <em>.(„ñƒĞøÿÿÿÿ
-DWeb:BoldAndItalicTagsCheckí"Replace this <i> tag by <em>.(¦Ç¾§
-DWeb:BoldAndItalicTagsCheckî"Replace this <i> tag by <em>.(¦Ç¾§
-DWeb:BoldAndItalicTagsCheckï"Replace this <i> tag by <em>.(¦Ç¾§
-DWeb:BoldAndItalicTagsCheckğ"Replace this <i> tag by <em>.(¦Ç¾§
-OWeb:AvoidCommentedOutCodeCheck"Remove this commented out code.(ëèÒèûÿÿÿÿ
-OWeb:FieldsetWithoutLegendCheck "$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheck²"$Add a <legend> tag to this fieldset.(¨Ïçñ
-DWeb:BoldAndItalicTagsCheck»"Replace this <i> tag by <em>.(¼Çıì
-DWeb:BoldAndItalicTagsCheck¼"Replace this <i> tag by <em>.(ëå¯
-DWeb:BoldAndItalicTagsCheck¼"Replace this <i> tag by <em>.(ëå¯
-DWeb:BoldAndItalicTagsCheck¼"Replace this <i> tag by <em>.(ëå¯
-DWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(¦Ç¾§
-OWeb:FieldsetWithoutLegendChecké"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckï"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckı"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheck´"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckº"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckÈ"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckÿ"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheck…"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheck“"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckÊ"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckĞ"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckŞ"$Add a <legend> tag to this fieldset.(¨Ïçñ
-IWeb:BoldAndItalicTagsCheck¹"Replace this <i> tag by <em>.(„ñƒĞøÿÿÿÿ
-DWeb:BoldAndItalicTagsCheckº"Replace this <i> tag by <em>.(¦Ç¾§
-DWeb:BoldAndItalicTagsCheck»"Replace this <i> tag by <em>.(¦Ç¾§
-DWeb:BoldAndItalicTagsCheck¼"Replace this <i> tag by <em>.(¦Ç¾§
-DWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(¦Ç¾§
-OWeb:AvoidCommentedOutCodeCheckÛ"Remove this commented out code.(ëèÒèûÿÿÿÿ
-OWeb:FieldsetWithoutLegendCheckí"$Add a <legend> tag to this fieldset.(¨Ïçñ
-OWeb:FieldsetWithoutLegendCheckÿ"$Add a <legend> tag to this fieldset.(¨Ïçñ
-NWeb:TableWithoutCaptionCheck¡" Add a description to this table.(¼ëùÏşÿÿÿÿ
-@	Web:S5256¡"%Add "<th>" headers to this "<table>".(¼ëùÏşÿÿÿÿ
-NWeb:TableWithoutCaptionCheck¸" Add a description to this table.(¼ëùÏşÿÿÿÿ
-@	Web:S5256¸"%Add "<th>" headers to this "<table>".(¼ëùÏşÿÿÿÿ
-DWeb:BoldAndItalicTagsCheck˜"Replace this <i> tag by <em>.(äçû¦
-IWeb:BoldAndItalicTagsCheck±"Replace this <i> tag by <em>.(¿—áöşÿÿÿÿ
-IWeb:BoldAndItalicTagsCheckµ"Replace this <i> tag by <em>.(¿—áöşÿÿÿÿ
-IWeb:BoldAndItalicTagsCheckñ"Replace this <i> tag by <em>.(¿—áöşÿÿÿÿ
-IWeb:BoldAndItalicTagsCheckõ"Replace this <i> tag by <em>.(¿—áöşÿÿÿÿ
-IWeb:BoldAndItalicTagsCheckš"Replace this <i> tag by <em>.(¿—áöşÿÿÿÿ
-IWeb:BoldAndItalicTagsCheck"Replace this <i> tag by <em>.(¿—áöşÿÿÿÿ
-DWeb:BoldAndItalicTagsCheck½"Replace this <i> tag by <em>.(½ÒŠ
-IWeb:BoldAndItalicTagsCheck¾"Replace this <i> tag by <em>.(ßé†åüÿÿÿÿ
-IWeb:BoldAndItalicTagsCheck¾"Replace this <i> tag by <em>.(ßé†åüÿÿÿÿ
-CWeb:BoldAndItalicTagsCheck¿"Replace this <i> tag by <em>.(¼¦Ñ\
-CWeb:BoldAndItalicTagsCheck¿"Replace this <i> tag by <em>.(¼¦Ñ\
-_	Web:S5255"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(üŠÄ­øÿÿÿÿ
-_	Web:S5255™"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(ŸÈøÂÿÿÿÿÿ
-Z	Web:S5255 "DAdd an "aria-label" or "aria-labbelledby" attribute to this element.( ó¾°
-_	Web:S5255¯"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(×äñ–ûÿÿÿÿ
-Y	Web:S5255¼"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(ÍıŒ
-Z	Web:S5255²"DAdd an "aria-label" or "aria-labbelledby" attribute to this element.(æÌäæ
