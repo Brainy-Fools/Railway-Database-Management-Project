@@ -4,6 +4,9 @@ from django.shortcuts import render, redirect
 # Create your views here.
 # from train.forms import SignUpForm
 
+# from django.utils.crypto import get_random_string
+#     ticket_no = get_random_string(length=8,allowed_chars=string.ascii_uppercase + string.digits + string.ascii_lowercase)
+#     setattr(ticket,ticket_id,ticket_no)
 
 def booking(request):
     return render(request, 'Flights-Booking.html')

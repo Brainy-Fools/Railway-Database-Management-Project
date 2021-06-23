@@ -33,3 +33,13 @@ F
 templates/Home_04.html,4\e\4ea5241bf23c7fa6861e3bfb4ec214cda1ab0b02
 F
 templates/Home_05.html,0\8\08179db1166a47efc42e81dd5d53b30731f0c96b
+P
+ train/migrations/0001_initial.py,f\a\fa11ba81667e5c3a0af5dbf90c9d4408e814db13
+[
++train/migrations/0002_auto_20210622_1736.py,c\1\c18c711c3220f306348aca23273d56f1a7d74e2e
+h
+8train/migrations/0003_alter_train_info_train_weekened.py,0\8\085729afdab6813ea684190e7b4897c79fad8fdd
+]
+-train/migrations/0004_alter_passenger_p_id.py,a\d\ad388fc7bfe1b524bb8ea548c8cb7ba5e0ab1bb1
+?
+Railway/wsgi.py,8\7\8783b3c8c2935b129060e29426d1dd30650d6e9d
