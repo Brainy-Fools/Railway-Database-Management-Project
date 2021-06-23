@@ -1,268 +1,130 @@
-<!DOCTYPE html>
 {% load static %}
-<!-- 
-Template Name: Travelite - Tours and Travels Online Booking HTML
-Version: 1.0.0
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
+<!DOCTYPE html>
 <html>
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-<meta charset="utf-8" />
-<title>Railway | Booking</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<meta name="description"  content="Travelite - Tours and Travels Online Booking HTML"/>
-<meta name="keywords" content="Travel, html template, Travelite template">
-<meta name="author"  content="Kamleshyadav"/>
-<meta name="MobileOptimized" content="320">
-<!--srart theme style -->
 
-
-<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
-<!-- end theme style -->
-
-<!-- favicon links -->
-<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-<link rel="icon" type="image/ico" href="favicon.ico" />
-</head>
+{% include 'Head.html' %}
 
 <body>
 <!--Page main section start-->
-<div id="travel_wrapper"> 
-  <!--Header start-->
-  <!--Header start-->
-  <header id="header_wrapper">
-	<div class="header_top">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6">
-					<p><i class="fa fa-phone"></i> For Support? Call Us: <span>+01 758-673-214</span></p>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<div class="top_menu">
-						<ul>
-							<li><a href=""><i class="fa fa-globe"></i> Languages</a>
-								<ul class="sub-menu">
-									<li><a href="">English</a></li>
-									<li><a href="">Bangla</a></li>
-								</ul>
-							</li>
-							<li><a href="">My Account</a></li>
-							<li class="Travelite_login_alert"><a href="#">Login</a></li>
-							<li class="Travelite_signup_alert"><a href="#">Signup</a></li>
-							<li><a href="">Taka</a>
-								<ul class="sub-menu">
-									<li><a href="">TAKA</a></li>
-									<li><a href="">USD</a></li>
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- popup form Start -->
-	<div class="full_width login_wrapper">
-		<div class="row">
-			<div class="container">
-				<div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-6 col-md-offset-6 col-sm-offset-6">
-					<!-- login form start -->
-					<div class="popup_alert_main Travelite_login_form">
-						<div class="login_heading"> login <span class="close_btn"><i class="fa fa-times"></i></span>
-						</div>
-						<div class="popup_inner">
-							<form>
-								<input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-								<input type="password" name="passlogin" placeholder="Password" class="input_login">
-								<input type="checkbox" id="login_check" name="checkbox" class="checkbox_login">
-								<label for="login_check" class="remember_me">Remember me</label>
-								<a href="#" class="forgot_link">Forget password?</a>
-							</form>
-							<div class="have_an_acnt">
-								<p>Dont have an account? <a href="#">Sign up</a></p>
-							</div>
-							<div class="or_line"><span>(OR)</span></div>
-							<div class="social_links_login">
-								<ul>
-									<li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-										facebook</a></li>
-									<li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-										Google+</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- login form  End -->
-					<!-- signup form start -->
-					<div class="popup_alert_main Travelite_signup_form">
-						<div class="login_heading"> signup <span class="close_btn"><i
-								class="fa fa-times"></i></span></div>
-						<div class="popup_inner">
-							<form class="signup_form" method="post">
-								{% csrf_token %}
-								<input type="text" name="emaillogin" placeholder="First Name" class="input_login">
-								<input type="text" name="emaillogin" placeholder="Last Name" class="input_login">
-								<input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-								<input type="password" name="passlogin" placeholder="Password" class="input_login">
-								<input type="password" name="conf passlogin" placeholder="Confirm Password"
-									   class="input_login">
-								<input type="checkbox" id="signup_check" name="checkbox" class="checkbox_login">
-								<label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
-									Policy</label>
-								<input type="submit" value="SIGN UP" class="sub_signup">
-							</form>
-							<div class="or_line"><span>(OR)</span></div>
-							<div class="social_links_login">
-								<ul>
-									<li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-										facebook</a></li>
-									<li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-										Google+</a></li>
-								</ul>
-							</div>
-							<div class="already_member"> already member? <a href="#">login here</a></div>
-						</div>
-					</div>
-					<!-- signup form  End -->
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- popup form  End -->
-	<div class="header_bottom">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2 col-sm-2">
-					<div class="travel_logo"><a href="Home_01.html"><img src="D:\New folder\Railway-Database-Management-Project-main\Railway\static\svg/Logo.svg" alt="logo"/></a></div>
-				</div>
-				<div class="col-md-10 col-sm-10"><a href="javascript:;" class="menu-toggle"></a>
-					<div class="main_menu">
-						<ul>
-							<li class="active"><a href="">Home</a>
-								
-							</li>
-							<li><a href="Tour_Home.html">Bangladesh</a>
-							   
-							</li>
-							<li><a href="Hotel-Home.html">Schedule</a>
-								
-							</li>
-							<li><a href="Flight-Home.html">Rail E-Booking</a>
-								
-							</li>
-							
-							<li><a href="">special offers</a></li>
-							<li><a href="Contact.html">contact</a></li>
-							<li><a href="#">pages</a>
-								<ul class="sub-menu">
-									<li><a href="About.html">About</a></li>
-									<li><a href="Services.html">services</a></li>
-									<li><a href="Blog.html">blog</a></li>
-									
-								</ul>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</header>
-<!--Header end-->
-  
-  <!--content body start-->
-  <div id="content_wrapper"> 
-    <!--page title start-->
-    <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0" style="background-image:url(http://placehold.it/1599x640);">
-      <ul>
-        <li><a href="javascript:;">About us</a></li>
-      </ul>
+<div id="travel_wrapper">
+    <!--Header start-->
+    {% include 'Header.html' %}
+    <!--Header end-->
+
+    <!--content body start-->
+    <div id="content_wrapper">
+        <!--page title start-->
+        <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0"
+             style="background-image:url(http://placehold.it/1599x640);">
+            <ul>
+                <li><a href="javascript:;">About us</a></li>
+            </ul>
+        </div>
+        <!--page title end-->
+        <div class="clearfix"></div>
+
+        <!-- traveller story section start -->
+        <section class="full_width ds_traveller_story">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
+                        <div class="left_side_slider">
+
+                            <ul class="about_slider">
+
+                                <li><img src="http://placehold.it/460x595" alt=""></li>
+                                <li><img src="http://placehold.it/460x595" alt=""></li>
+                                <li><img src="http://placehold.it/460x595" alt=""></li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12 Travelite_about_right_side">
+                        <div class="right_side_details">
+                            <h3>Short Story about <b class="traveller_text_b">Bangladesh Railway</b></h3>
+                            <p>
+                                বাংলাদেশ রেলওয়ের সংক্ষিপ্ত ইতিহাস
+
+
+                                বাংলাদেশ রেলপথ সরকারি মালিকানা ও সরকার কর্তৃক পরিচালিত দেশের একটি মুখ্য পরিবহন সংস্থা।
+                                মোট ২৫০৮৩ জন নিয়মিত কর্মচারীসহ বাংলাদেশ রেলওয়ের মোট ২৯৫৫.৫৩ কি:মি: রুট রয়েছে। যেহেতু
+                                দেশের এক প্রান্তকে অন্য প্রান্তের সাথে সংযোজন করার জন্য রেলপথ একটি গুরুত্বপূর্ণ স্থল
+                                পরিবহন ব্যবস্থা, তাই রেলপথের সার্বিক উন্নতি দেশের অর্থনৈতিক উন্নতিতে গুরুত্বপূর্ণ ভূমিকা
+                                পালন করে।
+
+                                জুন ২, ১৯৮২ পর্যন্ত একজন চেয়ারম্যান ও চারজন মেম্বারসহ রেলওয়ে বোর্ডের নিকট রেলপথের
+                                ব্যবস্থাপনা ও উন্নয়ন ন্যস্ত ছিল। তারপর প্রশাসনিক ও কার্যপরিচালনার সুবিধার্থে রেলওয়ে
+                                বোর্ডের বিলুপ্তি ৩ জুন ১৯৮২ সালে কার্যকর হয় এবং রেলওয়ে বোর্ডের কার্যক্রম যোগাযোগ
+                                মন্ত্রণালয়ের রেলওয়ে ডিভিশনের নিকট ন্যস্ত হয় এবং উক্ত বিভাগের সচিব বাংলাদেশ রেলওয়ের
+                                মহাপরিচালকের দায়িত্ব পালন করে। একই উদ্দেশ্যে দুই মহাব্যবস্থাপকের প্রশাসনিক নিয়ন্ত্রণে
+                                বাংলাদেশ রেলওয়েকে পূর্ব ও পশ্চিম দুই অঞ্চলে ভাগ করা হয়। দুই অঞ্চলের দুইজন মহাব্যবস্থাপক
+                                বাংলাদেশ রেলওয়ের মহাপরিচালকের নিকট দায়বদ্ধ হয়। পরবর্তীতে ১২ আগস্ট ১৯৯৫ সালে রেলপথের
+                                দৈনন্দিন কার্যক্রম মন্ত্রণালয় থেকে আলাদা হয়ে রেলওয়ে প্রফেশনালদের নিয়ে মহাপরিচালকের হাতে
+                                ন্যস্ত হয়। নীতি নির্ধারণের জন্য যোগাযোগ মন্ত্রণালয়ের মন্ত্রীকে চেয়ারম্যান করে ৯ সদস্য
+                                বিশিষ্ট Bangladesh Railway Authority (BRA) গঠিত হয়। অতিরিক্ত মহাপরিচালক ও যুগ্ম
+                                মহাপরিচালকগণ সমস্ত প্রশাসনিক ও নীতি নির্ধারণের কাজ সম্পন্ন করেন।
+
+                                দুই জোনের মহাব্যবস্থাপকগণকে সহায়তা করেন বিভিন্ন বিশেষায়িত দপ্তর, যারা কার্য পরিচালনা,
+                                রক্ষণাবেক্ষণ ও আর্থিক ব্যবস্থাপনার জন্য দায়িত্বশীল থাকেন। প্রত্যেক জোন আবার দুইটি প্রধান
+                                কার্য পরিচালনা বিভাগে বিভক্ত। এই বিভাগগুলো বিভাগীয় রেলওয়ে ব্যবস্থাপক (DRM) এর অধীনে
+                                পরিচালিত হয় এবং সংস্থাপন, পরিবহন, বাণিজ্যিক, আর্খিক, যান্ত্রিক, ওয়ে এন্ড ওয়ার্কস, সংকেত
+                                ও টেলিযোগাযোগ, বৈদ্যুতিক, চিকিৎসা, নিরাপত্তা বাহিনীর মত বিভিন্ন বিশেষায়িত দপ্তরের
+                                বিভাগীয় কর্মকর্তারা তাকে সহায়তা করে থাকেন। এছাড়াও দুইজন বিভাগীয় তত্ত্বাবধায়ক (Divisional
+                                Superintendent) এর অধীনে পূর্বাঞ্চলের পাহাড়তলী ও পশ্চিমাঞ্চলের সৈয়দপুর কারখানা
+                                (Workshop) আছে। অধিকন্তু ব্রড গেজ ও মিটার গেজ লোকোমোটিভের জেনারেল ওভারহলিং এর জন্য
+                                পার্বতীপুর চীফ এক্সিকিউটিভের নিয়ন্ত্রণে একটি লোকোমোটিভ কারখানা আছে।
+
+                                বাংলাদেশ রেলওয়েতে রেক্টরের অধীনে ‘রেলওয়ে ট্রেনিং একাডেমী (RTA)’, প্রধান পরিকল্পনা
+                                কর্মকর্তার অধীনে ‘পরিকল্পনা কোষ’ (Planning Cell), প্রধান সরঞ্জাম নিয়ন্ত্রকের অধীনে
+                                ‘সরঞ্জাম শাখা’ (Stores Department), দুই জোনের হিসাব ও অর্থনৈতিক ব্যবস্থাপনা কার্যক্রমের
+                                সমন্বয় ও পরামর্শের জন্য অতিরিক্ত মহাপরিচালক (অর্থ) এর অধীনে ‘হিসাব বিভাগ’(Accounts
+                                Department) আছে।
+
+                                ট্রেন পরিচালনার সাথে সম্পর্কিত বাংলাদেশ রেলপথের বিভিন্ন কার্যক্রম পরিদর্শন এবং রেলপথে
+                                পরিবহনের নিরাপত্তা নিশ্চিত করার জন্য বাংলাদেশ সরকার প্রথমে যোগাযোগ মন্ত্রণালয়ের অধীনে
+                                পৃথক রেলপথ বিভাগ ও পরে রেলপথ মন্ত্রণালয় গঠন করে।
+                            </p>
+                        </div>
+                        <div class="full_width check_lists">
+                            <ul>
+                                <li><label>integrity</label>
+                                    <p>-Doing the right thing</p></li>
+                                <li><label>Responsible</label>
+                                    <p>-think globel,act local</p></li>
+                                <li><label>Growth</label>
+                                    <p>-Stakeholders in our own success</p></li>
+                                <li><label>Innovation</label>
+                                    <p>-Thriving on new ideas and embracing change</p></li>
+                                <li><label>Fun</label>
+                                    <p>-It’s engrained into who we are and what we do</p></li>
+                                <li><label>Passion</label>
+                                    <p>-We are inspired by the work we do and the trips we offer</p></li>
+                            </ul>
+
+                        </div>
+                        <div class="pull_left btn_left">
+                            <a href="#" class="btn_green gallery_btn">view our gallery</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- traveller story section End -->
+
+
+        <!--footer start-->
+        {% include 'footer.html' %}
+        <!--footer end-->
+
     </div>
-    <!--page title end-->
-    <div class="clearfix"></div>
-    
-	<!-- traveller story section start -->
-      <section class="full_width ds_traveller_story">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-5 col-md-5 col-sm-8 col-xs-8">
-					<div class="left_side_slider">
-						
-						<ul class="about_slider">
-							
-							<li><img src="http://placehold.it/460x595" alt=""></li>
-							<li><img src="http://placehold.it/460x595" alt=""></li>
-							<li><img src="http://placehold.it/460x595" alt=""></li>
-						
-						</ul>
-						
-					</div>
-				</div>
-				<div class="col-lg-7 col-md-7 col-sm-12 Travelite_about_right_side">
-				<div class="right_side_details">
-					<h3>Short Story about <b class="traveller_text_b">Bangladesh Railway</b></h3>
-					<p>
-						বাংলাদেশ রেলওয়ের সংক্ষিপ্ত ইতিহাস
- 
-
-						বাংলাদেশ রেলপথ সরকারি মালিকানা ও সরকার কর্তৃক পরিচালিত দেশের একটি মুখ্য পরিবহন সংস্থা। মোট ২৫০৮৩ জন নিয়মিত কর্মচারীসহ বাংলাদেশ রেলওয়ের মোট ২৯৫৫.৫৩ কি:মি: রুট রয়েছে। যেহেতু দেশের এক প্রান্তকে অন্য প্রান্তের সাথে সংযোজন করার জন্য রেলপথ একটি গুরুত্বপূর্ণ স্থল পরিবহন ব্যবস্থা, তাই রেলপথের সার্বিক উন্নতি দেশের অর্থনৈতিক উন্নতিতে গুরুত্বপূর্ণ ভূমিকা পালন করে।
-
-						জুন ২, ১৯৮২ পর্যন্ত একজন চেয়ারম্যান ও চারজন মেম্বারসহ রেলওয়ে বোর্ডের নিকট রেলপথের ব্যবস্থাপনা ও উন্নয়ন ন্যস্ত ছিল। তারপর প্রশাসনিক ও কার্যপরিচালনার সুবিধার্থে রেলওয়ে বোর্ডের বিলুপ্তি ৩ জুন ১৯৮২ সালে কার্যকর হয় এবং রেলওয়ে বোর্ডের কার্যক্রম যোগাযোগ মন্ত্রণালয়ের রেলওয়ে ডিভিশনের নিকট ন্যস্ত হয় এবং উক্ত বিভাগের সচিব বাংলাদেশ রেলওয়ের মহাপরিচালকের দায়িত্ব পালন করে। একই উদ্দেশ্যে দুই মহাব্যবস্থাপকের প্রশাসনিক নিয়ন্ত্রণে বাংলাদেশ রেলওয়েকে পূর্ব ও পশ্চিম দুই অঞ্চলে ভাগ করা হয়। দুই অঞ্চলের দুইজন মহাব্যবস্থাপক বাংলাদেশ রেলওয়ের মহাপরিচালকের নিকট দায়বদ্ধ হয়। পরবর্তীতে ১২ আগস্ট ১৯৯৫ সালে রেলপথের দৈনন্দিন কার্যক্রম মন্ত্রণালয় থেকে আলাদা হয়ে রেলওয়ে প্রফেশনালদের নিয়ে মহাপরিচালকের হাতে ন্যস্ত হয়। নীতি নির্ধারণের জন্য যোগাযোগ মন্ত্রণালয়ের মন্ত্রীকে চেয়ারম্যান করে ৯ সদস্য বিশিষ্ট Bangladesh Railway Authority (BRA) গঠিত হয়। অতিরিক্ত মহাপরিচালক ও যুগ্ম মহাপরিচালকগণ সমস্ত প্রশাসনিক ও নীতি নির্ধারণের কাজ সম্পন্ন করেন।
-
-						দুই জোনের মহাব্যবস্থাপকগণকে সহায়তা করেন বিভিন্ন বিশেষায়িত দপ্তর, যারা কার্য পরিচালনা, রক্ষণাবেক্ষণ ও আর্থিক ব্যবস্থাপনার জন্য দায়িত্বশীল থাকেন। প্রত্যেক জোন আবার দুইটি প্রধান কার্য পরিচালনা বিভাগে বিভক্ত। এই বিভাগগুলো বিভাগীয় রেলওয়ে ব্যবস্থাপক (DRM) এর অধীনে পরিচালিত হয় এবং সংস্থাপন, পরিবহন, বাণিজ্যিক, আর্খিক, যান্ত্রিক, ওয়ে এন্ড ওয়ার্কস, সংকেত ও টেলিযোগাযোগ, বৈদ্যুতিক, চিকিৎসা, নিরাপত্তা বাহিনীর মত বিভিন্ন বিশেষায়িত দপ্তরের বিভাগীয় কর্মকর্তারা তাকে সহায়তা করে থাকেন। এছাড়াও দুইজন বিভাগীয় তত্ত্বাবধায়ক (Divisional Superintendent) এর অধীনে পূর্বাঞ্চলের পাহাড়তলী ও পশ্চিমাঞ্চলের সৈয়দপুর কারখানা (Workshop) আছে। অধিকন্তু ব্রড গেজ ও মিটার গেজ লোকোমোটিভের জেনারেল ওভারহলিং এর জন্য পার্বতীপুর চীফ এক্সিকিউটিভের নিয়ন্ত্রণে একটি লোকোমোটিভ কারখানা আছে।
-
-						বাংলাদেশ রেলওয়েতে রেক্টরের অধীনে ‘রেলওয়ে ট্রেনিং একাডেমী (RTA)’, প্রধান পরিকল্পনা কর্মকর্তার অধীনে ‘পরিকল্পনা কোষ’ (Planning Cell), প্রধান সরঞ্জাম নিয়ন্ত্রকের অধীনে ‘সরঞ্জাম শাখা’ (Stores Department), দুই জোনের হিসাব ও অর্থনৈতিক ব্যবস্থাপনা কার্যক্রমের সমন্বয় ও পরামর্শের জন্য অতিরিক্ত মহাপরিচালক (অর্থ) এর অধীনে ‘হিসাব বিভাগ’(Accounts Department) আছে।
-
-						ট্রেন পরিচালনার সাথে সম্পর্কিত বাংলাদেশ রেলপথের বিভিন্ন কার্যক্রম পরিদর্শন এবং রেলপথে পরিবহনের নিরাপত্তা নিশ্চিত করার জন্য বাংলাদেশ সরকার প্রথমে যোগাযোগ মন্ত্রণালয়ের অধীনে পৃথক রেলপথ বিভাগ ও পরে রেলপথ মন্ত্রণালয় গঠন করে।
-					</p>
-					</div>
-					<div class="full_width check_lists">
-						<ul>
-							<li><label>integrity</label> <p>-Doing the right thing</p></li>
-							<li><label>Responsible</label> <p>-think globel,act local</p></li>
-							<li><label>Growth</label> <p>-Stakeholders in our own success</p></li>
-							<li><label>Innovation</label> <p>-Thriving on new ideas and embracing change</p></li>
-							<li><label>Fun</label> <p>-It’s engrained into who we are and what we do</p></li>
-							<li><label>Passion</label> <p>-We are inspired by the work we do and the trips we offer</p></li>
-						</ul>
-						
-					</div>
-					<div class="pull_left btn_left">
-						<a href="#" class="btn_green gallery_btn">view our gallery</a>
-					</div>
-				
-				</div>
-			</div>
-			
-		</div>
-		
-	  </section>
-      <!-- traveller story section End -->
-	   
-  
-  <!--footer start-->
-  {% include 'footer.html' %}
-  <!--footer end-->
-  <div class="copyright">
-	  <div class="container">
-		  <div class="row">
-			  <div class="col-md-6 col-sm-6"><span>Stay Connected with Us - </span> <a href=""><i
-					  class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i
-					  class="fa fa-google-plus"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i
-					  class="fa fa-rss"></i></a></div>
-			  <div class="col-md-6 col-sm-6 text-right"><span>Travellers@2016. All Right Reserved</span></div>
-		  </div>
-	  </div>
-  </div>
-</div>
-<!--Page main section end-->
-<!--main js file start-->
-{% include 'scripts.html' %}
-<!--main js file end-->
+    <!--Page main section end-->
+    <!--main js file start-->
+    {% include 'scripts.html' %}
+    <!--main js file end-->
 </div>
 </body>
 </html>

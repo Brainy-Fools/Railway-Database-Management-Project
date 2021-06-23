@@ -1,0 +1,38 @@
+{% load static %}
+<head>
+    <!--Device size responsiveness-->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="MobileOptimized" content="320">
+    <!--SEO stuff-->
+    <meta name="description" content="Railway Management System">
+    <meta name="keywords"
+          content="Railway,e-ticketing,I Love Taylor Swift's Song,management,system,Train,project,dbms,oracle ">
+    <meta name="author" content="Abdullah Al Masum">
+    <!--for icon-->
+    {% block head_favicon %}
+        <link rel="shortcut icon" type="image/ico" href="{% static 'images/favicon.png' %}"/>
+        <link rel="icon" type="image/ico" href="{% static 'images/favicon.png' %}"/>
+    {% endblock head_favicon %}
+
+    {% block head_css %}
+        {% block head_css_site %}
+            <!--    &lt;!&ndash; Bootstrap CSS only &ndash;&gt;-->
+            <!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"-->
+            <!--          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">-->
+            <!--    &lt;!&ndash; Boxicons CDN Link for sideBar &ndash;&gt;-->
+            <!--    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>-->
+            <!--    &lt;!&ndash; Bootstrap old version CSS only &ndash;&gt;-->
+            <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+            <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+        {% endblock head_css_site %}
+        {% block head_css_section %}{% endblock head_css_section %}
+        {% block head_css_page %}
+            <!--for custom-css-page-->
+            <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
+        {% endblock head_css_page %}
+    {% endblock head_css %}
+    <!--for title-->
+    <title>{% block title %}Project Railway Management{% endblock title %}</title>
+</head>

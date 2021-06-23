@@ -1,105 +1,50 @@
+{% load static %}
+<!-- footer start -->
 <footer id="footer_wrapper">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <aside class="widget widget_text">
-                    <a href="Home_01.html">
-                        <img src="svg/Logo.svg" alt="footer logo">
-                    </a>
-                    <p>In 2015, We launched Travellers with the belief that other travellers would share our
-                        desire to experience authentic adventures in a responsible and sustainable manner. <br>
-                        <br> We've grown from a one-man show to a company of over 50 world wide, and from a
-                        handful of trips in all over the world. </p>
-                    <a href="">Read More <i class="fa fa-angle-right"></i></a>
-                </aside>
-                <aside class="widget widget_tag_cloud">
-                    <h4 class="widget-title">Tags</h4>
-                    <div class="tagcloud"><a href="">Travel</a> <a href="">Booking</a> <a href="">Hotels</a> <a
-                            href="">Cars</a> <a href="">Flights</a> <a href="">Tours</a></div>
+                    <a href="https://github.com/Brainy-Fools/" target="_blank"><img
+                            src="{% static 'images/logo_transparent2.png' %}" alt="footer logo"></a>
+                    {#                    <p>In 2015, We launched Travellers with the belief that other travellers would share our#}
+                    {#                        desire to experience authentic adventures in a responsible and sustainable manner. <br>#}
+                    {#                        <br> We've grown from a one-man show to a company of over 50 world wide, and from a#}
+                    {#                        handful of trips in all over the world. </p>#}
+                    {#                    <a href="">Read More <i class="fa fa-angle-right"></i></a>#}
                 </aside>
             </div>
             <div class="col-md-4">
-                <aside class="widget widget_recent_entries">
-                    <h4 class="widget-title">Recent Posts</h4>
-                    <ul>
-                        <li>
-                            <img src="http://placehold.it/91x81" alt="Recent blog"/>
-                            <div>
-                                <p>Nunc cursus libero purus ac congue arcu cursus..</p>
-                                <a href="">Read More</a>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="http://placehold.it/91x81" alt="Recent blog"/>
-                            <div>
-                                <p>Nunc cursus libero purus ac congue arcu cursus..</p>
-                                <a href="">Read More</a>
-                            </div>
-                        </li>
-                    </ul>
-                </aside>
                 <aside class="widget widget_links">
                     <h4 class="widget-title">Useful Links</h4>
                     <ul>
-                        <li><a href="">Travellers</a></li>
-                        <li><a href="">Support Center</a></li>
-                        <li><a href="">My Account</a></li>
-                        <li><a href="">Forum</a></li>
-                        <li><a href="">Special Offers</a></li>
-                        <li><a href="">Events Ready</a></li>
+                        <li><a href="{% url 'booking' %}">Home</a></li>
+                        <li><a href="{% url 'booking' %}">Ticket Booking</a></li>
+                        <li><a href="{% url 'booking-details' %}">Booking Details</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Special Offers</a></li>
+                        <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
+                        <li><a href="">Something Awesome</a></li>
                     </ul>
+                </aside>
+                <aside class="widget widget_tag_cloud">
+                    <h4 class="widget-title">Tags</h4>
+                    <div class="tagcloud">
+                        <a target="_blank" href="">Travel</a>
+                        <a target="_blank" href="">Booking</a>
+                        <a target="_blank" href="">Ticket</a>
+                        <a target="_blank" href="">Railway</a>
+                        <a target="_blank" href="">Trains</a>
+                        <a target="_blank" href="">Chill Life</a>
+                    </div>
                 </aside>
             </div>
             <div class="col-md-4">
                 <aside class="widget widget_search_availability">
-                    <div class="wsa_tab">
-                        <ul>
-                            <li>
-                                <a href="#widget_flight_search">
-                                    <svg version="1.1" id="widget_flight_search_icon"
-                                         xmlns="http://www.w3.org/2000/svg"
-                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                         viewBox="0 0 375.04 375.04"
-                                         style="enable-background:new 0 0 375.04 375.04;" xml:space="preserve">
-                              <g>
-                                <g id="Layer_5_77_">
-                                  <path d="M365.938,8.173c-18.008-16.392-48.41-3.005-62.883,11.475c0,0-33.939,32.109-48.018,44.313
-                                    c-3.334,2.89-6.641,1.855-6.641,1.855L95.341,38.898c-6.58-0.938-15.801,2.136-20.494,6.836L61.185,59.392
-                                    c-4.703,4.695-3.691,10.982,2.244,13.967l112.941,58.683c0,0,8.709,4.326,3.459,9.326c-18.617,17.73-50.209,49.563-67.314,66.77
-                                    c-5.607,5.641-13.006,4.793-13.006,4.793l-52.154-6.371c-6.633-0.475-15.893,2.979-20.596,7.675L3.107,237.893
-                                    c-4.697,4.697-3.99,11.502,1.584,15.125l86.676,20.646c5.574,3.621,7.094,5.137,10.713,10.703l19.295,85.343
-                                    c3.623,5.569,10.43,6.277,15.127,1.583l23.658-23.663c4.693-4.694,8.156-13.957,7.689-20.579l-6.186-50.286
-                                    c0,0-0.918-6.397,2.596-9.958c17.371-17.601,51.955-51.27,70.17-69.719c5.65-5.721,8.043,1.451,8.043,1.451l58.281,112.134
-                                    c2.982,5.94,9.275,6.954,13.973,2.258l13.658-13.668c4.691-4.698,7.779-13.919,6.85-20.492L309.36,130.072
-                                    c0,0-1.113-5.204,2.023-8.592c11.238-12.143,44.842-48.672,44.842-48.672C370.692,58.334,384.83,25.368,365.938,8.173z"/>
-                                </g>
-                              </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                                        <g> </g>
-                            </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div id="widget_flight_search" class="wsa_tab_content">
+                    <div id="widget_Train_search" class="wsa_tab_content">
                         <form>
                             <div class="travel_form_element">
-                                <label>Flight Type</label>
-                                <select class="selectpicker" title="Flight Type">
+                                <label>Train Type</label>
+                                <select class="selectpicker" title="Train Type">
                                     <option data-tokens="Business">Business</option>
                                     <option data-tokens="Economy">Economy</option>
                                     <option data-tokens="First Class">First Class</option>
@@ -107,72 +52,27 @@
                                 </select>
                             </div>
                             <div class="travel_form_element">
-                                <label>Flight Name</label>
-                                <select class="selectpicker" title="Flight Name">
+                                <label>Train Name</label>
+                                <select class="selectpicker" title="Train Name">
                                     <option data-tokens="Major Airlines (350)">Major Airlines (350)</option>
-                                    <option data-tokens="United Airlines (260)">United Airlines (260)</option>
-                                    <option data-tokens="Delta Airlines (620)">Delta Airlines (620)</option>
-                                    <option data-tokens="US Airways (520)">US Airways (520)</option>
-                                    <option data-tokens="Air France (500)">Air France (500)</option>
-                                    <option data-tokens="Olympic (120)">Olympic (120)</option>
-                                    <option data-tokens="Emirates (280)">Emirates (280)</option>
                                 </select>
                             </div>
                             <div class="travel_form_element">
-                                <label>Flying From</label>
+                                <label>Travel From</label>
                                 <select class="selectpicker" data-live-search="true" title="From">
                                     <option data-tokens="New Delhi, India (DEL)">New Delhi, India (DEL)</option>
-                                    <option data-tokens="Mumbai, India (BOM)">Mumbai, India (BOM)</option>
-                                    <option data-tokens="Bangalore, India (BLR)">Bangalore, India (BLR)</option>
-                                    <option data-tokens="Goa, India (GOI)">Goa, India (GOI)</option>
-                                    <option data-tokens="Kolkata, India (CCU)">Kolkata, India (CCU)</option>
-                                    <option data-tokens="Hyderabad, India (HYD)">Hyderabad, India (HYD)</option>
-                                    <option data-tokens="Dubai, UAE (DXB)">Dubai, UAE (DXB)</option>
-                                    <option data-tokens="Bangkok, Thailand (BKK)">Bangkok, Thailand (BKK)
-                                    </option>
-                                    <option data-tokens="Singapore, Singapore (SIN)">Singapore, Singapore
-                                        (SIN)
-                                    </option>
-                                    <option data-tokens="New York, US - All Airports (NYC)">New York, US - All
-                                        Airports (NYC)
-                                    </option>
                                 </select>
                             </div>
                             <div class="travel_form_element">
-                                <label>Flying To</label>
+                                <label>Travel Destination</label>
                                 <select class="selectpicker" data-live-search="true" title="To">
                                     <option data-tokens="New Delhi, India (DEL)">New Delhi, India (DEL)</option>
-                                    <option data-tokens="Mumbai, India (BOM)">Mumbai, India (BOM)</option>
-                                    <option data-tokens="Bangalore, India (BLR)">Bangalore, India (BLR)</option>
-                                    <option data-tokens="Goa, India (GOI)">Goa, India (GOI)</option>
-                                    <option data-tokens="Kolkata, India (CCU)">Kolkata, India (CCU)</option>
-                                    <option data-tokens="Hyderabad, India (HYD)">Hyderabad, India (HYD)</option>
-                                    <option data-tokens="Dubai, UAE (DXB)">Dubai, UAE (DXB)</option>
-                                    <option data-tokens="Bangkok, Thailand (BKK)">Bangkok, Thailand (BKK)
-                                    </option>
-                                    <option data-tokens="Singapore, Singapore (SIN)">Singapore, Singapore
-                                        (SIN)
-                                    </option>
-                                    <option data-tokens="New York, US - All Airports (NYC)">New York, US - All
-                                        Airports (NYC)
-                                    </option>
                                 </select>
                             </div>
                             <div class="travel_form_element">
-                                <label>Flight Times</label>
-                                <select class="selectpicker" title="Flight Times">
+                                <label>Train Times</label>
+                                <select class="selectpicker" title="Train Times">
                                     <option data-tokens="5am to 7am">5am to 7am</option>
-                                    <option data-tokens="7am to 9am">7am to 9am</option>
-                                    <option data-tokens="9am to 11am">9am to 11am</option>
-                                    <option data-tokens="11am to 1pm">11am to 1pm</option>
-                                    <option data-tokens="1pm to 3pm">1pm to 3pm</option>
-                                    <option data-tokens="3pm to 5pm">3pm to 5pm</option>
-                                    <option data-tokens="5pm to 7pm">5pm to 7pm</option>
-                                    <option data-tokens="7pm to 9pm">7pm to 9pm</option>
-                                    <option data-tokens="9pm to 11pm">9pm to 11pm</option>
-                                    <option data-tokens="11pm to 1am">11pm to 1am</option>
-                                    <option data-tokens="1am to 3am">1am to 3am</option>
-                                    <option data-tokens="3am to 5am">3am to 5am</option>
                                 </select>
                             </div>
                             <div class="travel_form_element">
@@ -183,9 +83,27 @@
                 </aside>
                 <aside class="widget payment_method">
                     <h4 class="widget-title">Supported Payment Method</h4>
-                    <a href=""><img src="images/Payment-Images.png" alt="Payment Method"/></a>
+                    <a href=""><img src="{% static 'images/Payment-Images.png' %}" alt="Payment Method"/></a>
                 </aside>
             </div>
         </div>
     </div>
 </footer>
+<!-- footer end -->
+<div class="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6"><span>Stay Connected with Us - </span>
+                <a class="text-white" target="_blank" href="https://github.com/Brainy-Fools/"><i
+                        class="fa fa-github"></i></a>
+                <a class="text-white" target="_blank" href=""><i class="fa fa-facebook"></i></a>
+                <a class="text-white" target="_blank" href=""><i class="fa fa-twitter"></i></a>
+                <a class="text-white" target="_blank" href=""><i class="fa fa-google-plus"></i></a>
+                <a class="text-white" target="_blank" href=""><i class="fa fa-linkedin"></i></a>
+            </div>
+            <div class="col-md-6 col-sm-6 text-right"><span> <a class="text-white"
+                                                                href="https://github.com/Brainy-Fools/" target="_blank">Brainy Fools @{% now 'Y ' %}.</a> All Right Reserved</span>
+            </div>
+        </div>
+    </div>
+</div>

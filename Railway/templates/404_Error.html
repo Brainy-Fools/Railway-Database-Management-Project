@@ -1,242 +1,77 @@
+{% load static %}
 <!DOCTYPE html>
-<!-- 
-Template Name: Travelite - Tours and Travels Online Booking HTML
-Version: 1.0.0
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-<meta charset="utf-8" />
-<title>Railway | Booking</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<meta name="description"  content="Travelite - Tours and Travels Online Booking HTML"/>
-<meta name="keywords" content="Travel, html template, Travelite template">
-<meta name="author"  content="Kamleshyadav"/>
-<meta name="MobileOptimized" content="320">
-<!--srart theme style -->
-<link href="css/main.css" rel="stylesheet" type="text/css"/>
-<!-- end theme style -->
+<html>
 
-<!-- favicon links -->
-<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-<link rel="icon" type="image/ico" href="favicon.ico" />
-</head>
+{% include 'Head.html' %}
 
 <body>
 <!--Page main section start-->
-<div id="travel_wrapper"> 
-  <header id="header_wrapper">
-    <div class="header_top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <p><i class="fa fa-phone"></i> For Support? Call Us: <span>+01 758-673-214</span></p>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="top_menu">
-                        <ul>
-                            <li><a href=""><i class="fa fa-globe"></i> Languages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="">English</a></li>
-                                    <li><a href="">Bangla</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">My Account</a></li>
-                            <li class="Travelite_login_alert"><a href="#">Login</a></li>
-                            <li class="Travelite_signup_alert"><a href="#">Signup</a></li>
-                            <li><a href="">Taka</a>
-                                <ul class="sub-menu">
-                                    <li><a href="">TAKA</a></li>
-                                    <li><a href="">USD</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<div id="travel_wrapper">
+    <!--Header start-->
+    {% include 'Header.html' %}
+    <!--Header end-->
+
+    <!--content body start-->
+    <div id="content_wrapper">
+        <!--page title start-->
+        <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0"
+             style="background-image:url(http://placehold.it/1599x640);">
+            <ul>
+                <li><a href="javascript:;">404 error</a></li>
+            </ul>
         </div>
-    </div>
-    <!-- popup form Start -->
-    <div class="full_width login_wrapper">
-        <div class="row">
+        <!--page title end-->
+        <div class="clearfix"></div>
+        <!-- 404 error page bg start -->
+        <div class="full_width Travelite_error_bg">
             <div class="container">
-                <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-6 col-md-offset-6 col-sm-offset-6">
-                    <!-- login form start -->
-                    <div class="popup_alert_main Travelite_login_form">
-                        <div class="login_heading"> login <span class="close_btn"><i class="fa fa-times"></i></span>
+                <div class="row">
+                    <div class="main_center_error_wrap">
+                        <div class="Travelite_error_heading">
+                            <h3>Sorry, this page isn’t available</h3>
+                            <p>The page you followed may be broken, or the page may have been removed.</p>
                         </div>
-                        <div class="popup_inner">
-                            <form>
-                                <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                <input type="checkbox" id="login_check" name="checkbox" class="checkbox_login">
-                                <label for="login_check" class="remember_me">Remember me</label>
-                                <a href="#" class="forgot_link">Forget password?</a>
-                            </form>
-                            <div class="have_an_acnt">
-                                <p>Dont have an account? <a href="#">Sign up</a></p>
-                            </div>
-                            <div class="or_line"><span>(OR)</span></div>
-                            <div class="social_links_login">
-                                <ul>
-                                    <li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-                                        facebook</a></li>
-                                    <li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-                                        Google+</a></li>
-                                </ul>
-                            </div>
+
+                        <div class="error_text_with_icon">
+                            <ul>
+                                <li class="error_text">404</li>
+                                <li class="vehicle_img">
+                                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="215.597px"
+                                         height="170.363px" viewBox="0 0 215.597 170.363"
+                                         enable-background="new 0 0 215.597 170.363" xml:space="preserve"><path fill="#86B817" d="M207.496,67.872V39.401h-16.249L168.41,0H75.331l-21.9,37.831L11.648,7.203l-3.994,5.451L44.15,39.401H6.271v28.471H0v13.489h6.28v10.41h39.056v-3.375c0-7.272,5.931-13.2,13.216-13.2c7.275,0,13.196,5.928,13.196,13.2v3.375h16.444v5.389h9.484v66.459H77.166v6.744h61.255v-6.744h-20.51V97.16h9.478v-5.389h12.43c1.613,9.393,9.741,16.572,19.581,16.572c9.854,0,18.008-7.18,19.615-16.572h28.468v-10.41h8.114V67.872H207.496z M159.413,101.6c-7.271,0-13.186-5.916-13.186-13.203c0-7.272,5.914-13.2,13.186-13.2c7.285,0,13.213,5.928,13.213,13.2C172.626,95.684,166.698,101.6,159.413,101.6z M200.751,85.024h-21.723c-1.607-9.396-9.762-16.573-19.615-16.573c-9.84,0-17.969,7.177-19.582,16.573H78.21c-1.604-9.403-9.811-16.573-19.658-16.573c-9.857,0-18.077,7.17-19.674,16.573H13.024V46.146h43.387l22.82-39.401h85.307l22.829,39.401h13.39v38.878H200.751z M117.798,15.195h38.242v30.694h-38.242V15.195z M162.785,20.577l14.663,25.306h-14.663V20.577z M84.085,15.195h26.965v30.694H66.294L84.085,15.195z M50.618,105.406c-11.013,0-19.964,8.944-19.964,19.944c0,5.968,2.697,11.276,6.886,14.938h-5.483v13.489h37.129v-13.489h-5.483c4.176-3.662,6.886-8.971,6.886-14.938C70.563,114.351,61.618,105.406,50.618,105.406z M50.618,138.537c-7.285,0-13.22-5.915-13.22-13.187c0-7.285,5.935-13.2,13.22-13.2c7.271,0,13.193,5.915,13.193,13.2C63.818,132.622,57.903,138.537,50.618,138.537z M32.057,156.874h37.129v13.489H32.057V156.874z"/></svg>
+                                </li>
+                                <li class="error_text">error</li>
+                            </ul>
                         </div>
+
+                        <div class="error_next_prev_links">
+                            <a href="#" class="home_page">home</a>
+                            <a href="#" class="prev_page">Previous Page</a>
+
+                        </div>
+                        <div class="serach_here">or<h5>search here</h5></div>
+                        <form>
+                            <div class="bottom_searching_part">
+                                <input type="text" class="search_page" name="search">
+                                <button class="btn_search" type="submit"><i class="fa fa-search">
+                                </i></button>
+                            </div>
+                        </form>
                     </div>
-                    <!-- login form  End -->
-                    <!-- signup form start -->
-                    <div class="popup_alert_main Travelite_signup_form">
-                        <div class="login_heading"> signup <span class="close_btn"><i
-                                class="fa fa-times"></i></span></div>
-                        <div class="popup_inner">
-                            <form class="signup_form" method="post">
-                                {% csrf_token %}
-                                <input type="text" name="emaillogin" placeholder="First Name" class="input_login">
-                                <input type="text" name="emaillogin" placeholder="Last Name" class="input_login">
-                                <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                <input type="password" name="conf passlogin" placeholder="Confirm Password"
-                                       class="input_login">
-                                <input type="checkbox" id="signup_check" name="checkbox" class="checkbox_login">
-                                <label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
-                                    Policy</label>
-                                <input type="submit" value="SIGN UP" class="sub_signup">
-                            </form>
-                            <div class="or_line"><span>(OR)</span></div>
-                            <div class="social_links_login">
-                                <ul>
-                                    <li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-                                        facebook</a></li>
-                                    <li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-                                        Google+</a></li>
-                                </ul>
-                            </div>
-                            <div class="already_member"> already member? <a href="#">login here</a></div>
-                        </div>
-                    </div>
-                    <!-- signup form  End -->
                 </div>
+
             </div>
         </div>
-    </div>
-    <!-- popup form  End -->
-    <div class="header_bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-2">
-                    <div class="travel_logo"><a href="Home_01.html"><img src="D:\New folder\Railway-Database-Management-Project-main\Railway\static\svg/Logo.svg" alt="logo"/></a></div>
-                </div>
-                <div class="col-md-10 col-sm-10"><a href="javascript:;" class="menu-toggle"></a>
-                    <div class="main_menu">
-                        <ul>
-                            <li class="active"><a href="">Home</a>
-                                
-                            </li>
-                            <li><a href="Tour_Home.html">Bangladesh</a>
-                               
-                            </li>
-                            <li><a href="Hotel-Home.html">Schedule</a>
-                                
-                            </li>
-                            <li><a href="Flight-Home.html">Rail E-Booking</a>
-                                
-                            </li>
-                            
-                            <li><a href="">special offers</a></li>
-                            <li><a href="Contact.html">contact</a></li>
-                            <li><a href="#">pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="About.html">About</a></li>
-                                    <li><a href="Services.html">services</a></li>
-                                    <li><a href="Blog.html">blog</a></li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!--Header end-->
-  
-  <!--content body start-->
-  <div id="content_wrapper"> 
-    <!--page title start-->
-    <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0" style="background-image:url(http://placehold.it/1599x640);">
-      <ul>
-        <li><a href="javascript:;">404 error</a></li>
-      </ul>
-    </div>
-    <!--page title end-->
-    <div class="clearfix"></div>
-	<!-- 404 error page bg start -->
-  <div class="full_width Travelite_error_bg">
-	 <div class="container">
-		<div class="row">
-		<div class="main_center_error_wrap"> 
-			<div class="Travelite_error_heading">
-			<h3>Sorry, this page isn’t available</h3>
-			<p>The page you followed may be broken, or the page may have been removed.</p>
-		    </div>
-			
-			<div class="error_text_with_icon">
-				<ul>
-					<li class="error_text">404</li>
-					<li class="vehicle_img">
-						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="215.597px" height="170.363px" viewBox="0 0 215.597 170.363" enable-background="new 0 0 215.597 170.363" xml:space="preserve"><path fill="#86B817" d="M207.496,67.872V39.401h-16.249L168.41,0H75.331l-21.9,37.831L11.648,7.203l-3.994,5.451L44.15,39.401H6.271v28.471H0v13.489h6.28v10.41h39.056v-3.375c0-7.272,5.931-13.2,13.216-13.2c7.275,0,13.196,5.928,13.196,13.2v3.375h16.444v5.389h9.484v66.459H77.166v6.744h61.255v-6.744h-20.51V97.16h9.478v-5.389h12.43c1.613,9.393,9.741,16.572,19.581,16.572c9.854,0,18.008-7.18,19.615-16.572h28.468v-10.41h8.114V67.872H207.496z M159.413,101.6c-7.271,0-13.186-5.916-13.186-13.203c0-7.272,5.914-13.2,13.186-13.2c7.285,0,13.213,5.928,13.213,13.2C172.626,95.684,166.698,101.6,159.413,101.6z M200.751,85.024h-21.723c-1.607-9.396-9.762-16.573-19.615-16.573c-9.84,0-17.969,7.177-19.582,16.573H78.21c-1.604-9.403-9.811-16.573-19.658-16.573c-9.857,0-18.077,7.17-19.674,16.573H13.024V46.146h43.387l22.82-39.401h85.307l22.829,39.401h13.39v38.878H200.751z M117.798,15.195h38.242v30.694h-38.242V15.195z M162.785,20.577l14.663,25.306h-14.663V20.577z M84.085,15.195h26.965v30.694H66.294L84.085,15.195z M50.618,105.406c-11.013,0-19.964,8.944-19.964,19.944c0,5.968,2.697,11.276,6.886,14.938h-5.483v13.489h37.129v-13.489h-5.483c4.176-3.662,6.886-8.971,6.886-14.938C70.563,114.351,61.618,105.406,50.618,105.406z M50.618,138.537c-7.285,0-13.22-5.915-13.22-13.187c0-7.285,5.935-13.2,13.22-13.2c7.271,0,13.193,5.915,13.193,13.2C63.818,132.622,57.903,138.537,50.618,138.537z M32.057,156.874h37.129v13.489H32.057V156.874z"/></svg>
-					</li>
-					<li class="error_text">error</li>
-				</ul>
-			</div>
-			
-			<div class="error_next_prev_links">
-				<a href="#" class="home_page">home</a>
-				<a href="#" class="prev_page">Previous Page</a>
-				
-			</div>
-			<div class="serach_here">or<h5>search here</h5></div>
-			<form>
-				<div class="bottom_searching_part">
-					<input type="text" class="search_page" name="search">
-					<button class="btn_search" type="submit"> <i class="fa fa-search">
-					</i> </button>
-				</div>
-			</form>
-	    </div>
-	    </div>
+        <!-- 404 error page bg end -->
+        <!-- counter section End -->
 
     </div>
-  </div>
-  <!-- 404 error page bg end -->
-<!-- counter section End -->
-	  
-  </div>
-  <!--content body end--> 
-  
-  <!--footer start-->
-  {% include 'footer.html' %}
-  <!--footer end-->
-  <div class="copyright">
-	  <div class="container">
-		  <div class="row">
-			  <div class="col-md-6 col-sm-6"><span>Stay Connected with Us - </span> <a href=""><i
-					  class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i
-					  class="fa fa-google-plus"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i
-					  class="fa fa-rss"></i></a></div>
-			  <div class="col-md-6 col-sm-6 text-right"><span>Travellers@2016. All Right Reserved</span></div>
-		  </div>
-	  </div>
-  </div>
+    <!--content body end-->
+
+    <!--footer start-->
+    {% include 'footer.html' %}
+    <!--footer end-->
 </div>
 <!--Page main section end-->
 <!--main js file start-->

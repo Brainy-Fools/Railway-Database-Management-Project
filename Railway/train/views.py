@@ -23,6 +23,8 @@ def about(request):
 def contact(request):
     return render(request, 'Contact.html')
 
+def comingsoon(request):
+    return render(request,'Coming_soon.html')
 
 # def signup(request):
 #     if request.method == 'POST':

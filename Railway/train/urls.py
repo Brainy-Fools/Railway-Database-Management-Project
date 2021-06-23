@@ -29,6 +29,7 @@ urlpatterns = [
     path('booking-details/', views.booking_details, name='booking-details'),
     path('About/', views.about, name='about_us'),
     path('Contact/', views.contact, name='contact_us'),
+    path('Coming-soon/', views.comingsoon, name='coming_soon'),
 ]
 
 

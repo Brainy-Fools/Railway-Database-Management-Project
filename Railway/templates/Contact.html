@@ -1,316 +1,147 @@
-<!DOCTYPE html>
 {% load static %}
-<!-- 
-Template Name: Travelite - Tours and Travels Online Booking HTML
-Version: 1.0.0
--->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-<meta charset="utf-8" />
-<title>Railway | Booking</title>
-<meta content="width=device-width, initial-scale=1.0" name="viewport" />
-<meta name="description"  content="Travelite - Tours and Travels Online Booking HTML"/>
-<meta name="keywords" content="Travel, html template, Travelite template">
-<meta name="author"  content="Kamleshyadav"/>
-<meta name="MobileOptimized" content="320">
-<!--srart theme style -->
-<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
-<!-- end theme style -->
+<!DOCTYPE html>
+<html>
 
-<!-- favicon links -->
-<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
-<link rel="icon" type="image/ico" href="favicon.ico" />
-</head>
+{% include 'Head.html' %}
 
 <body>
 <!--Page main section start-->
-<div id="travel_wrapper"> 
-  <!--Header start-->
-  <header id="header_wrapper">
-    <div class="header_top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6">
-                    <p><i class="fa fa-phone"></i> For Support? Call Us: <span>+01 758-673-214</span></p>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                    <div class="top_menu">
-                        <ul>
-                            <li><a href=""><i class="fa fa-globe"></i> Languages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="">English</a></li>
-                                    <li><a href="">Bangla</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="">My Account</a></li>
-                            <li class="Travelite_login_alert"><a href="#">Login</a></li>
-                            <li class="Travelite_signup_alert"><a href="#">Signup</a></li>
-                            <li><a href="">Taka</a>
-                                <ul class="sub-menu">
-                                    <li><a href="">TAKA</a></li>
-                                    <li><a href="">USD</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- popup form Start -->
-    <div class="full_width login_wrapper">
-        <div class="row">
-            <div class="container">
-                <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-6 col-md-offset-6 col-sm-offset-6">
-                    <!-- login form start -->
-                    <div class="popup_alert_main Travelite_login_form">
-                        <div class="login_heading"> login <span class="close_btn"><i class="fa fa-times"></i></span>
-                        </div>
-                        <div class="popup_inner">
-                            <form>
-                                <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                <input type="checkbox" id="login_check" name="checkbox" class="checkbox_login">
-                                <label for="login_check" class="remember_me">Remember me</label>
-                                <a href="#" class="forgot_link">Forget password?</a>
-                            </form>
-                            <div class="have_an_acnt">
-                                <p>Dont have an account? <a href="#">Sign up</a></p>
-                            </div>
-                            <div class="or_line"><span>(OR)</span></div>
-                            <div class="social_links_login">
-                                <ul>
-                                    <li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-                                        facebook</a></li>
-                                    <li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-                                        Google+</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- login form  End -->
-                    <!-- signup form start -->
-                    <div class="popup_alert_main Travelite_signup_form">
-                        <div class="login_heading"> signup <span class="close_btn"><i
-                                class="fa fa-times"></i></span></div>
-                        <div class="popup_inner">
-                            <form class="signup_form" method="post">
-                                {% csrf_token %}
-                                <input type="text" name="emaillogin" placeholder="First Name" class="input_login">
-                                <input type="text" name="emaillogin" placeholder="Last Name" class="input_login">
-                                <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                <input type="password" name="conf passlogin" placeholder="Confirm Password"
-                                       class="input_login">
-                                <input type="checkbox" id="signup_check" name="checkbox" class="checkbox_login">
-                                <label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
-                                    Policy</label>
-                                <input type="submit" value="SIGN UP" class="sub_signup">
-                            </form>
-                            <div class="or_line"><span>(OR)</span></div>
-                            <div class="social_links_login">
-                                <ul>
-                                    <li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-                                        facebook</a></li>
-                                    <li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-                                        Google+</a></li>
-                                </ul>
-                            </div>
-                            <div class="already_member"> already member? <a href="#">login here</a></div>
-                        </div>
-                    </div>
-                    <!-- signup form  End -->
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- popup form  End -->
-    <div class="header_bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-2">
-                    <div class="travel_logo"><a href="Home_01.html"><img src="D:\New folder\Railway-Database-Management-Project-main\Railway\static\svg/Logo.svg" alt="logo"/></a></div>
-                </div>
-                <div class="col-md-10 col-sm-10"><a href="javascript:;" class="menu-toggle"></a>
-                    <div class="main_menu">
-                        <ul>
-                            <li class="active"><a href="">Home</a>
-                                
-                            </li>
-                            <li><a href="Tour_Home.html">Bangladesh</a>
-                               
-                            </li>
-                            <li><a href="Hotel-Home.html">Schedule</a>
-                                
-                            </li>
-                            <li><a href="Flight-Home.html">Rail E-Booking</a>
-                                
-                            </li>
-                            
-                            <li><a href="">special offers</a></li>
-                            <li><a href="Contact.html">contact</a></li>
-                            <li><a href="#">pages</a>
-                                <ul class="sub-menu">
-                                    <li><a href="About.html">About</a></li>
-                                    <li><a href="Services.html">services</a></li>
-                                    <li><a href="Blog.html">blog</a></li>
-                                    
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-<!--Header end-->
-  
-  <!--content body start-->
-  <div id="content_wrapper"> 
-    <!--page title start-->
-    <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0" style="background-image:url(http://placehold.it/1599x640);">
-      <ul>
-        <li><a href="javascript:;">contact us</a></li>
-      </ul>
-    </div>
-    <!--page title end-->
-    <div class="clearfix"></div>
-    
-	<!-- contact map section start -->
-      <div class="full_width tr_contact_map_section">
-		
-				<div class="map_main">
-				<div id="bigth_googleMap"></div>
-					
-		</div>
-		
-	  </div>
-	<!-- contact map section End -->
-	
-	  <!-- contact details section start -->
-      <div class="full_width tr_contact_detais_section">
-		  <div class="container">
-		    <div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-12">
-					<div class="conatact_form_ds">
-						<form>
-							<input type="text" name="name" placeholder="Name" class="input_c" required="required">
-							<input type="email" name="email" placeholder="Email" class="input_c" required="required">
-							<input type="text" name="phone" placeholder="Phone" class="input_c" required="required">
-							<textarea class="text_area_c" placeholder="Message" name="msgs"></textarea>
-							<input type="submit" value="Send" class="btn_green" id="form_submit">
-						</form>
-						
-					</div>
-					
-				</div>
-				
-				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-				<div class="row">
-					<div class="col-lg-6 col-md-7 col-sm-8 col-lg-offset-2">
-					  <div class="address_contact_details">
-					  <div class="address_detais_city">
-						Houston:
-					  </div>
-						<ul>
-							<li><i class="fa fa-map-marker"></i> 1234, Street Name, City Name.</li>
-							<li><i class="fa fa-envelope"></i> Info@travellers.com</li>
-							<li><i class="fa fa-phone"></i> +1 235 654 4569</li>
-						</ul>
-					  </div>
-					  
-						<div class="address_contact_details">
-							<div class="address_detais_city">
-								Melbourne:
-							</div>
-							<ul>
-								<li><i class="fa fa-map-marker"></i> 1234, Street Name, City Name.</li>
-								<li><i class="fa fa-envelope"></i> Info@travellers.com</li>
-								<li><i class="fa fa-phone"></i> +1 235 654 4569</li>
-							</ul>
-						</div>
-						
-						<div class="address_contact_details">
-							<div class="address_detais_city">
-								Delhi:
-							</div>
-							<ul>
-								<li><i class="fa fa-map-marker"></i> 1234, Street Name, City Name.</li>
-								<li><i class="fa fa-envelope"></i> Info@travellers.com</li>
-								<li><i class="fa fa-phone"></i> +1 235 654 4569</li>
-							</ul>
-						</div>
-					</div>
-					
-					<div class="col-lg-4 col-md-5 col-sm-4 t_align_c">
-					 <!-- facebook squre start -->
-					<div class="social_box facebook_b_wrap">
-						<a href="#"><i class="fa fa-facebook-square"></i></a>
-						<div class="social_likes">30000</div>
-						<div class="shares_and_likes">shares & Likes</div>
-					</div>
-					<!-- facebook squre End -->
-					
-						<!-- twitter squre start -->
-						<div class="social_box twitter_b_wrap">
-							<a href="#"><i class="fa fa-twitter-square"></i></a>
-							<div class="social_likes">9000</div>
-							<div class="shares_and_likes">followers</div>
-						</div>
-						<!-- twitter squre End -->
-						
-						<!-- RSS squre start -->
-						<div class="social_box rss_b_wrap">
-							<a href="#"><i class="fa fa-rss-square"></i></a>
-							<div class="social_likes">15000</div>
-							<div class="shares_and_likes">subscribers</div>
-						</div>
-						<!-- RSS squre End -->
-					
-						<!-- Linkedin squre start -->
-						<div class="social_box linkedin_b_wrap">
-							<a href="#"><i class="fa fa-linkedin-square"></i></a>
-							<div class="social_likes">3200</div>
-							<div class="shares_and_likes">connections</div>
-						</div>
-						<!-- Linkedin squre End -->
-					</div>
-				</div>
-				</div>
-			</div>
-		  </div>
-		 
-		  
-	  </div>
-	  <!-- contact details section End -->
-	
-<!-- contact section End -->
+<div id="travel_wrapper">
+    <!--Header start-->
+    {% include 'Header.html' %}
+    <!--Header end-->
 
-<!-- counter section End -->
-	  
-  </div>
-  <!--content body end--> 
-  
- <!--footer start-->
- {% include 'footer.html' %}
- <!--footer end-->
- <div class="copyright">
-   <div class="container">
-     <div class="row">
-       <div class="col-md-6 col-sm-6"><span>Stay Connected with Us - </span> <a href=""><i
-           class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i
-           class="fa fa-google-plus"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i
-           class="fa fa-rss"></i></a></div>
-       <div class="col-md-6 col-sm-6 text-right"><span>Travellers@2016. All Right Reserved</span></div>
-     </div>
-   </div>
- </div>
+    <!--content body start-->
+    <div id="content_wrapper">
+        <!--page title start-->
+        <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0"
+             style="background-image:url(http://placehold.it/1599x640);">
+            <ul>
+                <li><a href="javascript:;">contact us</a></li>
+            </ul>
+        </div>
+        <!--page title end-->
+        <div class="clearfix"></div>
+
+        <!-- contact map section start -->
+        <div class="full_width tr_contact_map_section">
+
+            <div class="map_main">
+                <div id="bigth_googleMap"></div>
+
+            </div>
+
+        </div>
+        <!-- contact map section End -->
+
+        <!-- contact details section start -->
+        <div class="full_width tr_contact_detais_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="conatact_form_ds">
+                            <form>
+                                <input type="text" name="name" placeholder="Name" class="input_c" required="required">
+                                <input type="email" name="email" placeholder="Email" class="input_c"
+                                       required="required">
+                                <input type="text" name="phone" placeholder="Phone" class="input_c" required="required">
+                                <textarea class="text_area_c" placeholder="Message" name="msgs"></textarea>
+                                <input type="submit" value="Send" class="btn_green" id="form_submit">
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-7 col-sm-8 col-lg-offset-2">
+                                <div class="address_contact_details">
+                                    <div class="address_detais_city">
+                                        Houston:
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-map-marker"></i> 1234, Street Name, City Name.</li>
+                                        <li><i class="fa fa-envelope"></i> Info@travellers.com</li>
+                                        <li><i class="fa fa-phone"></i> +1 235 654 4569</li>
+                                    </ul>
+                                </div>
+
+                                <div class="address_contact_details">
+                                    <div class="address_detais_city">
+                                        Melbourne:
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-map-marker"></i> 1234, Street Name, City Name.</li>
+                                        <li><i class="fa fa-envelope"></i> Info@travellers.com</li>
+                                        <li><i class="fa fa-phone"></i> +1 235 654 4569</li>
+                                    </ul>
+                                </div>
+
+                                <div class="address_contact_details">
+                                    <div class="address_detais_city">
+                                        Delhi:
+                                    </div>
+                                    <ul>
+                                        <li><i class="fa fa-map-marker"></i> 1234, Street Name, City Name.</li>
+                                        <li><i class="fa fa-envelope"></i> Info@travellers.com</li>
+                                        <li><i class="fa fa-phone"></i> +1 235 654 4569</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-5 col-sm-4 t_align_c">
+                                <!-- facebook squre start -->
+                                <div class="social_box facebook_b_wrap">
+                                    <a href="#"><i class="fa fa-facebook-square"></i></a>
+                                    <div class="social_likes">30000</div>
+                                    <div class="shares_and_likes">shares & Likes</div>
+                                </div>
+                                <!-- facebook squre End -->
+
+                                <!-- twitter squre start -->
+                                <div class="social_box twitter_b_wrap">
+                                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                                    <div class="social_likes">9000</div>
+                                    <div class="shares_and_likes">followers</div>
+                                </div>
+                                <!-- twitter squre End -->
+
+                                <!-- RSS squre start -->
+                                <div class="social_box rss_b_wrap">
+                                    <a href="#"><i class="fa fa-rss-square"></i></a>
+                                    <div class="social_likes">15000</div>
+                                    <div class="shares_and_likes">subscribers</div>
+                                </div>
+                                <!-- RSS squre End -->
+
+                                <!-- Linkedin squre start -->
+                                <div class="social_box linkedin_b_wrap">
+                                    <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                                    <div class="social_likes">3200</div>
+                                    <div class="shares_and_likes">connections</div>
+                                </div>
+                                <!-- Linkedin squre End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- contact details section End -->
+
+        <!-- contact section End -->
+
+        <!-- counter section End -->
+
+    </div>
+    <!--content body end-->
+
+    <!--footer start-->
+    {% include 'footer.html' %}
+    <!--footer end-->
 </div>
 <!--Page main section end-->
 <!--main js file start-->

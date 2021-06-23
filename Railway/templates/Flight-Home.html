@@ -1,39 +1,9 @@
-<!DOCTYPE html>
 {% load static %}
-<!--
-   Template Name: Travelite - Tours and Travels Online Booking HTML
-   Version: 1.0.0
-   -->
-<!--[if IE 8]>
-<html lang="en" class="ie8 no-js">
-<![endif]-->
-<!--[if IE 9]>
-<html lang="en" class="ie9 no-js">
-<![endif]-->
-<!--[if !IE]><!-->
+<!DOCTYPE html>
 <html>
-<!--<![endif]-->
-<!-- BEGIN HEAD -->
-<head>
-    <meta charset="utf-8"/>
-    <!--Device size responsiveness-->
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="MobileOptimized" content="320">
-    <!--SEO stuff-->
-    <meta name="description" content="Railway Management System">
-    <meta name="keywords"
-          content="Railway,e-ticketing,I Love Taylor Swift's Song,management,system,Train,project,dbms,oracle ">
-    <meta name="author" content="Abdullah Al Masum">
-    <title>বাংলাদেশ রেলওয়ে</title>
-    <!--srart theme style -->
-    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
-    <!-- end theme style -->
-    <!-- favicon links -->
-    <link rel="shortcut icon" type="image/ico" href="{% static 'favicon.ico' %}"/>
-    <link rel="icon" type="image/ico" href="{% static '/images/favicon.ico' %}"/>
-</head>
+
+{% include 'Head.html' %}
+
 <body class="travel_home">
 <!--Page loading start-->
 <!-- {#{% include 'loading.html' %}#} -->
@@ -41,144 +11,7 @@
 <!--Page main section start-->
 <div id="travel_wrapper">
     <!--Header start-->
-    <header id="header_wrapper">
-        <div class="header_top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <p><i class="fa fa-phone"></i> For Support? Call Us: <span>+01 758-673-214</span></p>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <div class="top_menu">
-                            <ul>
-                                <li><a href=""><i class="fa fa-globe"></i> Languages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">English</a></li>
-                                        <li><a href="">Bangla</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="">My Account</a></li>
-                                <li class="Travelite_login_alert"><a href="#">Login</a></li>
-                                <li class="Travelite_signup_alert"><a href="#">Signup</a></li>
-                                <li><a href="">Taka</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="">TAKA</a></li>
-                                        <li><a href="">USD</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- popup form Start -->
-        <div class="full_width login_wrapper">
-            <div class="row">
-                <div class="container">
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-lg-offset-6 col-md-offset-6 col-sm-offset-6">
-                        <!-- login form start -->
-                        <div class="popup_alert_main Travelite_login_form">
-                            <div class="login_heading"> login <span class="close_btn"><i class="fa fa-times"></i></span>
-                            </div>
-                            <div class="popup_inner">
-                                <form>
-                                    <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                    <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                    <input type="checkbox" id="login_check" name="checkbox" class="checkbox_login">
-                                    <label for="login_check" class="remember_me">Remember me</label>
-                                    <a href="#" class="forgot_link">Forget password?</a>
-                                </form>
-                                <div class="have_an_acnt">
-                                    <p>Dont have an account? <a href="#">Sign up</a></p>
-                                </div>
-                                <div class="or_line"><span>(OR)</span></div>
-                                <div class="social_links_login">
-                                    <ul>
-                                        <li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-                                            facebook</a></li>
-                                        <li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-                                            Google+</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- login form  End -->
-                        <!-- signup form start -->
-                        <div class="popup_alert_main Travelite_signup_form">
-                            <div class="login_heading"> signup <span class="close_btn"><i
-                                    class="fa fa-times"></i></span></div>
-                            <div class="popup_inner">
-                                <form class="signup_form" method="post">
-                                    {% csrf_token %}
-                                    <input type="text" name="emaillogin" placeholder="First Name" class="input_login">
-                                    <input type="text" name="emaillogin" placeholder="Last Name" class="input_login">
-                                    <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                    <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                    <input type="password" name="conf passlogin" placeholder="Confirm Password"
-                                           class="input_login">
-                                    <input type="checkbox" id="signup_check" name="checkbox" class="checkbox_login">
-                                    <label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
-                                        Policy</label>
-                                    <input type="submit" value="SIGN UP" class="sub_signup">
-                                </form>
-                                <div class="or_line"><span>(OR)</span></div>
-                                <div class="social_links_login">
-                                    <ul>
-                                        <li class="facebook_login"><a href="#"><i class="fa fa-facebook"></i>Login with
-                                            facebook</a></li>
-                                        <li class="gplus_login"><a href="#"><i class="fa fa-google-plus"></i>Login with
-                                            Google+</a></li>
-                                    </ul>
-                                </div>
-                                <div class="already_member"> already member? <a href="#">login here</a></div>
-                            </div>
-                        </div>
-                        <!-- signup form  End -->
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- popup form  End -->
-        <div class="header_bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-2 col-sm-2">
-                        <div class="travel_logo"><a href="http://127.0.0.1:8000/railway/booking-details/"><img src="{% static 'svg/rl.png' %}" alt="logo"/></a></div>
-                    </div>
-                    <div class="col-md-10 col-sm-10"><a href="javascript:;" class="menu-toggle"></a>
-                        <div class="main_menu">
-                            <ul>
-                                <li class="active"><a href="http://127.0.0.1:8000/railway/booking-details/">Home</a>
-                                    
-                                </li>
-                                <li><a href="http://www.railway.gov.bd/">Bangladesh</a>
-                                   
-                                </li>
-                                <li><a href="https://railway.portal.gov.bd/sites/default/files/files/railway.portal.gov.bd/page/e8b03db9_b945_46b6_88bf_b7294f6d88d6/East%20zone.pdf">Schedule</a>
-                                    
-                                </li>
-                                <li><a href="http://127.0.0.1:8000/railway/booking-details/">Rail E-Booking</a>
-                                    
-                                </li>
-                                
-                                <li><a href="">special offers</a></li>
-                                <li><a href="http://127.0.0.1:8000/railway/Contact/">contact</a></li>
-                                <li><a href="#">pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="http://127.0.0.1:8000/railway/About/">About</a></li>
-                                        <li><a href="Services.html">services</a></li>
-                                        <li><a href="Blog.html">blog</a></li>
-                                        
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    {% include 'Header.html' %}
     <!--Header end-->
     <!--content body start-->
     <div id="content_wrapper">
@@ -869,17 +702,6 @@
         <!--footer start-->
         {% include 'footer.html' %}
         <!--footer end-->
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6"><span>Stay Connected with Us - </span> <a href=""><i
-                            class="fa fa-facebook"></i></a> <a href=""><i class="fa fa-twitter"></i></a> <a href=""><i
-                            class="fa fa-google-plus"></i></a> <a href=""><i class="fa fa-linkedin"></i></a> <a href=""><i
-                            class="fa fa-rss"></i></a></div>
-                    <div class="col-md-6 col-sm-6 text-right"><span>Travellers@2016. All Right Reserved</span></div>
-                </div>
-            </div>
-        </div>
     </div>
     <!--Page main section end-->
     <!--main js file start-->
