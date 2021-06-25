@@ -45,12 +45,12 @@
                                 <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
                                 <input type="password" name="passlogin" placeholder="Password" class="input_login">
                                 <input type="checkbox" id="login_check" name="checkbox" class="checkbox_login">
-{#                                <label for="login_check" class="remember_me">Remember me</label>#}
+                                {#                                <label for="login_check" class="remember_me">Remember me</label>#}
                                 <a href="#" class="forgot_link">Forget password?</a>
                             </form>
-{#                            <div class="have_an_acnt">#}
-{#                                <p>Don't have an account? <a href="#">Sign up</a></p>#}
-{#                            </div>#}
+                            {#                            <div class="have_an_acnt">#}
+                            {#                                <p>Don't have an account? <a href="#">Sign up</a></p>#}
+                            {#                            </div>#}
                             <div class="or_line"><span>(OR)</span></div>
                             <div class="social_links_login">
                                 <ul>
@@ -68,18 +68,26 @@
                         <div class="login_heading"> signup <span class="close_btn"><i
                                 class="fa fa-times"></i></span></div>
                         <div class="popup_inner">
-                            <form class="signup_form" method="post">
+                            <form class="signup_form" method="post" enctype="multipart/form-data" action="#">
                                 {% csrf_token %}
-{#                                <input type="text" name="emaillogin" placeholder="Your Name" class="input_login">#}
-{#                                <input type="text" name="emaillogin" placeholder="Last Name" class="input_login">#}
-                                <input type="email" name="emaillogin" placeholder="Email Id" class="input_login">
-                                <input type="password" name="passlogin" placeholder="Password" class="input_login">
-                                <input type="password" name="conf passlogin" placeholder="Confirm Password"
-                                       class="input_login">
-                                <input type="checkbox" id="signup_check" name="checkbox" class="checkbox_login" checked disabled>
+                                {#                                <input type="text" name="emaillogin" placeholder="Your Name" class="input_login">#}
+                                {#                                <input type="text" name="emaillogin" placeholder="Last Name" class="input_login">#}
+                                <input type="email" name="emailSign" placeholder="Email Id" class="input_login" required>
+                                <input type="password" name="passSign" placeholder="Password" class="input_login" required>
+                                <input type="password" name="conf_passSign" placeholder="Confirm Password"
+                                       class="input_login" required>
+                                <select id="user_status" name="userStatusSign" class="input_login">
+                                    <option selected value="Passenger">Passenger</option>
+                                    <option value="Guest">Guest</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Clerk">Clerk</option>
+                                    <option value="Admin">Admin</option>
+                                </select><br>
+                                <input type="checkbox" id="signup_check" name="checkSign" class="checkbox_login" checked
+                                       disabled>
                                 <label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
                                     Policy</label>
-                                <input type="submit" value="SIGN UP" class="sub_signup">
+                                <input type="submit" name="signUpSubmit" value="SIGN_UP" class="sub_signup">
                             </form>
                             <div class="or_line"><span>(OR)</span></div>
                             <div class="social_links_login">
@@ -102,7 +110,8 @@
             <div class="row">
                 <div class="col-md-2 col-sm-2">
                     <div class="travel_logo">
-                        <a href="{% url 'booking' %}"><img height="90px" src="{% static 'images/logo_transparent.png' %}" alt="logo"/></a>
+                        <a href="{% url 'booking' %}"><img height="90px"
+                                                           src="{% static 'images/logo_transparent.png' %}" alt="logo"/></a>
                     </div>
                 </div>
                 <div class="col-md-10 col-sm-10"><a href="javascript:;" class="menu-toggle"></a>
@@ -115,13 +124,13 @@
                             <li><a href="{% url 'coming_soon' %}">special offers</a></li>
                             <li><a href="{% url 'contact_us' %}">contact</a></li>
                             <li><a href="{% url 'about_us' %}">About</a></li>
-{#                            <li><a href="#">pages</a>#}
-{#                                <ul class="sub-menu">#}
-{#                                    <li><a href="{% url 'about_us' %}">About</a></li>#}
-{#                                    <li><a href="Services.html">services</a></li>#}
-{#                                    <li><a href="Blog.html">blog</a></li>#}
-{#                                </ul>#}
-{#                            </li>#}
+                            {#                            <li><a href="#">pages</a>#}
+                            {#                                <ul class="sub-menu">#}
+                            {#                                    <li><a href="{% url 'about_us' %}">About</a></li>#}
+                            {#                                    <li><a href="Services.html">services</a></li>#}
+                            {#                                    <li><a href="Blog.html">blog</a></li>#}
+                            {#                                </ul>#}
+                            {#                            </li>#}
                         </ul>
                     </div>
                 </div>
