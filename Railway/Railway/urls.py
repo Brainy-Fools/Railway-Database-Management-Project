@@ -28,12 +28,13 @@ import debug_toolbar
 
 admin.site.site_header = "Brainy Fools"
 admin.site.site_title = "Railway project DashBoard"
-admin.site.index_title = "Welcome User"
+admin.site.index_title = "Welcome Admin"
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', RedirectView.as_view(url='home/', permanent=True)),
     path('',include('train.urls')),
-    path('', RedirectView.as_view(url='booking/', permanent=True)),
     path('__debug__/',include(debug_toolbar.urls)),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

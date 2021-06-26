@@ -1,4 +1,11 @@
 {% load static %}
+<script>
+    setTimeout(function () {
+        if ($('#msg').length > 0) {
+            $('#msg').remove();
+        }
+    }, 4000)
+</script>
 <script type="text/javascript" src="{% static '/js/jquery-1.11.3.js' %}"></script>
 <script type="text/javascript" src="{% static '/js/bootstrap.js' %}"></script>
 <script type="text/javascript" src="{% static '/js/bootstrap-select.js' %}"></script>

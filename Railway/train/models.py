@@ -4,6 +4,7 @@ from django.core.validators import RegexValidator
 from django.core.validators import validate_email
 from phone_field import PhoneField
 import string, random
+import datetime
 
 
 # first admin/manager have to insert route & train info
@@ -58,8 +59,10 @@ class route(models.Model):
     # r_id =                models.CharField(primary_key=True, max_length=32, help_text='This should be admin generated')
     r_id =                models.AutoField(primary_key=True)
     r_stoppages =         models.CharField(max_length=256,help_text='comma separated stoppages name')
-    r_arrival_time =      models.DateTimeField(blank=True)
-    r_departure_time =    models.DateTimeField(blank=True)
+    r_arrival_date =      models.DateField(blank=True)
+    r_arrival_time =      models.TimeField(blank=True)
+    r_departure_date =    models.DateField(blank=True)
+    r_departure_time =    models.TimeField(blank=True)
     r_arrival_station =   models.CharField(max_length=32,help_text='From ticket it should be auto generated')
     r_departure_station = models.CharField(max_length=32,help_text='From ticket it should be auto generated')
     r_line_no =           models.SmallIntegerField(help_text='This is station\'s route line number')
@@ -71,7 +74,7 @@ class route(models.Model):
         return "%d" %(self.r_id)
 
 class train_info(models.Model):
-    train_route =         models.ManyToManyField(route)
+    train_route =         models.ManyToManyField(route,related_name='train_infos')
     train_id =            models.CharField(primary_key=True,max_length=60)
     train_name =          models.CharField(max_length=32,help_text='Give exclusive train name here')
     train_service =       models.CharField(max_length=60)
@@ -119,3 +122,6 @@ class passenger(models.Model):
 
     def __str__(self):
         return f'{self.p_id} : {self.p_name}'
+
+
+

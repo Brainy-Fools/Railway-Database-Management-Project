@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'debug_toolbar',
     'phone_field',
+    'django_filters',
     'train.apps.TrainConfig',
 ]
 
@@ -67,6 +68,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'train.context_processors.add_variable_to_context',
             ],
         },
     },
@@ -84,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'orcl',
-        'USER': 'c##manager',
-        'PASSWORD': 'manager',
+        'USER': 'c##bolbona',
+        'PASSWORD': 'bolboNa',
         'HOST': 'localhost',
         'PORT': '1521',
     }
@@ -157,3 +159,13 @@ DEBUG_TOOLBAR_PANELS = [
 INTERNAL_IPS = [
 '127.0.0.1'
 ]
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'alert-info',
+    messages.INFO: 'alert-info',
+    messages.SUCCESS: 'alert-success',
+    messages.WARNING: 'alert-warning',
+    messages.ERROR: 'alert-danger',
+}

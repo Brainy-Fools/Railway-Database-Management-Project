@@ -20,10 +20,10 @@
                     <ul>
                         <li><a href="{% url 'booking' %}">Home</a></li>
                         <li><a href="{% url 'booking' %}">Ticket Booking</a></li>
-                        <li><a href="{% url 'booking-details' %}">Booking Details</a></li>
+                        <li><a href="{% url 'index-page' %}">Booking Details</a></li>
                         <li><a href="{% url 'coming_soon' %}">Special Offers</a></li>
                         <li><a href="{% url 'contact_us' %}">Contact Us</a></li>
-                        <li><a href="">Something Awesome</a></li>
+                        <li><a href="{% url 'coming_soon' %}">Something Awesome</a></li>
                     </ul>
                 </aside>
                 <aside class="widget widget_tag_cloud">
@@ -41,49 +41,57 @@
             <div class="col-md-4">
                 <aside class="widget widget_search_availability">
                     <div id="widget_Train_search" class="wsa_tab_content">
-                        <form>
+                        <form method="POST" enctype="multipart/form-data" action="{% url 'schedule' %}">
+                            {% csrf_token %}
                             <div class="travel_form_element">
-                                <label>Train Type</label>
-                                <select class="selectpicker" title="Train Type">
-                                    <option data-tokens="Business">Business</option>
-                                    <option data-tokens="Economy">Economy</option>
-                                    <option data-tokens="First Class">First Class</option>
-                                    <option data-tokens="Premium">Premium</option>
+                                <label>Train class</label>
+                                <select class="selectpicker" name="ticket_class" title="Train Type">
+                                    {% for x in everyTicket %}
+                                    <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="travel_form_element">
                                 <label>Train Name</label>
-                                <select class="selectpicker" title="Train Name">
-                                    <option data-tokens="Major Airlines (350)">Major Airlines (350)</option>
+                                <select class="selectpicker" name="ticket_nameF" title="Train Name">
+                                    {% for x in everyTrain %}
+                                    <option value="{{ x.train_name }}">{{ x.train_name }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="travel_form_element">
                                 <label>Travel From</label>
-                                <select class="selectpicker" data-live-search="true" title="From">
-                                    <option data-tokens="New Delhi, India (DEL)">New Delhi, India (DEL)</option>
+                                <select class="selectpicker" name="travelFrom" data-live-search="true" title="From">
+                                    {% for x in everyRoute %}
+                                    <option value="{{ x.r_departure_station }}">{{ x.r_departure_station }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="travel_form_element">
                                 <label>Travel Destination</label>
-                                <select class="selectpicker" data-live-search="true" title="To">
-                                    <option data-tokens="New Delhi, India (DEL)">New Delhi, India (DEL)</option>
+                                <select class="selectpicker" name="travelDest" data-live-search="true" title="To">
+                                    {% for x in everyRoute %}
+                                    <option value="{{ x.r_arrival_station }}">{{ x.r_arrival_station }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="travel_form_element">
                                 <label>Train Times</label>
-                                <select class="selectpicker" title="Train Times">
-                                    <option data-tokens="5am to 7am">5am to 7am</option>
+                                <select class="selectpicker" name="travelTime" title="Train Times">
+                                    {% for x in everyRoute %}
+                                    <option value="{{ x.r_departure_time }}">{{ x.r_departure_time }}</option>
+                                    {% endfor %}
                                 </select>
                             </div>
                             <div class="travel_form_element">
-                                <button type="submit" class="btn-travel btn-yellow">Search</button>
+                                <button type="submit" name="train_query" value="search" class="btn-travel btn-yellow">Search</button>
                             </div>
                         </form>
                     </div>
                 </aside>
                 <aside class="widget payment_method">
                     <h4 class="widget-title">Supported Payment Method</h4>
-                    <a href=""><img src="{% static 'images/Payment-Images.png' %}" alt="Payment Method"/></a>
+                    <a href="" disabled><img src="{% static 'images/Payment-Images.png' %}" alt="Payment Method"/></a>
                 </aside>
             </div>
         </div>

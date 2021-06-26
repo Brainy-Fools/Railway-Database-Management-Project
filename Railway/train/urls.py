@@ -25,9 +25,10 @@ body_class2 = ""
 
 
 urlpatterns = [
-    path('booking/', views.booking, name='booking'),
-    path('booking-details/', views.booking_details, name='booking-details'),
+    path('home/', views.index, name='index-page'),
+    path('booking/', views.booking_details, name='booking'),
     path('About/', views.about, name='about_us'),
+    path('schedule/',views.schedule,name='schedule'),
     path('Contact/', views.contact, name='contact_us'),
     path('Coming-soon/', views.comingsoon, name='coming_soon'),
 ]

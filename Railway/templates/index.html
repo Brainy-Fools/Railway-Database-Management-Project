@@ -1,0 +1,528 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+{% include 'Head.html' %}
+
+<body class="travel_home">
+<!--Page loading start-->
+<!-- {#{% include 'loading.html' %}#} -->
+<!--Page loading end-->
+<!--Page main section start-->
+<div id="travel_wrapper">
+    <!--Header start-->
+    {% include 'Header.html' %}
+    <!--Header end-->
+    <!--content body start-->
+    <div id="content_wrapper">
+        <div class="clearfix"></div>
+        <div class="slider_tab_main">
+            <!-- Home first slider start -->
+            {#            <div class="full_width home_slider">#}
+            {#                <div class="example">#}
+            {#                    <article class="content" style="width:100%; float:left;">#}
+            {#                        <div id="rev_slider_116_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container"#}
+            {#                             data-alias="layer-animations"#}
+            {#                             style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">#}
+            {#                            <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->#}
+            {#                            <div id="rev_slider_116_1" class="rev_slider fullwidthabanner" style="display:none;"#}
+            {#                                 data-version="5.0.7">#}
+            {#                                <ul style="width:100% !important;" class="homesix_slide">#}
+            {#                                    <!-- SLIDE  -->#}
+            {#                                    <li data-index="rs-391" data-transition="parallaxhorizontal"#}
+            {#                                        data-slotamount="default" data-easein="default" data-easeout="default"#}
+            {#                                        data-masterspeed="default" data-rotate="0" data-saveperformance="off"#}
+            {#                                        data-title="Smooth Mask" data-description="">#}
+            {#                                        <div class="slider_overlay_2"></div>#}
+            {#                                        <!-- MAIN IMAGE --><img#}
+            {#                                            src="https://images.pexels.com/photos/1658967/pexels-photo-1658967.jpeg?crop=entropy&cs=srgb&dl=pexels-senuscape-1658967.jpg&fit=crop&fm=jpg&h=1074&w=1600"#}
+            {#                                            alt="slide2"#}
+            {#                                            data-bgposition="center center" data-bgfit="cover"#}
+            {#                                            data-bgrepeat="no-repeat" class="rev-slidebg"#}
+            {#                                            data-no-retina>#}
+            {#                                        <!-- LAYERS -->#}
+            {#                                        <!-- LAYER-1-start-->#}
+            {#                                        <h3 class="tp-caption NotGeneric-Title slide_booking_list_heading tp-resizeme"#}
+            {#                                            id="slide-391-layer-1" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-150" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="1000"#}
+            {#                                            data-splitin="none" data-splitout="none" data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:22px; line-height: 36px; margin:0px;">#}
+            {#                                            কেন ই-বুকিং করবেন?🤷‍♂️#}
+            {#                                        </h3>#}
+            {#                                        <!-- LAYER-1-end-->#}
+            {#                                        <!-- LAYER-2-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-391-layer-2" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-80" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="2500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>আপনাদের#}
+            {#                                            সেবায় সর্বদা সবখানে#}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-2-end-->#}
+            {#                                        <!-- LAYER-3-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-391-layer-3" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-45" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="4000" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>প্রতিদিন#}
+            {#                                            ২০০০০ গ্রাহক অনলাইনে বুকিং করছেন#}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-3-end-->#}
+            {#                                        <!-- LAYER-4-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-391-layer-4" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-10" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="5500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>সহজ এবং#}
+            {#                                            দ্রুত বুকিং#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-4-end-->#}
+            {#                                        <!-- LAYER-5-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-391-layer-5" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="25" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="7000" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>পেমেন্ট ও#}
+            {#                                            নিরাপত্তার নিশ্চয়তা#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-5-end-->#}
+            {#                                        <!-- LAYER-6-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-391-layer-6" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="60" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="8500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>অনলাইন টিকেট#}
+            {#                                            ক্যান্সেলেশন#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-6-end-->#}
+            {#                                        <!-- LAYER-7-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-391-layer-7" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="95" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="9500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>ঘরে বসে#}
+            {#                                            নিরাপদে থেকে বুকিং করুন#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-7-end-->#}
+            {#                                        <!-- LAYERS END -->#}
+            {#                                    </li>#}
+            {#                                    <!--slide-->#}
+            {#                                    <li data-index="rs-392" data-transition="parallaxhorizontal"#}
+            {#                                        data-slotamount="default" data-easein="default" data-easeout="default"#}
+            {#                                        data-masterspeed="default" data-rotate="0" data-saveperformance="off"#}
+            {#                                        data-title="Slide Mask" data-description="">#}
+            {#                                        <div class="slider_overlay_2"></div>#}
+            {#                                        <!-- MAIN IMAGE --><img#}
+            {#                                            src="https://images.pexels.com/photos/2790396/pexels-photo-2790396.jpeg?crop=entropy&cs=srgb&dl=pexels-mark-pl%C3%B6tz-2790396.jpg&fit=crop&fm=jpg&h=3598&w=5397"#}
+            {#                                            alt="slide3"#}
+            {#                                            data-bgposition="center center" data-bgfit="cover"#}
+            {#                                            data-bgrepeat="no-repeat" class="rev-slidebg"#}
+            {#                                            data-no-retina>#}
+            {#                                        <!-- LAYERS START -->#}
+            {#                                        <!-- LAYER-1-start-->#}
+            {#                                        <h3 class="tp-caption NotGeneric-Title slide_booking_list_heading tp-resizeme"#}
+            {#                                            id="slide-392-layer-1" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-150" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0deg;rY:0;rZ:0;sX:2;sY:2;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" data-start="1000"#}
+            {#                                            data-splitin="none" data-splitout="none" data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:22px; line-height: 36px; margin:0px;">#}
+            {#                                            Why booking with BD Railway?#}
+            {#                                        </h3>#}
+            {#                                        <!-- LAYER-1-end-->#}
+            {#                                        <!-- LAYER-2-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-392-layer-2" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-80" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="2500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>Available#}
+            {#                                            Anytime, Anywhere#}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-2-end-->#}
+            {#                                        <!-- LAYER-3-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-392-layer-3" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-45" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="4000" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>Over#}
+            {#                                            20000 Satisfied Customer#}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-3-end-->#}
+            {#                                        <!-- LAYER-4-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-392-layer-4" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="-10" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="5500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>Fast and#}
+            {#                                            Easy#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-4-end-->#}
+            {#                                        <!-- LAYER-5-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-392-layer-5" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="25" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="7000" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>Best Price#}
+            {#                                            and Secured Booking#}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-5-end-->#}
+            {#                                        <!-- LAYER-6-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-392-layer-6" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="60" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="8500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>Online#}
+            {#                                            Ticket Cancelation#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-6-end-->#}
+            {#                                        <!-- LAYER-7-start-->#}
+            {#                                        <h5 class="tp-caption NotGeneric-Title slide_booking_list tp-resizeme"#}
+            {#                                            id="slide-392-layer-7" data-x="80" data-hoffset="" data-y="center"#}
+            {#                                            data-voffset="95" data-width="['auto','auto','auto','auto']"#}
+            {#                                            data-height="['auto','auto','auto','auto']" data-transform_idle="o:1;"#}
+            {#                                            data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1000;e:Power2.easeOut;"#}
+            {#                                            data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"#}
+            {#                                            data-start="9500" data-splitin="none" data-splitout="none"#}
+            {#                                            data-responsive_offset="on"#}
+            {#                                            style="z-index: 6; white-space: nowrap; font-size:15px; line-height: 36px; margin:0px;">#}
+            {#                                            <i class="fa fa-check-square-o" style="padding-right:30px;"></i>Manage Your#}
+            {#                                            Booking from Home Safely#}
+            {##}
+            {#                                        </h5>#}
+            {#                                        <!-- LAYER-7-end-->#}
+            {#                                        <!-- LAYERS END -->#}
+            {#                                    </li>#}
+            {#                                    <!--slide-->#}
+            {#                                </ul>#}
+            {#                            </div>#}
+            {#                        </div>#}
+            {#                        <!-- END REVOLUTION SLIDER -->#}
+            {#                    </article>#}
+            {#                </div>#}
+            {#                <!-- section end -->#}
+            {#            </div>#}
+            <!-- Home first slider End -->
+            <!-- slider tab section start -->
+            <div class="home_tabs_search tab_search_white">
+                {#                <div class="full_width slider_form_main">#}
+                {#                    <div class="container">#}
+                {#                        <div class="row">#}
+                {#                            <div class="col-lg-12">#}
+                {#                                <div class="slider_tabs">#}
+                {#                                    <div class="wsa_tab">#}
+                {#                                        <ul>#}
+                {#                                            <li><a href="#TRain-search"><i class="fa fa-train"></i></a></li>#}
+                {#                                        </ul>#}
+                {#                                    </div>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                <div class="full_width slider_content_wrap">
+                    <div class="container">
+                        <!-- first content_start -->
+                        <div id="TRain-search" class="flight_booking_tab">
+                            <!-- tab_search form start -->
+                            <form method="POST" enctype="multipart/form-data" action="{% url 'schedule' %}">
+{#                                {{ myFilter.form }}#}
+                                {% csrf_token %}
+                                <div class="flight_booking_inner">
+                                    <div class="pull_left location_airport">
+                                        <label for="fromStation">From</label>
+                                        <select name="fromStation" id="fromStation">
+                                            {% for x in r_objects %}
+                                                <option value="{{ x.r_departure_station }}">{{ x.r_departure_station}}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <i class="fa fa-caret-down"></i>
+                                    </div>
+                                    <div class="pull_left check_in_field">
+                                        <label>Journey Date</label> <input type="text" id="Check_in_date_tab"
+                                                                           placeholder="dd/mm/yyyy" name="from_date">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <div class="pull_left timing_field">
+                                        <label>Ticket Class</label>
+                                        <select class="form-control" id="search_adults">
+                                            {% for x in t_objects %}
+                                                <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>
+                                            {% endfor %}
+                                        </select>
+                                        <i class="fa fa-caret-down"></i>
+                                    </div>
+                                    <div class="pull_left room_select_field">
+                                        <label>adults</label>
+                                        <select class="form-control " id="search_adult">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                        </select>
+                                        <i class="fa fa-caret-down"></i>
+                                    </div>
+                                    <div class="pull_left room_adults">
+                                        <label for="luggage_check" class="remember_me">Have Luggages</label>
+                                        <input type="checkbox" id="luggage_check" name="luggage_check"
+                                               class="checkbox_login">
+                                    </div>
+                                </div>
+                                <!-- flight_booking_inner end -->
+                                <div class="flight_booking_inner">
+                                    <div class="pull_left location_airport">
+                                        <label for="toStation">To</label>
+                                        <select name="toStation" id="toStation">
+                                            {% for x in r_objects %}
+                                                <option value={{ x.r_arrival_station }}>{{ x.r_arrival_station }}</option>
+                                            {% endfor %}
+                                        </select><i class="fa fa-caret-down"></i>
+                                    </div>
+                                    <div class="pull_left check_in_field">
+                                        <label>Return Date</label>
+                                        <input type="text" id="Check_out_date_tab" placeholder="dd/mm/yyyy" name="return_date">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <div class="pull_left timing_field">
+                                        <label>timing</label>
+                                        <select name="toStation" id="toStation">
+                                            {% for x in r_objects %}
+                                                <option value="{{ x.r_departure_time }}">{{ x.r_arrival_time }}</option>
+                                            {% endfor %}
+                                        </select><i class="fa fa-caret-down"></i>
+                                    </div>
+                                    <div class="pull_left room_select_field">
+                                        <label>kids</label>
+                                        <select class="form-control" id="search_kids">
+                                            <option value="1">01</option>
+                                            <option value="2">02</option>
+                                            <option value="3">03</option>
+                                            <option value="4">04</option>
+                                        </select>
+                                        <i class="fa fa-caret-down"></i>
+                                    </div>
+                                    <div class="pull_left submit_field">
+                                        <input type="search" placeholder="SEARCH" class="search_tabs" readonly>
+                                        <button class="btn tab_search" type="submit" name="search_train1"
+                                                value="get_train1">
+                                            <i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                                <!-- flight_booking_inner end -->
+                            </form>
+                            <!-- tab_search form End -->
+                        </div>
+                        <!-- first content_end -->
+                    </div>
+                </div>
+            </div>
+            <!-- slider tab section End -->
+        </div>
+        <!-- slider main wrapper end -->
+        <!-- popular flights section Start -->
+        <div class="full_width Travelite_feature_section border_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="fight_section_wrapper">
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="offer_first first_box">
+                                <h3 class="Travelite_heading_feature">Popular trains</h3>
+                                <p>Based on most Booking</p>
+                                <div><a href="#" class="black_btn">view more</a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="hotel_feature_box">
+                                <img src="https://images.pexels.com/photos/258347/pexels-photo-258347.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-258347.jpg&fit=crop&fm=jpg&h=300&w=270"
+                                     class="img-responsive" alt="feature">
+                                <div class="feature_overlay_second">
+                                    <div class="bottom_first"><a href="#">Dhaka-Chittagong</a><span>750 Tk</span></div>
+                                    <div class="bottom_second">one way train<span>/person</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="hotel_feature_box">
+                                <img src="https://images.pexels.com/photos/159148/regional-train-rail-cars-platform-deutsche-bahn-159148.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-159148.jpg&fit=crop&fm=jpg&h=300&w=270"
+                                     class="img-responsive" alt="feature">
+                                <div class="feature_overlay_second">
+                                    <div class="bottom_first"><a href="#">Dhaka-Barishal</a><span>750 Tk</span></div>
+                                    <div class="bottom_second">one way train<span>/person</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="hotel_feature_box">
+                                <img src="https://images.pexels.com/photos/1548693/pexels-photo-1548693.jpeg?crop=entropy&cs=srgb&dl=pexels-david-bartus-1548693.jpg&fit=crop&fm=jpg&h=300&w=270"
+                                     class="img-responsive" alt="feature">
+                                <div class="feature_overlay_second">
+                                    <div class="bottom_first"><a href="#">Dhaka-Rangpur</a><span>750 Tk</span></div>
+                                    <div class="bottom_second">one way train<span>/person</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- popular   trains section End-->
+        <!-- special offers section start -->
+        <div class="full_width Travelite_world_section">
+            <div class="container">
+                <div class="row">
+                    <div class="heading_team">
+                        <h3>Special offers</h3>
+                        <p>For your amazing weekend!
+                        </p>
+                    </div>
+                    <div class="flights_special_offers full_width">
+                        <!-- first ractangle start -->
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class=" full_width offer_box_wrapper">
+                                <div class="circle_icon"> 20% <span>off</span></div>
+                                <div class="img_overlay_wrapper">
+                                    <img src="http://placehold.it/270x211" class="img-responsive" alt="offer">
+                                    <div class="img_overlay"></div>
+                                </div>
+                                <div class="full_width offer_inner">
+                                    <h4>Senior Travel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- first ractangle End -->
+                        <!-- second ractangle start -->
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class=" full_width offer_box_wrapper">
+                                <div class="circle_icon"> 30% <span>off</span></div>
+                                <div class="img_overlay_wrapper">
+                                    <img src="https://images.pexels.com/photos/880929/pexels-photo-880929.jpeg?crop=entropy&cs=srgb&dl=pexels-leslie-toh-880929.jpg&fit=crop&fm=jpg&h=3080&w=5472"
+                                         class="img-responsive" alt="offer">
+                                    <div class="img_overlay"></div>
+                                </div>
+                                <div class="full_width offer_inner">
+                                    <h4>Weekend Trip</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- second ractangle End -->
+                        <!-- thired ractangle start -->
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class=" full_width offer_box_wrapper">
+                                <div class="circle_icon"> 15% <span>off</span></div>
+                                <div class="img_overlay_wrapper">
+                                    <img src="https://images.pexels.com/photos/2569249/pexels-photo-2569249.jpeg?crop=entropy&cs=srgb&dl=pexels-luis-leon-2569249.jpg&fit=crop&fm=jpg&h=6000&w=4000"
+                                         class="img-responsive" alt="offer">
+                                    <div class="img_overlay"></div>
+                                </div>
+                                <div class="full_width offer_inner">
+                                    <h4>Business Class</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- thired ractangle End -->
+                        <!-- fourth ractangle start -->
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class=" full_width offer_box_wrapper">
+                                <div class="circle_icon"> 40% <span>off</span></div>
+                                <div class="img_overlay_wrapper">
+                                    <img src="https://images.pexels.com/photos/1170184/pexels-photo-1170184.jpeg?crop=entropy&cs=srgb&dl=pexels-veerasak-piyawatanakul-1170184.jpg&fit=crop&fm=jpg&h=4000&w=6000"
+                                         class="img-responsive" alt="offer">
+                                    <div class="img_overlay"></div>
+                                </div>
+                                <div class="full_width offer_inner">
+                                    <h4>Family Travel</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- fourth ractangle End -->
+                    </div>
+                    <div class="full_width destination_button"><a href="#" class="btn_green btns feature_more_btn">more
+                        offers</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- special offers section end -->
+        <!-- booking from app section Start -->
+
+        <!-- booking from app section End -->
+        <!-- subscribe section start -->
+
+        <!-- subscribe section End -->
+        <!--content body end-->
+        <!--footer start-->
+        {% include 'footer.html' %}
+        <!--footer end-->
+    </div>
+    <!--Page main section end-->
+    <!--main js file start-->
+    {% include 'scripts.html' %}
+    <!--main js file end-->
+</div>
+</body>
+</html>

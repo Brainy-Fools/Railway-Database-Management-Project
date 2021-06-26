@@ -23,7 +23,6 @@ class UserAdmin(admin.ModelAdmin):
 class PassengerAdmin(admin.ModelAdmin):
     list_display = ('p_name', 'p_age', 'p_gender', 'p_phone','p_transaction_id')
     list_filter = [('p_gender')]
-    fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
     pass
 
 @admin.register(transection)
@@ -41,9 +40,9 @@ class TicketAdmin(admin.ModelAdmin):
 
 @admin.register(route)
 class RoutesAdmin(admin.ModelAdmin):
-    list_display = ('r_id','r_departure_station','r_departure_time','r_stoppages', 'r_arrival_station', 'r_arrival_time',)
+    list_display = ('r_id','r_departure_station','r_departure_date','r_departure_time','r_stoppages', 'r_arrival_station', 'r_arrival_date','r_arrival_time',)
     list_filter = ['r_departure_station', 'r_arrival_station']
-    fields = ['r_id','r_line_no','r_stoppages', ('r_departure_station', 'r_arrival_station '),('r_departure_time','r_arrival_time'),]
+    fields = ['r_line_no','r_stoppages', ('r_departure_station', 'r_arrival_station'),('r_departure_date','r_arrival_date'),('r_departure_time','r_arrival_time'),]
     pass
 
 @admin.register(train_info)
