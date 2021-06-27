@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect
 # from .context_processors import everyWhere
 from .models import user, ticket, train_info, transection, route, passenger
 from django.db import connection, connections
+import cx_Oracle
 from .filters import *
 
 cursor = connection.cursor()
@@ -32,9 +33,10 @@ def loggin(request):
             x = user.objects.filter(user_email=emaillog).filter(user_password=passlog).filter(user_status=statusLog)
             if x:
                 if x.filter(user_status='Admin'):
-                    # print('Cool,nicely done')
+                    print('Cool,nicely done')
                     # context_processors.everyWhere['adminPlace'] = ''
                     messages.success(request=request, message='WelCome Back Admin !!')
+                print("hello",emaillog)
                 messages.success(request=request, message='Logged In SuccessFul !!')
                 return True
             else:
@@ -54,7 +56,6 @@ def loggin(request):
 # else:
 #     messages.error(request=request,message='Invalid LogIn attempt')
 #     print("Bad luck Bro , Try hard next time...")
-pass
 
 # def passenger():
 #     passenger = passenger()
@@ -85,20 +86,26 @@ def signUp(request):
             messages.warning(request=request, message="Password did not matched")
 
 
-def booking_details(request):
+def booking(request):
     signUp(request=request)
     loggin(request=request)
-    # with connection.cursor() as cursor:
-    #     cursor.execute('''select * from train_route''')
-    #     row = cursor.fetchall()
-    #     context = {
-    #         'data' : row #this will give list so i have to make a loop in template to get items from list
-    #     }
-    context = {}
-    return render(request, 'Flights-Booking.html', context=context)
+    # # with connection.cursor() as cursor:
+    # #     cursor.execute('''select * from train_route''')
+    # #     row = cursor.fetchall()
+    # #     context = {
+    # #         'data' : row #this will give list so i have to make a loop in template to get items from list
+    # #     }
+    # # context = {'a':'M'}
+    return render(request, 'Flights-Booking.html')
 
+def buy1(request):
+    signUp(request=request)
+    loggin(request=request)
+    return render(request, 'Flights-Booking.html')
 
 def schedule(request):
+    signUp(request=request)
+    loggin(request=request)
     train_data = train_info.objects.all()
 
     if request.POST.get('search_train1') == 'get_train1':
@@ -123,6 +130,10 @@ def schedule(request):
         # print(x)
         # train_data = x.get(pk)
         # train_data = train_data.filter(train_route__r_arrival_station=arr_st)
+        # check = request.POST.get('selected_ticket_buy') == 'proceed to Buy Selected'
+        # if check == True:
+        #     buy1(request=request)
+        #     exit(0)
     return render(request, 'train_search.html', {'train_infos': train_data})
 
 def footer_schedule(request):
@@ -136,7 +147,10 @@ def footer_schedule(request):
 
     schedule(request=request)
 
+
 def index(request):
+    signUp(request=request)
+    loggin(request=request)
     # if train_info.objects.filter(train_route__r_arrival_station=arr_st) :
     #     print("found it")
     # name_map = {'departure': 'r_departure_station', 'arrival': 'r_arrival_station', 'stoppages': 'r_stoppages', 'dep_time': 'r_departure_time'}
@@ -166,6 +180,8 @@ def index(request):
 
 
 def about(request):
+    signUp(request=request)
+    loggin(request=request)
     context = {
 
     }
@@ -173,6 +189,8 @@ def about(request):
 
 
 def contact(request):
+    signUp(request=request)
+    loggin(request=request)
     context = {
 
     }
@@ -180,21 +198,9 @@ def contact(request):
 
 
 def comingsoon(request):
+    signUp(request=request)
+    loggin(request=request)
     context = {
 
     }
     return render(request, 'Coming_soon.html', context=context)
-
-# def signup(request):
-#     if request.method == 'POST':
-#         form = SignUpForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get('username')
-#             raw_password = form.cleaned_data.get('password1')
-#             user = authenticate(username=username, password=raw_password)
-#             login(request, user)
-#             return redirect('booking')
-#     else:
-#         form = SignUpForm()
-#     return render(request, 'Flights-Booking.html', {'form': form})

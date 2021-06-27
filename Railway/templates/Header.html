@@ -2,13 +2,13 @@
 <header id="header_wrapper">
     <div class="header_top">
         <div class="container">
-            <ul>
-                {% if my_dict == '' %}
-                    <li {{ do_it }}><a href="{% url 'admin:index' %}">DashBoard for admin</a></li>
+{#            <ul>#}
+{#                {% if my_dict == '' %}#}
+{#                    <li {{ do_it }}><a href="{% url 'admin:index' %}">DashBoard for admin</a></li>#}
                     {#            {% else %}#}
                     {#                <li class='hidden'><a href="{% url 'admin:index' %}">DashBoard for admin</a></li>#}
-                {% endif %}
-            </ul>
+{#                {% endif %}#}
+{#            </ul>#}
             {% include 'messages.html' %}
             <div class="row">
                 <div class="col-md-6 col-sm-6">
@@ -129,7 +129,7 @@
             <div class="row">
                 <div class="col-md-2 col-sm-2">
                     <div class="travel_logo">
-                        <a href="{% url 'booking' %}"><img height="90px"
+                        <a href="{% url 'index-page' %}"><img height="90px"
                                                            src="{% static 'images/logo_transparent.png' %}" alt="logo"/></a>
                     </div>
                 </div>

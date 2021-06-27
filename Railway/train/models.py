@@ -26,6 +26,7 @@ class user(models.Model):
 
     class Meta:
         ordering = ['user_id']
+        db_table = 'user'
 
     def __str__(self):
         return "%s" %(self.user_email)
@@ -51,6 +52,7 @@ class transection(models.Model):
 
     class Meta:
         ordering = ['transaction_id']
+        db_table = 'transaction'
 
     def __str__(self):
         return "%s" %(self.transaction_id)
@@ -69,6 +71,7 @@ class route(models.Model):
 
     class Meta:
         ordering = ['r_id']
+        db_table = 'route'
 
     def __str__(self):
         return "%d" %(self.r_id)
@@ -83,6 +86,7 @@ class train_info(models.Model):
 
     class Meta:
         ordering = ['train_id']
+        db_table = 'train_info'
 
     def __str__(self):
         return "%s" %(self.train_name)
@@ -100,6 +104,7 @@ class ticket(models.Model):
 
     class Meta:
         ordering = ['-ticket_id'] # from top to bottom
+        db_table = 'ticket'
 
     def __str__(self):
         return "%s" %(self.ticket_of_passenger.p_name)
@@ -119,6 +124,7 @@ class passenger(models.Model):
 
     class Meta:
         ordering = ['p_id']
+        db_table = 'passenger'
 
     def __str__(self):
         return f'{self.p_id} : {self.p_name}'

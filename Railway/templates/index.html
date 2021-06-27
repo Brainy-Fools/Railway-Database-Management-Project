@@ -270,116 +270,100 @@
             {#            </div>#}
             <!-- Home first slider End -->
             <!-- slider tab section start -->
-            <div class="home_tabs_search tab_search_white">
-                {#                <div class="full_width slider_form_main">#}
-                {#                    <div class="container">#}
-                {#                        <div class="row">#}
-                {#                            <div class="col-lg-12">#}
-                {#                                <div class="slider_tabs">#}
-                {#                                    <div class="wsa_tab">#}
-                {#                                        <ul>#}
-                {#                                            <li><a href="#TRain-search"><i class="fa fa-train"></i></a></li>#}
-                {#                                        </ul>#}
-                {#                                    </div>#}
-                {#                                </div>#}
-                {#                            </div>#}
-                {#                        </div>#}
-                {#                    </div>#}
-                {#                </div>#}
-                <div class="full_width slider_content_wrap">
-                    <div class="container">
-                        <!-- first content_start -->
-                        <div id="TRain-search" class="flight_booking_tab">
-                            <!-- tab_search form start -->
-                            <form method="POST" enctype="multipart/form-data" action="{% url 'schedule' %}">
-{#                                {{ myFilter.form }}#}
-                                {% csrf_token %}
-                                <div class="flight_booking_inner">
-                                    <div class="pull_left location_airport">
-                                        <label for="fromStation">From</label>
-                                        <select name="fromStation" id="fromStation">
-                                            {% for x in r_objects %}
-                                                <option value="{{ x.r_departure_station }}">{{ x.r_departure_station}}</option>
-                                            {% endfor %}
-                                        </select>
-                                        <i class="fa fa-caret-down"></i>
-                                    </div>
-                                    <div class="pull_left check_in_field">
-                                        <label>Journey Date</label> <input type="text" id="Check_in_date_tab"
-                                                                           placeholder="dd/mm/yyyy" name="from_date">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <div class="pull_left timing_field">
-                                        <label>Ticket Class</label>
-                                        <select class="form-control" id="search_adults">
-                                            {% for x in t_objects %}
-                                                <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>
-                                            {% endfor %}
-                                        </select>
-                                        <i class="fa fa-caret-down"></i>
-                                    </div>
-                                    <div class="pull_left room_select_field">
-                                        <label>adults</label>
-                                        <select class="form-control " id="search_adult">
-                                            <option value="1">01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                        </select>
-                                        <i class="fa fa-caret-down"></i>
-                                    </div>
-                                    <div class="pull_left room_adults">
-                                        <label for="luggage_check" class="remember_me">Have Luggages</label>
-                                        <input type="checkbox" id="luggage_check" name="luggage_check"
-                                               class="checkbox_login">
-                                    </div>
+            <div class="full_width slider_content_wrap">
+                <div class="container">
+                    <!-- first content_start -->
+                    <div id="TRain-search" class="flight_booking_tab">
+                        <!-- tab_search form start -->
+                        <form method="POST" enctype="multipart/form-data" action="{% url 'schedule' %}">
+                            {#                                {{ myFilter.form }}#}
+                            {% csrf_token %}
+                            <div class="flight_booking_inner">
+                                <div class="pull_left location_airport">
+                                    <label for="fromStation">From</label>
+                                    <select name="fromStation" id="fromStation">
+                                        {% for x in r_objects %}
+                                            <option value="{{ x.r_departure_station }}">{{ x.r_departure_station }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <i class="fa fa-caret-down"></i>
                                 </div>
-                                <!-- flight_booking_inner end -->
-                                <div class="flight_booking_inner">
-                                    <div class="pull_left location_airport">
-                                        <label for="toStation">To</label>
-                                        <select name="toStation" id="toStation">
-                                            {% for x in r_objects %}
-                                                <option value={{ x.r_arrival_station }}>{{ x.r_arrival_station }}</option>
-                                            {% endfor %}
-                                        </select><i class="fa fa-caret-down"></i>
-                                    </div>
-                                    <div class="pull_left check_in_field">
-                                        <label>Return Date</label>
-                                        <input type="text" id="Check_out_date_tab" placeholder="dd/mm/yyyy" name="return_date">
-                                        <i class="fa fa-calendar"></i>
-                                    </div>
-                                    <div class="pull_left timing_field">
-                                        <label>timing</label>
-                                        <select name="toStation" id="toStation">
-                                            {% for x in r_objects %}
-                                                <option value="{{ x.r_departure_time }}">{{ x.r_arrival_time }}</option>
-                                            {% endfor %}
-                                        </select><i class="fa fa-caret-down"></i>
-                                    </div>
-                                    <div class="pull_left room_select_field">
-                                        <label>kids</label>
-                                        <select class="form-control" id="search_kids">
-                                            <option value="1">01</option>
-                                            <option value="2">02</option>
-                                            <option value="3">03</option>
-                                            <option value="4">04</option>
-                                        </select>
-                                        <i class="fa fa-caret-down"></i>
-                                    </div>
-                                    <div class="pull_left submit_field">
-                                        <input type="search" placeholder="SEARCH" class="search_tabs" readonly>
-                                        <button class="btn tab_search" type="submit" name="search_train1"
-                                                value="get_train1">
-                                            <i class="glyphicon glyphicon-search"></i></button>
-                                    </div>
+                                <div class="pull_left check_in_field">
+                                    <label>Journey Date</label> <input type="text" id="Check_in_date_tab"
+                                                                       placeholder="dd/mm/yyyy" name="from_date">
+                                    <i class="fa fa-calendar"></i>
                                 </div>
-                                <!-- flight_booking_inner end -->
-                            </form>
-                            <!-- tab_search form End -->
-                        </div>
-                        <!-- first content_end -->
+                                <div class="pull_left timing_field">
+                                    <label>Ticket Class</label>
+                                    <select class="form-control" id="search_adults">
+                                        {% for x in t_objects %}
+                                            <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="pull_left room_select_field">
+                                    <label>adults</label>
+                                    <select class="form-control " id="search_adult">
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                    </select>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="pull_left room_adults">
+                                    <label for="luggage_check" class="remember_me">Have Luggages</label>
+                                    <input type="checkbox" id="luggage_check" name="luggage_check"
+                                           class="checkbox_login">
+                                </div>
+                            </div>
+                            <!-- flight_booking_inner end -->
+                            <div class="flight_booking_inner">
+                                <div class="pull_left location_airport">
+                                    <label for="toStation">To</label>
+                                    <select name="toStation" id="toStation">
+                                        {% for x in r_objects %}
+                                            <option value={{ x.r_arrival_station }}>{{ x.r_arrival_station }}</option>
+                                        {% endfor %}
+                                    </select><i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="pull_left check_in_field">
+                                    <label>Return Date</label>
+                                    <input type="text" id="Check_out_date_tab" placeholder="dd/mm/yyyy"
+                                           name="return_date">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <div class="pull_left timing_field">
+                                    <label>timing</label>
+                                    <select name="toStation" id="toStation">
+                                        {% for x in r_objects %}
+                                            <option value="{{ x.r_departure_time }}">{{ x.r_arrival_time }}</option>
+                                        {% endfor %}
+                                    </select><i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="pull_left room_select_field">
+                                    <label>kids</label>
+                                    <select class="form-control" id="search_kids">
+                                        <option value="1">01</option>
+                                        <option value="2">02</option>
+                                        <option value="3">03</option>
+                                        <option value="4">04</option>
+                                    </select>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="pull_left submit_field">
+                                    <input type="search" placeholder="SEARCH" class="search_tabs" readonly>
+                                    <button class="btn tab_search" type="submit" name="search_train1"
+                                            value="get_train1">
+                                        <i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                            <!-- flight_booking_inner end -->
+                        </form>
+                        <!-- tab_search form End -->
                     </div>
+                    <!-- first content_end -->
                 </div>
             </div>
             <!-- slider tab section End -->
@@ -399,7 +383,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="hotel_feature_box">
-                                <img src="https://images.pexels.com/photos/258347/pexels-photo-258347.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-258347.jpg&fit=crop&fm=jpg&h=300&w=270"
+                                <img src="https://i.pinimg.com/originals/e8/63/2e/e8632ee94b8ece7db5725efaeac0e84c.jpg"
                                      class="img-responsive" alt="feature">
                                 <div class="feature_overlay_second">
                                     <div class="bottom_first"><a href="#">Dhaka-Chittagong</a><span>750 Tk</span></div>
@@ -409,7 +393,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="hotel_feature_box">
-                                <img src="https://images.pexels.com/photos/159148/regional-train-rail-cars-platform-deutsche-bahn-159148.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-159148.jpg&fit=crop&fm=jpg&h=300&w=270"
+                                <img src="https://twistedsifter.com/wp-content/uploads/2018/05/ng_tpoty_people_week5_008.jpg"
                                      class="img-responsive" alt="feature">
                                 <div class="feature_overlay_second">
                                     <div class="bottom_first"><a href="#">Dhaka-Barishal</a><span>750 Tk</span></div>
@@ -419,7 +403,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-6">
                             <div class="hotel_feature_box">
-                                <img src="https://images.pexels.com/photos/1548693/pexels-photo-1548693.jpeg?crop=entropy&cs=srgb&dl=pexels-david-bartus-1548693.jpg&fit=crop&fm=jpg&h=300&w=270"
+                                <img src="https://i.dailymail.co.uk/i/pix/2017/06/01/12/40FD805F00000578-0-image-a-56_1496316941395.jpg"
                                      class="img-responsive" alt="feature">
                                 <div class="feature_overlay_second">
                                     <div class="bottom_first"><a href="#">Dhaka-Rangpur</a><span>750 Tk</span></div>
@@ -447,7 +431,8 @@
                             <div class=" full_width offer_box_wrapper">
                                 <div class="circle_icon"> 20% <span>off</span></div>
                                 <div class="img_overlay_wrapper">
-                                    <img src="http://placehold.it/270x211" class="img-responsive" alt="offer">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYRHGhqGbQctDoAhAxImdMJioQYQVkSiI8Q&usqp=CAU"
+                                         class="img-responsive" alt="offer">
                                     <div class="img_overlay"></div>
                                 </div>
                                 <div class="full_width offer_inner">
@@ -461,7 +446,7 @@
                             <div class=" full_width offer_box_wrapper">
                                 <div class="circle_icon"> 30% <span>off</span></div>
                                 <div class="img_overlay_wrapper">
-                                    <img src="https://images.pexels.com/photos/880929/pexels-photo-880929.jpeg?crop=entropy&cs=srgb&dl=pexels-leslie-toh-880929.jpg&fit=crop&fm=jpg&h=3080&w=5472"
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsVqvlafvtU-VPRIdDq1YnyTPrcIklefiZZkVDwIhJWrFXfW671Z5eptmWSgtXn-sm2xU&usqp=CAU"
                                          class="img-responsive" alt="offer">
                                     <div class="img_overlay"></div>
                                 </div>
@@ -476,7 +461,7 @@
                             <div class=" full_width offer_box_wrapper">
                                 <div class="circle_icon"> 15% <span>off</span></div>
                                 <div class="img_overlay_wrapper">
-                                    <img src="https://images.pexels.com/photos/2569249/pexels-photo-2569249.jpeg?crop=entropy&cs=srgb&dl=pexels-luis-leon-2569249.jpg&fit=crop&fm=jpg&h=6000&w=4000"
+                                    <img src="https://i.pinimg.com/originals/e8/63/2e/e8632ee94b8ece7db5725efaeac0e84c.jpg"
                                          class="img-responsive" alt="offer">
                                     <div class="img_overlay"></div>
                                 </div>
@@ -491,7 +476,7 @@
                             <div class=" full_width offer_box_wrapper">
                                 <div class="circle_icon"> 40% <span>off</span></div>
                                 <div class="img_overlay_wrapper">
-                                    <img src="https://images.pexels.com/photos/1170184/pexels-photo-1170184.jpeg?crop=entropy&cs=srgb&dl=pexels-veerasak-piyawatanakul-1170184.jpg&fit=crop&fm=jpg&h=4000&w=6000"
+                                    <img src="https://photos.lensculture.com/large/5b927049-4614-4510-b0d0-cbd1fee7a773.jpg"
                                          class="img-responsive" alt="offer">
                                     <div class="img_overlay"></div>
                                 </div>
