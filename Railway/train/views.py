@@ -12,10 +12,10 @@ from .models import user, ticket, train_info, transection, route, passenger
 from django.db import connection, connections
 from django.db.models import Q
 import cx_Oracle
-from .filters import *
 
 cursor = connection.cursor()
 global valu;
+global selected_route_id
 
 
 # Create your views here.
@@ -34,10 +34,10 @@ def loggin(request):
             x = user.objects.filter(user_email=emaillog).filter(user_password=passlog).filter(user_status=statusLog)
             if x:
                 if x.filter(user_status='Admin'):
-                    print('Cool,nicely done')
+                    # print('Cool,nicely done')
                     # context_processors.everyWhere['adminPlace'] = ''
                     messages.success(request=request, message='WelCome Back Admin !!')
-                print("hello",emaillog)
+                # print("hello", emaillog)
                 messages.success(request=request, message='Logged In SuccessFul !!')
                 return True
             else:
@@ -88,8 +88,32 @@ def signUp(request):
 
 
 def booking(request):
+    train_id_selected = False
+    pasId = False
+
     signUp(request=request)
     loggin(request=request)
+    if request.POST.get('purchaseBtn', False):
+        train_id_selected = request.POST.get('ticket_id_selected')
+        # print(train_id_selected)
+    if request.POST.get('passenger_Created', False):
+        pasId = passenger_Insert(request)
+        # if pasId != 0:
+        #     print(pCheck)
+    if request.method == 'POST':
+        payment = request.POST.get('NogodFinished')
+        pinNum = request.POST.get('transactionPin')
+        accname = request.POST.get('nogodAccountName')
+        accNum = request.POST.get('AccountNumber')
+        if payment:
+            try:
+                transactionDone = transection(payment_gateway='Nogod', transaction_id=pasId, transaction_pin=pinNum,
+                                              account_holder_name=accname, account_no=accNum, bill_cleared=True)
+                transactionDone.save()
+                # print("Ok")
+            except:
+                messages.error(request, "Have to create a new passenger!!")
+
     # # with connection.cursor() as cursor:
     # #     cursor.execute('''select * from train_route''')
     # #     row = cursor.fetchall()
@@ -99,23 +123,73 @@ def booking(request):
     # # context = {'a':'M'}
     return render(request, 'Flights-Booking.html')
 
+
 def buy1(request):
     signUp(request=request)
     loggin(request=request)
     return render(request, 'Flights-Booking.html')
 
+
+def passenger_Insert(request):
+    fname = request.POST.get('fname')
+    lname = request.POST.get('lname')
+    pName = str(fname) + ' ' + str(lname)
+    phone = request.POST.get('phone')
+    pmail = request.POST.get('passenger_email')
+    pAge = request.POST.get('Age')
+    pgender = request.POST.get('gender')
+
+    x = user.objects.filter(user_email__exact=pmail, user_status='Passenger')
+    if x:
+        # print("Found passenger")
+        messages.success(request, "passenger's mail account matched")
+        try:
+            uId = user.objects.get(user_email=pmail)
+            p1 = passenger(p_name=pName, p_gender=pgender, p_phone=phone, p_age=pAge, p_transaction_id=uId)
+            p1.save()
+            return p1
+        except:
+            messages.warning(request, "Already a passenger with that mail is exists")
+        return 0
+    else:
+        messages.error(request, "mail not matched,have to put verify mail account again")
+        return 0
+
+
 def schedule(request):
     signUp(request=request)
     loggin(request=request)
-    train_data = train_info.objects.all()
-    if request.POST.get('ticket_item_selected'):
-        print('yes,item selected')
+    context = {}
+    # if request.POST.get('ticket_item_selected'):
+        # print('yes,item selected')
 
     if request.POST.get('search_train1') == 'get_train1':
-        dep_st = str(request.POST.get('fromStation'))
-        arr_st = str(request.POST.get('toStation'))
+        dep_st = request.POST.get('fromStation')
+        arr_st = request.POST.get('returnStation')
         dept_date = request.POST.get('from_date')
         arr_date = request.POST.get('return_date')
+        # print(dep_st)
+        # print(arr_st)
+        # print(dept_date)
+        # print(arr_date)
+        try:
+            selected_route_information = route.objects.get(r_arrival_station__icontains=arr_st,
+                                                           r_departure_station__icontains=dep_st,
+                                                           r_arrival_date=arr_date, r_departure_date=dept_date)
+            selected_route_data = route.objects.get(r_arrival_station__icontains=arr_st,
+                                                    r_departure_station__icontains=dep_st, r_arrival_date=arr_date,
+                                                    r_departure_date=dept_date).train_infos.all()
+            selected_route_id = selected_route_information.r_id
+            # print(selected_route_id)
+            timeTable = train_info.objects.filter(train_route__r_id=selected_route_id)
+            # print(timeTable)
+        except:
+            selected_route_data = False
+        finally:
+            context = {
+                'searched_data': selected_route_data,
+                # 'time_Table' : timeTable,
+            }
         # query = '''SELECT
         #          train_info.train_name ,
         #          route.r_id
@@ -137,7 +211,8 @@ def schedule(request):
         # if check == True:
         #     buy1(request=request)
         #     exit(0)
-    return render(request, 'train_search.html', {'train_infos': train_data})
+    return render(request, 'train_search.html', context=context)
+
 
 def footer_schedule(request):
     if request.POST.get('train_query') == 'search':
@@ -146,7 +221,7 @@ def footer_schedule(request):
         travelFrom = request.POST.get('travelFrom')
         travelDest = request.POST.get('travelDest')
         travelTime = request.POST.get('travelTime')
-        print(trainName,travelFrom,travelDest,ticketClass,travelTime)
+        # print(trainName, travelFrom, travelDest, ticketClass, travelTime)
 
     schedule(request=request)
 
@@ -169,15 +244,14 @@ def index(request):
     #         'route_line': val.r_line_no,
     #     }
     # schedule(request=request)
-    my_Filter = OrderFilter()
-    r_data = route.objects.all()
+    # my_Filter = OrderFilter()
+    r_data = route.objects.order_by('r_departure_station', 'r_arrival_station').distinct()
     # r_data2 = route.objects.distinct("r_departure_station").all()
-    ticket_data = ticket.objects.all()
+    ticket_data = ticket.objects.order_by('ticket_class').distinct()
     context = {
         'r_objects': r_data,
         # 'r_objects2': r_data2,
         't_objects': ticket_data,
-        'myFilter': my_Filter,
     }
     return render(request, 'index.html', context=context)
 
@@ -208,9 +282,10 @@ def comingsoon(request):
     }
     return render(request, 'Coming_soon.html', context=context)
 
-def error404(request,anything):
+
+def error404(request, anything):
     if request.method == 'POST':
         srch = request.POST['404search']
         if srch:
-            messages.error(request,'No matched Data,Go to Home')
+            messages.error(request, 'No matched Data,Go to Home')
     return render(request, '404_Error.html')

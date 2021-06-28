@@ -34,13 +34,13 @@ class user(models.Model):
 
 class transection(models.Model):
     B = 'Bkash'
-    V = 'Visa Card'
-    M = 'Master Card'
+    D = 'Debi Card'
+    C = 'Credit Card'
     N = 'Nogod'
     R = 'Rocket'
 
-    payment_gateway =        models.CharField(choices=[(B,'Bkash'),(N,'Nogod'),(R,'Rocket'),(V,'Visa Card'),(M,'Master Card')],default=N,max_length=32,help_text='Choose your favourable payment gateway')
-    transaction_id =         models.ForeignKey('passenger', on_delete=models.CASCADE)
+    payment_gateway =        models.CharField(choices=[(B,'Bkash'),(N,'Nogod'),(R,'Rocket'),(D,'Debit Card'),(C,'Credit Card')],default=N,max_length=32,help_text='Choose your favourable payment gateway')
+    transaction_id =         models.ForeignKey('passenger', on_delete=models.CASCADE,related_name='transections')
     account_no =             models.CharField(max_length=60, help_text='type account number or Bkash phone Number',
                                   primary_key=True)
     account_holder_name =    models.CharField(max_length=60, blank=True)
@@ -80,8 +80,8 @@ class route(models.Model):
 class train_info(models.Model):
     train_route =         models.ForeignKey(route,on_delete=models.DO_NOTHING,related_name='train_infos')
     train_id =            models.CharField(primary_key=True,max_length=60)
-    train_name =          models.CharField(max_length=32,help_text='Give exclusive train name here')
-    train_service =       models.CharField(max_length=60)
+    train_name =          models.CharField(max_length=64,help_text='Give exclusive train name here')
+    train_service =       models.CharField(max_length=256)
     train_weekened =      models.CharField(blank=True,max_length=12)
     train_info =          models.TextField(blank=True)
 
@@ -95,12 +95,12 @@ class train_info(models.Model):
 class ticket(models.Model):
     ticket_id =             models.CharField(primary_key=True,help_text='This should be admin generated',max_length=32)
     transaction_for_ticket= models.OneToOneField(transection, on_delete=models.CASCADE,null=True)
-    ticket_train =          models.OneToOneField(train_info,on_delete=models.CASCADE,blank=True) # ticket will be generated from train_info
-    ticket_of_passenger =   models.OneToOneField('passenger', on_delete=models.CASCADE, blank=True) # jodi passenger delete hoy tobe ticket diye ki korbe
+    ticket_train =          models.OneToOneField(train_info,on_delete=models.CASCADE,blank=True) # ticket will be generated from train_info,ekhon train-i jodi na thake tobe ticket to ashbei na
+    ticket_of_passenger =   models.OneToOneField('passenger', on_delete=models.CASCADE, blank=True)
     ticket_source =         models.CharField(max_length=32, help_text='Departure Station ', blank=True)
     ticket_dest =           models.CharField(max_length=32, help_text='Arrival Station ', blank=True)
-    ticket_class =          models.CharField(max_length=12, help_text='Seat Quality')
-    ticket_seat_no =        models.CharField(max_length=12)
+    ticket_class =          models.CharField(max_length=64, help_text='Seat Quality')
+    ticket_seat_no =        models.CharField(max_length=32)
     ticket_fare =           models.IntegerField()
 
     class Meta:

@@ -46,6 +46,7 @@
                             {% csrf_token %}
                             <div class="travel_form_element">
                                 <label>Train class</label>
+{#                                <input type="text" name="trian_class" placeholder="Train Class" class="selectpicker">#}
                                 <select class="selectpicker" name="ticket_class" title="Train Type">
                                     {% for x in everyTicket %}
                                     <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>

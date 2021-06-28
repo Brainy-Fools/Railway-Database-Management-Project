@@ -289,8 +289,8 @@
                                     <i class="fa fa-caret-down"></i>
                                 </div>
                                 <div class="pull_left check_in_field">
-                                    <label>Journey Date</label> <input type="text" id="Check_in_date_tab"
-                                                                       placeholder="dd/mm/yyyy" name="from_date">
+                                    <label>Journey Date</label>
+                                    <input type="date" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" name="from_date">
                                     <i class="fa fa-calendar"></i>
                                 </div>
                                 <div class="pull_left timing_field">
@@ -304,8 +304,8 @@
                                 </div>
                                 <div class="pull_left room_select_field">
                                     <label>adults</label>
-                                    <select class="form-control " id="search_adult">
-                                        <option value="1">01</option>
+                                    <select class="form-control " id="search_adult" disabled>
+                                        <option value="1" selected>01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
                                         <option value="4">04</option>
@@ -322,7 +322,7 @@
                             <div class="flight_booking_inner">
                                 <div class="pull_left location_airport">
                                     <label for="toStation">To</label>
-                                    <select name="toStation" id="toStation" data-live-search="true" class="selectpicker">
+                                    <select name="returnStation" id="toStation" data-live-search="true" class="selectpicker">
                                         {% for x in r_objects %}
                                             <option value={{ x.r_arrival_station }}>{{ x.r_arrival_station }}</option>
                                         {% endfor %}
@@ -330,25 +330,25 @@
                                 </div>
                                 <div class="pull_left check_in_field">
                                     <label>Return Date</label>
-                                    <input type="text" id="Check_out_date_tab" placeholder="dd/mm/yyyy"
+                                    <input type="date" placeholder="YYYY-MM-DD" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
                                            name="return_date">
                                     <i class="fa fa-calendar"></i>
                                 </div>
                                 <div class="pull_left timing_field">
                                     <label>timing</label>
-                                    <select name="toStation" id="toStation">
+                                    <select name="returnDate" id="toStation">
                                         {% for x in r_objects %}
-                                            <option value="{{ x.r_departure_time }}">{{ x.r_arrival_time }}</option>
+                                            <option value="{{ x.r_arrival_time }}">{{ x.r_arrival_time }}</option>
                                         {% endfor %}
                                     </select><i class="fa fa-caret-down"></i>
                                 </div>
                                 <div class="pull_left room_select_field">
                                     <label>kids</label>
-                                    <select class="form-control" id="search_kids">
+                                    <select class="form-control" id="search_kids" disabled>
+                                        <option value="0">00</option>
                                         <option value="1">01</option>
                                         <option value="2">02</option>
                                         <option value="3">03</option>
-                                        <option value="4">04</option>
                                     </select>
                                     <i class="fa fa-caret-down"></i>
                                 </div>

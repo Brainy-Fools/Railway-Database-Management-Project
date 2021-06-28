@@ -1,0 +1,4 @@
+django_phone_field==1.8.1
+Django==3.2.4
+django_debug_toolbar==3.2.1
+cx_Oracle==8.2.1

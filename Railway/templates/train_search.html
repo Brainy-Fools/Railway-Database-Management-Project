@@ -298,39 +298,49 @@
         <!-- slider main wrapper end -->
         <div class="col-md-12">
             <h4>According to your search Result</h4>
-
-            <div class="table-responsive">
-                <table id="bootstrapdatatable" class="table table-striped table-bordered table-hover table-dark">
-                    <thead>
-                    <th scope="col">Select To Purchase</th>
-                    <th scope="col">Train Name</th>
-                    {#                    <th>Train Route</th>#}
-                    <th scope="col">Train Service</th>
-                    <th scope="col">Train Weekend</th>
-                    <th scope="col">Train Info</th>
-                    </thead>
-                    <tbody>
-                    {% for x in train_infos %}
-                        {% if x %}
-                            <tr>
-                                <td>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1"
-                                               name="ticket_item_selected">
-                                    </div>
-                                </td>
-                                <td>{{ x.train_name }}</td>
-                                <td>{{ x.train_service }}</td>
-                                <td>{{ x.train_weekened }}</td>
-                                <td>{{ x.train_info }}</td>
-                            </tr>
-                        {% endif %}
-                    {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-            <div class="full_width destination_button"><a href="#" class="btn_green btns feature_more_btn">more
-                offers</a></div>
+            <form method="post" action="{% url 'booking' %}">
+                <div class="form-group align-items-center">
+                    <div class="table-responsive">
+                        <table id="bootstrapdatatable"
+                               class="table table-striped table-bordered table-hover table-dark">
+                            <thead>
+                            <th scope="col">Select One To Purchase</th>
+                            <th scope="col">Train Name</th>
+                            {#                    <th>Train Departure Time</th>#}
+                            <th scope="col">Train Service</th>
+                            <th scope="col">Train Weekend</th>
+                            <th scope="col">Train Info</th>
+                            </thead>
+                            <tbody>
+                            {% if searched_data %}
+                                {#                        {% for x in time_Table %}#}
+                                {% for x in searched_data %}
+                                    <tr>
+                                        <td>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck1"
+                                                       name="ticket_id_selected" value={{ x.train_id }}>
+                                            </div>
+                                        </td>
+                                        <td>{{ x.train_name }}</td>
+                                        {#                                <td>{{ x.train_route__r_departure_time }}</td>#}
+                                        <td>{{ x.train_service }}</td>
+                                        <td>{{ x.train_weekened }}</td>
+                                        <td>{{ x.train_info }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <h3 style="color: red"><span>No Matched Data Found</span></h3>
+                            {% endif %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="text-center">
+                    {% csrf_token %}
+                    <input class="btn btn-primary" name="purchaseBtn" type="submit" value="Proceed To Purchase">
+                </div>
+            </form>
         </div>
         {#        <form class="package_booking_main" method="post">#}
         {#            {% csrf_token %}#}
