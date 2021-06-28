@@ -1,0 +1,26 @@
+{% extends "admin/login.html" %}
+
+{% load i18n static %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+#header {
+  background-color: transparent !important;
+}
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1>
+  <span style="color: red !important">Join Brainy Fools</span>
+  <br />
+  <small style="color: #0f3e68">{% block head_title %}We are always hungry for troubles{% endblock %}</small>
+</h1>
+{% endblock %}
+
+{% block content_title %}
+<p class="lead" style="font-size: larger">
+Be the Admin of our Railway Project
+</p>
+{% endblock %}

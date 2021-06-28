@@ -31,6 +31,7 @@ urlpatterns = [
     path('schedule/',views.schedule,name='schedule'),
     path('Contact/', views.contact, name='contact_us'),
     path('Coming-soon/', views.comingsoon, name='coming_soon'),
+    path('<slug:anything>',views.error404,name='error404')
 ]
 
 

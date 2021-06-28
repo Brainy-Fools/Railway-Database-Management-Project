@@ -15,7 +15,7 @@
     <div id="content_wrapper">
         <!--page title start-->
         <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0"
-             style="background-image:url(http://placehold.it/1599x640);">
+             style="background-image:url(https://img.freepik.com/free-vector/vector-coloful-page-with-3d-model-train-bright-landscape-beautiful-vector-illustration-with-train-travel-vintage-retro-train-graphic-vector_177886-175.jpg?size=626&ext=jpg);">
             <ul>
                 <li><a href="javascript:;">404 error</a></li>
             </ul>
@@ -46,15 +46,16 @@
                         </div>
 
                         <div class="error_next_prev_links">
-                            <a href="#" class="home_page">home</a>
-                            <a href="#" class="prev_page">Previous Page</a>
+                            <a href="{% url 'index-page' %}" class="home_page">Home</a>
+                            <a href="{% url 'contact_us' %}" class="prev_page">Contact Us</a>
 
                         </div>
                         <div class="serach_here">or<h5>search here</h5></div>
-                        <form>
+                        <form method="post" action="" enctype="multipart/form-data">
+                            {% csrf_token %}
                             <div class="bottom_searching_part">
                                 <input type="text" class="search_page" name="search">
-                                <button class="btn_search" type="submit"><i class="fa fa-search">
+                                <button class="btn_search" name="404search" type="submit"><i class="fa fa-search">
                                 </i></button>
                             </div>
                         </form>

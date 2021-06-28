@@ -281,7 +281,7 @@
                             <div class="flight_booking_inner">
                                 <div class="pull_left location_airport">
                                     <label for="fromStation">From</label>
-                                    <select name="fromStation" id="fromStation">
+                                    <select name="fromStation" id="fromStation" data-live-search="true" class="selectpicker">
                                         {% for x in r_objects %}
                                             <option value="{{ x.r_departure_station }}">{{ x.r_departure_station }}</option>
                                         {% endfor %}
@@ -295,7 +295,7 @@
                                 </div>
                                 <div class="pull_left timing_field">
                                     <label>Ticket Class</label>
-                                    <select class="form-control" id="search_adults">
+                                    <select class="form-control" id="search_adults" data-live-search="true" class="selectpicker">
                                         {% for x in t_objects %}
                                             <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>
                                         {% endfor %}
@@ -322,7 +322,7 @@
                             <div class="flight_booking_inner">
                                 <div class="pull_left location_airport">
                                     <label for="toStation">To</label>
-                                    <select name="toStation" id="toStation">
+                                    <select name="toStation" id="toStation" data-live-search="true" class="selectpicker">
                                         {% for x in r_objects %}
                                             <option value={{ x.r_arrival_station }}>{{ x.r_arrival_station }}</option>
                                         {% endfor %}

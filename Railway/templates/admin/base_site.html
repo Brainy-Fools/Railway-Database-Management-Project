@@ -1,0 +1,43 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+{% block extrahead %}
+    <link rel="shortcut icon" href="{% static 'images/favicon3.ico' %}" />
+{% endblock %}
+{% block title %}Admin | Railway Project{% endblock %}
+
+{% block branding %}{% endblock %}
+{% block breadcrumbs %}{% endblock %}
+
+{% block bodyclass %}bg-info{% endblock %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      #header, .breadcrumbs { display: none; }
+
+      /* Bootstrap issues with admin */
+      * { box-sizing: unset; }
+      div.module caption { caption-side: top !important; }
+      .collapse { display: block !important; }
+    </style>
+{% endblock %}
+
+{% block bodyheader %}
+    <div class="bg-white container">
+
+      <div class="jumbotron">
+        <h1 class="display-4">Hacking the Django Admin with Bootstrap with MasumBhai</h1>
+        <p class="lead">
+          The <a ref="https://docs.djangoproject.com/en/dev/ref/contrib/admin/">Django administration site</a> is great—full-featured, easy to use, secure by design, rock solid… and somewhat ugly, which can be something of a downside when you want to integrate it with the look-and-feel of the rest of the website. Let’s sort that out with MasumBhai.
+        </p>
+      </div>
+{% endblock %}
+
+{% block bodyfooter %}
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+{% endblock %}

@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect
 # from .context_processors import everyWhere
 from .models import user, ticket, train_info, transection, route, passenger
 from django.db import connection, connections
+from django.db.models import Q
 import cx_Oracle
 from .filters import *
 
@@ -107,6 +108,8 @@ def schedule(request):
     signUp(request=request)
     loggin(request=request)
     train_data = train_info.objects.all()
+    if request.POST.get('ticket_item_selected'):
+        print('yes,item selected')
 
     if request.POST.get('search_train1') == 'get_train1':
         dep_st = str(request.POST.get('fromStation'))
@@ -204,3 +207,10 @@ def comingsoon(request):
 
     }
     return render(request, 'Coming_soon.html', context=context)
+
+def error404(request,anything):
+    if request.method == 'POST':
+        srch = request.POST['404search']
+        if srch:
+            messages.error(request,'No matched Data,Go to Home')
+    return render(request, '404_Error.html')

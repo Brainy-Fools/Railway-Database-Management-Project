@@ -40,7 +40,7 @@ class transection(models.Model):
     R = 'Rocket'
 
     payment_gateway =        models.CharField(choices=[(B,'Bkash'),(N,'Nogod'),(R,'Rocket'),(V,'Visa Card'),(M,'Master Card')],default=N,max_length=32,help_text='Choose your favourable payment gateway')
-    transaction_id =         models.ForeignKey(user, on_delete=models.CASCADE)
+    transaction_id =         models.ForeignKey('passenger', on_delete=models.CASCADE)
     account_no =             models.CharField(max_length=60, help_text='type account number or Bkash phone Number',
                                   primary_key=True)
     account_holder_name =    models.CharField(max_length=60, blank=True)
@@ -50,9 +50,10 @@ class transection(models.Model):
     bill_cleared =           models.BooleanField(default=False)
     qr_code =                models.ImageField(unique=True, blank=True)
 
+
     class Meta:
         ordering = ['transaction_id']
-        db_table = 'transaction'
+        db_table = 'transection'
 
     def __str__(self):
         return "%s" %(self.transaction_id)
@@ -77,7 +78,7 @@ class route(models.Model):
         return "%d" %(self.r_id)
 
 class train_info(models.Model):
-    train_route =         models.ManyToManyField(route,related_name='train_infos')
+    train_route =         models.ForeignKey(route,on_delete=models.DO_NOTHING,related_name='train_infos')
     train_id =            models.CharField(primary_key=True,max_length=60)
     train_name =          models.CharField(max_length=32,help_text='Give exclusive train name here')
     train_service =       models.CharField(max_length=60)
@@ -120,7 +121,7 @@ class passenger(models.Model):
     p_age =            models.IntegerField(help_text='Give original age,no fake ages allowed')
     p_gender =         models.CharField(choices=[(M,'Male'),(F,'Female'),(T,'Transgender'),(P,'Prefer not to say')],default=P,max_length=32, blank=True)
     p_phone =          PhoneField(blank=True, help_text='Contact phone number')
-    p_transaction_id = models.OneToOneField(transection, on_delete=models.CASCADE,blank=True) #if transaction deleted no longer will be passenger
+    p_transaction_id = models.OneToOneField(user, on_delete=models.CASCADE,blank=True) #if transaction deleted no longer will be passenger
 
     class Meta:
         ordering = ['p_id']

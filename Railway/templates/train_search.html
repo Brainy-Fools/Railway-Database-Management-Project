@@ -315,7 +315,9 @@
                             <tr>
                                 <td>
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck1"></div>
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1"
+                                               name="ticket_item_selected">
+                                    </div>
                                 </td>
                                 <td>{{ x.train_name }}</td>
                                 <td>{{ x.train_service }}</td>
@@ -327,16 +329,12 @@
                     </tbody>
                 </table>
             </div>
+            <div class="full_width destination_button"><a href="#" class="btn_green btns feature_more_btn">more
+                offers</a></div>
         </div>
-{#        <form class="package_booking_main" method="post">#}
-{#            {% csrf_token %}#}
-{#            <div class="full_width t_align_c">#}
-{#                <input type="submit" name="selected_ticket_buy" value="proceed to Buy Selected"#}
-{#                        class="btn_green proceed_buttton btns">#}
-{#                    Buy selected Ticket#}
-{#                </input>#}
-{#            </div>#}
-{#        </form>#}
+        {#        <form class="package_booking_main" method="post">#}
+        {#            {% csrf_token %}#}
+        {#        </form>#}
         <!-- popular flights section Start -->
         <div class="full_width Travelite_feature_section border_bottom">
             <div class="container">
@@ -399,7 +397,8 @@
                             <div class=" full_width offer_box_wrapper">
                                 <div class="circle_icon"> 20% <span>off</span></div>
                                 <div class="img_overlay_wrapper">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYRHGhqGbQctDoAhAxImdMJioQYQVkSiI8Q&usqp=CAU" class="img-responsive" alt="offer">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSYRHGhqGbQctDoAhAxImdMJioQYQVkSiI8Q&usqp=CAU"
+                                         class="img-responsive" alt="offer">
                                     <div class="img_overlay"></div>
                                 </div>
                                 <div class="full_width offer_inner">
