@@ -33,7 +33,7 @@ class TransectionAdmin(admin.ModelAdmin):
 
 @admin.register(ticket)
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('ticket_of_passenger','ticket_train','transaction_for_ticket','ticket_source', 'ticket_dest', 'ticket_class','ticket_seat_no','ticket_fare')
+    list_display = ('ticket_of_passenger','ticket_train','ticket_source', 'ticket_dest', 'ticket_class','ticket_seat_no','ticket_fare')
     list_filter = ['ticket_source','ticket_dest']
     fields = ['ticket_id',('transaction_for_ticket','ticket_of_passenger'),'ticket_train',('ticket_source', 'ticket_dest'),('ticket_class','ticket_seat_no','ticket_fare')]
     pass

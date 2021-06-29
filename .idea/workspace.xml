@@ -2,17 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="Herculean tasks">
+      <change afterPath="$PROJECT_DIR$/Railway/train/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/train/migrations/0002_auto_20210628_1626.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/train/migrations/0003_auto_20210628_1630.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/train/migrations/0004_auto_20210629_2047.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/0/8/08179db1166a47efc42e81dd5d53b30731f0c96b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/3/5/35917d22ce0da382a1c895a8c70b36048a182fc3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/4/e/4ea5241bf23c7fa6861e3bfb4ec214cda1ab0b02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/5/6/56844c4b632ccce200c900879a9c11c6da4064e8" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/6/b/6bfcb25975e480ee4d2d1cc6481aac9cde7465d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/9/1/9194471cc8b9864be82f9207ff0077545bacb14a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/9/2/924627e410e78e0b95a7bea0cab78584c7948f33" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/templates/train_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/train_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/train/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/static/images/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Coming_soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/Coming_soon.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Flights-Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/Booking.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Flights-Details.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/Header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Home_04.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Home_05.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/messages.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/scripts.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/scripts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/context_processors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/context_processors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/train/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/train/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,6 +78,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Railway/static/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -94,6 +116,7 @@
       <workItem from="1624044962255" duration="4608000" />
       <workItem from="1624049735382" duration="772000" />
       <workItem from="1624806879783" duration="40000" />
+      <workItem from="1624983332885" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="Left hand holding ice_pack,Right hand holding mouse">
       <created>1623671720759</created>
