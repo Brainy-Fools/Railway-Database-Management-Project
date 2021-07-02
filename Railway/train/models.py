@@ -36,7 +36,7 @@ class transection(models.Model):
     R = 'Rocket'
 
     payment_gateway =        models.CharField(choices=[(B,'Bkash'),(N,'Nogod'),(R,'Rocket'),(D,'Debit Card'),(C,'Credit Card')],default=N,max_length=32,help_text='Choose your favourable payment gateway')
-    transaction_id =         models.ForeignKey('ticket', on_delete=models.CASCADE,related_name='transections')
+    transaction_id =         models.OneToOneField('ticket', on_delete=models.DO_NOTHING,related_name='transections')
     account_no =             models.CharField(max_length=60, help_text='type account number or Bkash phone Number',
                                   primary_key=True)
     account_holder_name =    models.CharField(max_length=60, blank=True,null=True)
@@ -88,7 +88,7 @@ class train_info(models.Model):
         return "%s" %(self.train_name)
 
 class ticket(models.Model):
-    ticket_id =             models.CharField(primary_key=True,help_text='This should be admin generated',max_length=32)
+    ticket_id =             models.CharField(primary_key=True,help_text='This should be auto generated',max_length=32)
     # transaction_for_ticket= models.OneToOneField(transection, on_delete=models.CASCADE,null=True)
     ticket_train =          models.ForeignKey(train_info,on_delete=models.CASCADE,blank=True) # ticket will be generated from train_info,ekhon train-i jodi na thake tobe ticket to ashbei na
     ticket_of_passenger =   models.OneToOneField('passenger', on_delete=models.CASCADE, blank=True)

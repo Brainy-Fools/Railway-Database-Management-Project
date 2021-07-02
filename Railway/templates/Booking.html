@@ -12,7 +12,7 @@
     <div id="content_wrapper">
         <!--page title Start-->
         <div class="page_title" data-stellar-background-ratio="0" data-stellar-vertical-offset="0"
-             style="background-image:url(https://i.dailymail.co.uk/i/pix/2017/06/01/12/40FD805F00000578-0-image-a-56_1496316941395.jpg);">
+             style="background-image:url({% static 'images/MasumBhai_Express_003.jpg' %});">
             <ul>
                 <li><a href="javascript:;">E booking</a></li>
             </ul>
@@ -32,14 +32,88 @@
                                 <!-- tabs start -->
                                 <div class="tour_booking_tabs">
                                     <ul>
-                                        <li {# style="display: none" #}><a href="#booking_details">Booking Details</a>
+                                        <li {# style="display: none" #}><a href="#personal_info">Passenger Info</a></li>
+                                        <li {# style="display: none" {# class="{%  if activate_details is none %}{{ 'hidden' }}{% endif %}" #}><a href="#booking_details">Booking Details</a>
                                         </li>
-                                        <li {# style="display: none" #}><a href="#personal_info">Personal Info</a></li>
                                         <li {# style="display: none" #}><a href="#payment_info">Payment Info</a></li>
                                         <li {# style="display: none" #}><a href="#confirmation">Confirmation</a></li>
                                     </ul>
                                 </div>
                                 <!-- tabs end -->
+                                <!-- personal_info Start -->
+                                <div id="personal_info" class="main_content_area hotel_main_content">
+                                    <!--  tab inner section three Start -->
+                                    <div class="inner_container">
+                                        <div class="heading_tab_inner">
+                                            <h5>personal information</h5>
+                                        </div>
+                                        <form class="package_booking_main" method="post" action="{% url 'booking' %}">
+                                            {% csrf_token %}
+                                            <div class="tab_inner_section inner_section_2 flight_inner_section">
+                                                <div class="tab_inner_body full_width">
+                                                    <!-- package_booking_form start -->
+                                                    <div class="package_booking_form">
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <input type="text" placeholder="Passenger Full Name"
+                                                                   name="firstname"
+                                                                   class="booking_input" required>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <input type="email" placeholder="Your passenger Email"
+                                                                   name="passenger_email" class="booking_input"
+                                                                   required>
+                                                        </div>
+                                                        <div class="col-lg-6 col-md-6">
+                                                            <input type="tel" placeholder="Actual Phone Number"
+                                                                   name="phone"
+                                                                   class="booking_input" required>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2">
+                                                            <input type="number" placeholder="Age" name="Age"
+                                                                   class="booking_input" required>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2 ">
+                                                            {#                                                            <label for="genderSelection">Gender:</label>#}
+                                                            <select id="genderSelection" name="gender"
+                                                                    class="selectpicker" data-style="btn-primary"
+                                                                    title="select Gender">
+                                                                <option value="Male" selected>Male</option>
+                                                                <option value="Female">Female</option>
+                                                                <option value="Transgender">Transgender</option>
+                                                                <option value="Prefer not to say">prefer not to say
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <textarea
+                                                                    placeholder="Give Your valuable comment & we will treasure that"
+                                                                    class="booking_textarea"></textarea>
+                                                        </div>
+                                                    </div>
+                                                    <!--  package_booking_form END -->
+                                                </div>
+                                                <!--  tab_inner_body end -->
+                                                {#                                                <div class="checkbox_book top_margin">#}
+                                                {#                                                    <input type="checkbox" id="check1" name="check" value="check1" disabled >#}
+                                                {#                                                    <label for="check1">I want receive Brainy Fools promotional and offers#}
+                                                {#                                                        in the future</label>#}
+                                                {#                                                </div>#}
+                                            </div>
+                                            <!--  tab inner three section End -->
+                                            <!-- proceed button -->
+                                            <div class="full_width t_align_c">
+                                                {% csrf_token %}
+                                                <button type="submit" name="passenger_Created" value="passenger_Created"
+                                                        class="btn_green proceed_buttton btns">
+                                                    <a href="#detail-Information">proceed to next step</a>
+                                                </button>
+                                            </div>
+                                            <!-- proceed button -->
+                                        </form>
+                                    </div>
+                                    <!--  inner container end -->
+                                </div>
+                                <!-- personal_info End -->
                                 <!-- booking_details Start -->
                                 <div id="booking_details" class="main_content_area hotel_main_content">
                                     <div class="inner_container">
@@ -169,80 +243,6 @@
                                     <!-- proceed button -->
                                 </div>
                                 <!-- booking_details End -->
-                                <!-- personal_info Start -->
-                                <div id="personal_info" class="main_content_area hotel_main_content">
-                                    <!--  tab inner section three Start -->
-                                    <div class="inner_container">
-                                        <div class="heading_tab_inner">
-                                            <h5>personal information</h5>
-                                        </div>
-                                        <form class="package_booking_main" method="post">
-                                            {% csrf_token %}
-                                            <div class="tab_inner_section inner_section_2 flight_inner_section">
-                                                <div class="tab_inner_body full_width">
-                                                    <!-- package_booking_form start -->
-                                                    <div class="package_booking_form">
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <input type="text" placeholder="Passenger Full Name"
-                                                                   name="firstname"
-                                                                   class="booking_input" required>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <input type="email" placeholder="Your passenger Email"
-                                                                   name="passenger_email" class="booking_input"
-                                                                   required>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <input type="tel" placeholder="Actual Phone Number"
-                                                                   name="phone"
-                                                                   class="booking_input" required>
-                                                        </div>
-                                                        <div class="col-lg-2 col-md-2">
-                                                            <input type="number" placeholder="Age" name="Age"
-                                                                   class="booking_input" required>
-                                                        </div>
-                                                        <div class="col-lg-2 col-md-2 ">
-                                                            {#                                                            <label for="genderSelection">Gender:</label>#}
-                                                            <select id="genderSelection" name="gender"
-                                                                    class="selectpicker" data-style="btn-primary"
-                                                                    title="select Gender">
-                                                                <option value="Male" selected>Male</option>
-                                                                <option value="Female">Female</option>
-                                                                <option value="Transgender">Transgender</option>
-                                                                <option value="Prefer not to say">prefer not to say
-                                                                </option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="col-lg-12">
-                                                            <textarea
-                                                                    placeholder="Give Your valuable comment & we will treasure that"
-                                                                    class="booking_textarea"></textarea>
-                                                        </div>
-                                                    </div>
-                                                    <!--  package_booking_form END -->
-                                                </div>
-                                                <!--  tab_inner_body end -->
-                                                {#                                                <div class="checkbox_book top_margin">#}
-                                                {#                                                    <input type="checkbox" id="check1" name="check" value="check1" disabled >#}
-                                                {#                                                    <label for="check1">I want receive Brainy Fools promotional and offers#}
-                                                {#                                                        in the future</label>#}
-                                                {#                                                </div>#}
-                                            </div>
-                                            <!--  tab inner three section End -->
-                                            <!-- proceed button -->
-                                            <div class="full_width t_align_c">
-                                                {% csrf_token %}
-                                                <button type="submit" value="passenger_Created"
-                                                        class="btn_green proceed_buttton btns">
-                                                    <a href="#booking_details">proceed to next step</a>
-                                                </button>
-                                            </div>
-                                            <!-- proceed button -->
-                                        </form>
-                                    </div>
-                                    <!--  inner container end -->
-                                </div>
-                                <!-- personal_info End -->
                                 <!-- payment_info Start -->
                                 <div id="payment_info" class="main_content_area flight_inner_section">
                                     <!-- inner_container Start -->

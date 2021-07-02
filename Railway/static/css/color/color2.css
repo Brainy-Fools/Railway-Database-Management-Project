@@ -28,7 +28,7 @@
 .Travelite_slider_menus{
 	background: -moz-linear-gradient(right, #8B76E8 53%,rgba(139, 118, 232, 0) 59%);
 	background: -webkit-linear-gradient(right, #8B76E8 53%,rgba(139, 118, 232, 0) 59%);
-	background: linear-gradient (right, #8B76E8 53%,rgba(139, 118, 232, 0) 59%)
+	background: linear-gradient(right, #8B76E8 53%,rgba(139, 118, 232, 0) 59%)
 }
 
 .feature_tabs ul li.active_tab svg, .left_image_coming_soon svg path, .error_text_with_icon ul li svg path, .unlimited_feature_main .best_feature_icon svg{
@@ -76,7 +76,7 @@ ul.sort_place_icons li i, .check_in_out_wrap .check_in .check_in_box, #tour_book
 	background: rgba(57, 56, 112, 0.95);
 }
 
-#booking_details:after, #personal_info:after, #payment_info:after, #confirmation:after{
+#personal_info:after,#booking_details:after, #payment_info:after, #confirmation:after{
 	border-bottom: 8px solid #393870;
 }
 

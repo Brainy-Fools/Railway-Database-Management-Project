@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls import include,url
-
+from django.urls import NoReverseMatch, reverse
 from . import views
 
 body_class = "travel_home"
@@ -28,10 +28,10 @@ urlpatterns = [
     path('home/', views.index, name='index-page'),
     path('booking/', views.booking, name='booking'),
     path('About/', views.about, name='about_us'),
-    path('schedule/',views.schedule,name='schedule'),
+    path('schedule/',views.schedule, name='schedule'),
     path('Contact/', views.contact, name='contact_us'),
     path('Coming-soon/', views.comingsoon, name='coming_soon'),
-    path('<slug:anything>',views.error404,name='error404')
+    path('<slug:anything>',views.error404, name='error404')
 ]
 
 
