@@ -188,11 +188,11 @@ def booking(request):
                                     ticket_class=ticKetClAss,
                                     ticket_seat_no=seatNum,
                                     ticket_fare=totalFare,
-                                    ticket_issue_date=datetime.datetime.now())
+                                    ticket_issue_date=datetime.datetime.now(tz=get_current_timezone()))
             generateTicket.save()
             request.session['TicketID'] = generateTicket.ticket_id
         except:
-            messages.error(request, message="Have to follow order")
+            messages.error(request, message="Have to maintain sequence to get confirmation")
 
     if request.POST.get('mobileBanking'):
         mobilePinNum = request.POST.get('mbTransactionPin')
@@ -243,10 +243,10 @@ def booking(request):
                 })
 
                 image = qrCodeGenerate(**context)
-                tranxInfo = transection.objects.filter(transaction_id=ticketObj).update(qr_code=image)
-
-                # travellerQrCode = tranxInfo.qr_code
-                # context.update({'travellerQrCode': travellerQrCode})
+                transection.objects.filter(transaction_id=ticketObj).update(qr_code=image)
+                xyz = transection.objects.get(transaction_id=ticketObj)
+                travellerQrCode = xyz.qr_code.url
+                context.update({'travellerQrCode': travellerQrCode})
                 messages.success(request, message="Payment Complete--check out the confirmation section")
         except:
             messages.error(request, "Transaction didn't complete for mobile banking!!")
@@ -302,9 +302,9 @@ def booking(request):
 
                 image = qrCodeGenerate(**context)
                 transection.objects.filter(transaction_id=ticketObj).update(qr_code=image)
-
-                travellerQrCode = tranxInfo.qr_code
-                context.update({'travellerQrCode': image})
+                xyz = transection.objects.get(transaction_id=ticketObj)
+                travellerQrCode = xyz.qr_code.url
+                context.update({'travellerQrCode': travellerQrCode})
                 messages.success(request, message="Payment Complete--check out the confirmation section")
         except:
             messages.error(request, "Transaction didn't complete for card medium!!")
@@ -314,7 +314,7 @@ def booking(request):
 
 def qrCodeGenerate(**data):
     qr = qrcode.QRCode(
-        version=20,
+        version=15,
         box_size=15,
         error_correction=qrcode.constants.ERROR_CORRECT_H,
         border=5
@@ -343,15 +343,15 @@ def qrCodeGenerate(**data):
     Ticket Class    : {travellerClass}\n
     Ticket Number   : {travellerTicket}\n
     Ticket Seat no  : {travellerSeat}\n
-    Ticket Class    : {travellerClass}\n
     Transaction Pin : {travellerTranx}\n
     Ticket Issued   : {ticketIssueDate.strftime('%Y-%m-%d | %H:%M:%S')}
     '''
     qr.add_data(insideQRcode)
     qr.make(fit=True)
     img = qr.make_image(fill='black', back_color='yellow')
+    # fileLocation = f'qrcode/{travellerTicket}.png'
     fileLocation = f'qrcode/{travellerTicket}.png'
-    image = img.save(f'static/images/qrcode/{travellerTicket}.png')
+    image = img.save(f'media/qrcode/{travellerTicket}.png')
     return fileLocation
 
 

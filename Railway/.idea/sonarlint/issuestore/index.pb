@@ -61,11 +61,29 @@ K
 static/css/color/color5.css,9\a\9a10f4b93fd6d243c598bfea929db33580fcb880
 J
 templates/Coming_soon.html,3\5\35917d22ce0da382a1c895a8c70b36048a182fc3
-E
-templates/Header.html,9\3\93600825b730f795b033a4b9179ef111ec4e2f87
 K
 templates/train_search.html,1\1\1131e83e8adf9d767c60e2c5a62b4169275e94ee
 N
 templates/admin/base_site.html,3\0\306e62245ac725f73af1cc7df5f39a8d75998bec
-@
-requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
+P
+ train/migrations/0001_initial.py,f\a\fa11ba81667e5c3a0af5dbf90c9d4408e814db13
+[
++train/migrations/0002_auto_20210703_0107.py,f\f\ffc82d4225c002e407f2251fa3c4846139d8e82a
+c
+3train/migrations/0003_remove_transection_qr_code.py,4\1\41532a8c93e073848d279bae0f3bcb9803a98ed6
+`
+0train/migrations/0004_alter_passenger_options.py,6\f\6f0a5f5200a615348ede2a23efc028863c696de7
+i
+9train/migrations/0005_alter_ticket_ticket_of_passenger.py,c\4\c453edfce5b89501eed3af6602ddf6776f273474
+\
+,train/migrations/0006_transection_qr_code.py,3\b\3bf3846d81d359ee66beefeb5f1d0ad7e4724147
+b
+2train/migrations/0007_alter_transection_qr_code.py,7\3\73fb24f674fbdc5180a52e11ef24e34e384c3304
+b
+2train/migrations/0008_alter_transection_qr_code.py,d\f\df5a91d7e2bcbb2b22ec720b40ec12907115393b
+b
+2train/migrations/0009_alter_transection_qr_code.py,c\8\c84081346fee7ea5ba40c9ca51ae08a7193a9f1e
+D
+templates/About.html,2\a\2a2ba15fb0c2ee8cabe1605b647a828a7880df63
+=
+train/urls.py,4\7\474854609316ee004f784751bb266d28883fa223

@@ -139,7 +139,8 @@
                                                                             - {{ arrivalStation }}</h4><br>
                                                                         <b>Route: </b><br>
                                                                         {{ betweenStations }}<br>
-                                                                        <b> One Way</b>
+                                                                        <b> One Way</b><br>
+                                                                        <h3 class="text-center">{{ trainName }}</h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -157,7 +158,7 @@
                                                 </div>
                                                 <!-- tab include area Start -->
                                                 <div class="inludes_section flight_schedule_section"><span
-                                                        class="emirates_button btn-yellow">shovon</span>
+                                                        class="emirates_button btn-yellow">{{ ticketClasS }}</span>
                                                     <div class="main_section_flight">
                                                         <div class="country_section_box">
                                                             <p>Departure Station</p>
@@ -185,7 +186,8 @@
                                                             <div class="airline_detail_list">
                                                                 <fieldset>
                                                                     <ul>
-                                                                        <li><span>Coach Type</span><span>-</span><span>{{ ticketClasS }}</span>
+                                                                        <li>
+                                                                            <span>Coach Type</span><span>-</span><span>{{ ticketClasS }}</span>
                                                                         </li>
                                                                         <li>
                                                                             <span>Train Service</span><span>-</span><span>{{ trainService }}</span>
@@ -352,7 +354,7 @@
                                                                     {% csrf_token %}
                                                                     <label>Transaction Pin</label>
                                                                     <input type="text"
-                                                                           placeholder="Name Of The Account Holder"
+                                                                           placeholder="your Transaction Pin"
                                                                            class="input_card" name="mbTransactionPin"
                                                                            required>
                                                                 </fieldset>
@@ -468,122 +470,139 @@
                                         </div>
                                         <!-- confirmation message End-->
                                         <!--  tab inner section two Start -->
-{#                                        <div class="tab_inner_section flight_inner_section">#}
-{#                                            <div class="heading_tab_inner">#}
-{#                                                <h5>Train Route Details</h5>#}
-{#                                                <span><a href="{% url 'index-page' %}" disabled>Change Route</a></span></div>#}
-{#                                            <div class="tab_inner_body full_width">#}
-{#                                                <div class="flight_review_area full_width">#}
-{#                                                    <div class="col-lg-10 col-md-9">#}
-{#                                                        <!--  review area start -->#}
-{#                                                        <div class="row">#}
-{#                                                            <div class="col-lg-4 col-md-4"><img#}
-{#                                                                    src="{% static '/images/Masum_Express.jpg' %}"#}
-{#                                                                    alt="review image"></div>#}
-{#                                                            <div class="col-lg-8 col-md-8">#}
-{#                                                                <div class="review_content">#}
-{#                                                                    <div class="top_head_bar">#}
-{#                                                                        <h4>{{ departureStation }}#}
-{#                                                                            - {{ arrivalStation }}</h4><br>#}
-{#                                                                        <b>Route: </b><br>#}
-{#                                                                        {{ betweenStations }}<br>#}
-{#                                                                        <b> One Way</b>#}
-{#                                                                    </div>#}
-{#                                                                </div>#}
-{#                                                            </div>#}
-{#                                                            <!--  review area end -->#}
-{#                                                        </div>#}
-{#                                                        <!-- row -->#}
-{#                                                    </div>#}
-{#                                                    <!--  col-lg-9 -->#}
-{#                                                    <div class="right_includes_flight col-lg-2 col-md-3">#}
-{#                                                        <div class="doller_left">#}
-{#                                                            <h2>BDT {{ totalFare }} Tk</h2>#}
-                                                            {#                                                            <p>/Person</p>#}
-{#                                                        </div>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                                <!-- tab include area Start -->#}
-{#                                                <div class="inludes_section flight_schedule_section"><span#}
-{#                                                        class="emirates_button btn-yellow">{{ travellerClass }}</span>#}
-{#                                                    <div class="main_section_flight">#}
-{#                                                        <div class="country_section_box">#}
-{#                                                            <p>Departure Station</p>#}
-{#                                                            <h4>{{ departureStation }} - {{ departureTime }}</h4>#}
-{#                                                            <p class="shedule_d">{{ departureDate }}</p>#}
-{#                                                        </div>#}
-{#                                                        <div class="middle_flight_section">#}
-{#                                                            <h5>Total Time</h5>#}
-{#                                                            <p><i class="fa fa-clock-o"></i>{{ duration }}</p>#}
-{#                                                        </div>#}
-{#                                                        <div class="country_section_box">#}
-{#                                                            <p>Destination Station</p>#}
-{#                                                            <h4>{{ arrivalStation }} - {{ arrivalTime }}</h4>#}
-{#                                                            <p class="shedule_d">{{ arrivalDate }}</p>#}
-{#                                                        </div>#}
-{#                                                    </div>#}
-{#                                                </div>#}
-{#                                                <!-- tab include area End -->#}
-{#                                                <!-- tab include area Start -->#}
-{#                                                <div class="inludes_section">#}
-{#                                                    <div class="flight_details_table full_width">#}
-{#                                                        <div class="table_heding_title">Other Details</div>#}
-{#                                                        <!-- table  start-->#}
-{#                                                        <div class="hotel_airlines_list">#}
-{#                                                            <div class="airline_detail_list">#}
-{#                                                                <fieldset>#}
-{#                                                                    <ul>#}
-{#                                                                        <li><span>Coach Type</span><span>-</span><span>{{ travellerClass }}</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li>#}
-{#                                                                            <span>Train Service</span><span>-</span><span>{{ trainService }}</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li><span>Fare type</span><span>-</span><span>Refundable</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li>#}
-{#                                                                            <span>Cancellation</span><span>-</span><span>50tk/Person</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li>#}
-{#                                                                            <span>Train Change</span><span>-</span><span>25tk/Person</span>#}
-{#                                                                        </li>#}
-{#                                                                    </ul>#}
-{#                                                                </fieldset>#}
-{#                                                            </div>#}
-{#                                                            <div class="airline_detail_list table_bold">#}
-{#                                                                <fieldset>#}
-{#                                                                    <ul>#}
-{#                                                                        <li><span>Baggage</span><span>-</span><span>Extra Charge</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li>#}
-{#                                                                            <span>Train Name</span><span>-</span><span>{{ trainName }}</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li><span>Base Fare</span><span>-</span><span#}
-{#                                                                                class="bold">{{ baseFare }} tk</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li>#}
-{#                                                                            <span>Tax &amp; Fees</span><span>-</span><span#}
-{#                                                                                class="bold">{{ vatFare }} tk</span>#}
-{#                                                                        </li>#}
-{#                                                                        <li><span>Total Price</span><span>-</span><span#}
-{#                                                                                class="bold">{{ totalFare }} tk</span>#}
-{#                                                                        </li>#}
-{#                                                                    </ul>#}
-{#                                                                </fieldset>#}
-{#                                                            </div>#}
-{#                                                        </div>#}
-{#                                                        <!-- table end -->#}
-{#                                                    </div>#}
-{#                                                    <!-- flight_details_table End-->#}
-{#                                                </div>#}
-{#                                                <!-- tab include area End -->#}
-{#                                            </div>#}
-{#                                            <!--  tab inner body  End-->#}
-{#                                        </div>#}
+                                        {#                                        <div class="tab_inner_section flight_inner_section">#}
+                                        {#                                            <div class="heading_tab_inner">#}
+                                        {#                                                <h5>Train Route Details</h5>#}
+                                        {#                                                <span><a href="{% url 'index-page' %}" disabled>Change Route</a></span></div>#}
+                                        {#                                            <div class="tab_inner_body full_width">#}
+                                        {#                                                <div class="flight_review_area full_width">#}
+                                        {#                                                    <div class="col-lg-10 col-md-9">#}
+                                        {#                                                        <!--  review area start -->#}
+                                        {#                                                        <div class="row">#}
+                                        {#                                                            <div class="col-lg-4 col-md-4"><img#}
+                                        {#                                                                    src="{% static '/images/Masum_Express.jpg' %}"#}
+                                        {#                                                                    alt="review image"></div>#}
+                                        {#                                                            <div class="col-lg-8 col-md-8">#}
+                                        {#                                                                <div class="review_content">#}
+                                        {#                                                                    <div class="top_head_bar">#}
+                                        {#                                                                        <h4>{{ departureStation }}#}
+                                        {#                                                                            - {{ arrivalStation }}</h4><br>#}
+                                        {#                                                                        <b>Route: </b><br>#}
+                                        {#                                                                        {{ betweenStations }}<br>#}
+                                        {#                                                                        <b> One Way</b>#}
+                                        {#                                                                    </div>#}
+                                        {#                                                                </div>#}
+                                        {#                                                            </div>#}
+                                        {#                                                            <!--  review area end -->#}
+                                        {#                                                        </div>#}
+                                        {#                                                        <!-- row -->#}
+                                        {#                                                    </div>#}
+                                        {#                                                    <!--  col-lg-9 -->#}
+                                        {#                                                    <div class="right_includes_flight col-lg-2 col-md-3">#}
+                                        {#                                                        <div class="doller_left">#}
+                                        {#                                                            <h2>BDT {{ totalFare }} Tk</h2>#}
+                                        {#                                                            <p>/Person</p>#}
+                                        {#                                                        </div>#}
+                                        {#                                                    </div>#}
+                                        {#                                                </div>#}
+                                        {#                                                <!-- tab include area Start -->#}
+                                        {#                                                <div class="inludes_section flight_schedule_section"><span#}
+                                        {#                                                        class="emirates_button btn-yellow">{{ travellerClass }}</span>#}
+                                        {#                                                    <div class="main_section_flight">#}
+                                        {#                                                        <div class="country_section_box">#}
+                                        {#                                                            <p>Departure Station</p>#}
+                                        {#                                                            <h4>{{ departureStation }} - {{ departureTime }}</h4>#}
+                                        {#                                                            <p class="shedule_d">{{ departureDate }}</p>#}
+                                        {#                                                        </div>#}
+                                        {#                                                        <div class="middle_flight_section">#}
+                                        {#                                                            <h5>Total Time</h5>#}
+                                        {#                                                            <p><i class="fa fa-clock-o"></i>{{ duration }}</p>#}
+                                        {#                                                        </div>#}
+                                        {#                                                        <div class="country_section_box">#}
+                                        {#                                                            <p>Destination Station</p>#}
+                                        {#                                                            <h4>{{ arrivalStation }} - {{ arrivalTime }}</h4>#}
+                                        {#                                                            <p class="shedule_d">{{ arrivalDate }}</p>#}
+                                        {#                                                        </div>#}
+                                        {#                                                    </div>#}
+                                        {#                                                </div>#}
+                                        {#                                                <!-- tab include area End -->#}
+                                        {#                                                <!-- tab include area Start -->#}
+                                        {#                                                <div class="inludes_section">#}
+                                        {#                                                    <div class="flight_details_table full_width">#}
+                                        {#                                                        <div class="table_heding_title">Other Details</div>#}
+                                        {#                                                        <!-- table  start-->#}
+                                        {#                                                        <div class="hotel_airlines_list">#}
+                                        {#                                                            <div class="airline_detail_list">#}
+                                        {#                                                                <fieldset>#}
+                                        {#                                                                    <ul>#}
+                                        {#                                                                        <li><span>Coach Type</span><span>-</span><span>{{ travellerClass }}</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li>#}
+                                        {#                                                                            <span>Train Service</span><span>-</span><span>{{ trainService }}</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li><span>Fare type</span><span>-</span><span>Refundable</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li>#}
+                                        {#                                                                            <span>Cancellation</span><span>-</span><span>50tk/Person</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li>#}
+                                        {#                                                                            <span>Train Change</span><span>-</span><span>25tk/Person</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                    </ul>#}
+                                        {#                                                                </fieldset>#}
+                                        {#                                                            </div>#}
+                                        {#                                                            <div class="airline_detail_list table_bold">#}
+                                        {#                                                                <fieldset>#}
+                                        {#                                                                    <ul>#}
+                                        {#                                                                        <li><span>Baggage</span><span>-</span><span>Extra Charge</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li>#}
+                                        {#                                                                            <span>Train Name</span><span>-</span><span>{{ trainName }}</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li><span>Base Fare</span><span>-</span><span#}
+                                        {#                                                                                class="bold">{{ baseFare }} tk</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li>#}
+                                        {#                                                                            <span>Tax &amp; Fees</span><span>-</span><span#}
+                                        {#                                                                                class="bold">{{ vatFare }} tk</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                        <li><span>Total Price</span><span>-</span><span#}
+                                        {#                                                                                class="bold">{{ totalFare }} tk</span>#}
+                                        {#                                                                        </li>#}
+                                        {#                                                                    </ul>#}
+                                        {#                                                                </fieldset>#}
+                                        {#                                                            </div>#}
+                                        {#                                                        </div>#}
+                                        {#                                                        <!-- table end -->#}
+                                        {#                                                    </div>#}
+                                        {#                                                    <!-- flight_details_table End-->#}
+                                        {#                                                </div>#}
+                                        {#                                                <!-- tab include area End -->#}
+                                        {#                                            </div>#}
+                                        {#                                            <!--  tab inner body  End-->#}
+                                        {#                                        </div>#}
                                         <!-- tab inner section end -->
                                         <!-- information_section start -->
                                         <div class="full_width information_section">
-                                            <div class="information_title"> Traveler Information</div>
+                                            <div class="full_width information_section">
+{#                                                <div class="information_title"> Traveler & Ticket Information</div>#}
+                                                <!-- information_table End -->
+                                                <div class="full_width information_table_main">
+                                                    <div class="booking_text t_align_c">
+                                                        {#                                                    <p><img src="{% static 'images/qrCode/7aUgdNL5.png' %}" height="320px" width="320px"></p>#}
+                                                        <p><img src="{{ travellerQrCode }}" height="270px"
+                                                                width="270px" alt="Generated by Masum"></p>
+                                                        <span>Just Scan the QR code</span></div>
+                                                </div>
+                                            </div>
+                                            <!-- information_table End -->
+                                            {#                                            <div class="full_width t_align_c">#}
+                                            {#                                                <button type="button" value="proceed to next step"#}
+                                            {#                                                        class="btn_green proceed_buttton btns">print booking#}
+                                            {#                                                </button>#}
+                                            {#                                            </div>#}
                                             <div class="full_width information_table_main">
+                                            <div class="information_title"> Traveler & Ticket Information</div>
                                                 <div class="col-lg-6 col-md-6 border_right">
                                                     <div class="payment_table_package">
                                                         <table class="table">
@@ -640,23 +659,6 @@
                                                 </div>
                                             </div>
                                             <!-- information_table End -->
-                                        </div>
-                                        <!-- information_section End -->
-                                        <!-- information_section start -->
-                                        <div class="full_width information_section space_top_65">
-                                            <div class="information_title"> Billing & Booking Information</div>
-                                            <!-- information_table End -->
-                                            <div class="full_width information_table_main">
-                                                <div class="booking_text t_align_c">
-                                                    <p><img src="{% static 'images/qrCode/7aUgdNL5.png' %}" height="320px" width="320px"></p>
-                                                    <span>Just Scan the QR code</span></div>
-                                            </div>
-                                            <!-- information_table End -->
-                                            <div class="full_width t_align_c">
-                                                <button type="button" value="proceed to next step"
-                                                        class="btn_green proceed_buttton btns">print booking
-                                                </button>
-                                            </div>
                                         </div>
                                         <!-- information_section End -->
                                     </div>

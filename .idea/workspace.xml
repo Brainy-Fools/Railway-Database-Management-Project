@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90986195-c23c-4328-add3-c4eccbb0504d" name="Default Changelist" comment="Herculean tasks">
-      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/55956aeb-1f17-4c5a-ad01-ca99e653041f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/55956aeb-1f17-4c5a-ad01-ca99e653041f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/55956aeb-1f17-4c5a-ad01-ca99e653041f/storage_v2/_src_/schema/C__ADMIN.LIHWqg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/55956aeb-1f17-4c5a-ad01-ca99e653041f/storage_v2/_src_/schema/C__ADMIN.LIHWqg.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/f/a/fa11ba81667e5c3a0af5dbf90c9d4408e814db13" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/media/qrcode/NvdAeQVZ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Railway/media/qrcode/QVUgn0ZA.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/0/4/04e7ba69625288d99c0aec7d6b4822b243575c88" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/3/0/306e62245ac725f73af1cc7df5f39a8d75998bec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/b/7/b7bf5db7499c22f9c730e46d0d627630bdc48931" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/1/9/19359a61ae2446b51b549167b014da2fcf265768" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/9/3/93600825b730f795b033a4b9179ef111ec4e2f87" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/Railway/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/Railway/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/media/qrcode/RygpBgkZ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/static/images/qrCode/7aUgdNL5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/templates/Booking.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/Booking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/templates/admin/base_site.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/admin/base_site.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Railway/train/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Railway/templates/Header.html" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/templates/Header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/train/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Railway/train/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Railway/train/views.py" afterDir="false" />
     </list>
@@ -68,7 +65,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Railway/static/images" />
+    <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/xyz" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />

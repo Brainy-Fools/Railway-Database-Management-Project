@@ -23,7 +23,7 @@
                                     <li><a href="">Bangla</a></li>
                                 </ul>
                             </li>
-                            <li class='{{ adminPlace }}'><a href="{% url 'admin:index' %}">DashBoard for admin</a></li>
+                            <li class='{{ adminPlace }}'><a href="{% url 'admin:index' %}" target="_blank">DashBoard for admin</a></li>
                             <li class="Travelite_login_alert"><a href="#">Log-In</a></li>
                             <li class="Travelite_signup_alert"><a href="#">Sign-Up</a></li>
                             <li><a href="">Taka</a>
@@ -64,6 +64,7 @@
                                 <input type="checkbox" id="login_check" name="checkbox" class="checkbox_login" checked
                                        disabled>
                                 <label for="login_check" class="remember_me">Remember me</label>
+                                {% csrf_token %}
                                 <input type="submit" name="LogInSubmit" value="Log_In" class="sub_signup">
                                 <a href="{% url 'coming_soon' %}" class="forgot_link">Forget password?</a>
                             </form>
@@ -106,6 +107,7 @@
                                        disabled>
                                 <label for="signup_check" class="remember_me">I agree the Terms of Service and Privacy
                                     Policy</label>
+                                {% csrf_token %}
                                 <input type="submit" name="signUpSubmit" value="SIGN_UP" class="sub_signup">
                             </form>
                             <div class="or_line"><span>(OR)</span></div>
