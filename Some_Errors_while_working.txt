@@ -1,0 +1,61 @@
+Error:
+django.db.migrations.exceptions.MigrationSchemaMissing: Unable to create the django_migrations table (ORA-02000: missing ALWAYS keyword)
+
+Error:
+Django version-2.0 supports oracle 12c and above
+
+Error:
+connect <user_name>/oracle19c@localhost:1521/orclpdb	
+somehow i can't connect to my database...
+
+
+Error:
+this is very importent if you closed database while running, then the next time when you want to connect from 'sql developer'
+
+Error:
+I accidently wrote shutdown immediate in sqlplus & resolve that by https://stackoverflow.com/a/25862800/13939591 wasted 2 hours
+
+Error:
+in jinja2 <!-- --> this type comment suffers me one hour. try to use {% comment %} whatever you write {% endcomment %}
+
+Error:
+You are trying to add a non-nullable field 'ticket_class' to ticket without a default; we can't do that (the database needs something to populate
+ existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option:
+
+
+Error:
+Nice. now for one model i'm getting : cx_Oracle.DatabaseError: ORA-01451: column to be modified to NULL cannot be modified to NULL
+
+Error:
+Not Nice.Bad bad Error. 5 Hour por solve hoise. Error was giving for previously created model.So, this command : py manage.py makemigrations wasn't working.
+
+Error;
+Getting Error for modifying Admin.py: The value of 'fieldsets[1][1]['fields']' must be a list or tuple.
+
+Error:
+Nice oracle database,nice. Error: DISTINCT ON fields is not supported by this database backend with django
+
+Error:
+Now,when deleting route or train_info objects:This error showing
+ORA-02091: transaction rolled back
+ORA-02292: integrity constraint (C##BOLBONA.TRAIN_TRA_ROUTE_ID_4437C99D_F) violated - child record found
+Found this solutions:
+A ROLLBACK TRANSACTION statement does not produce any messages to the user. If warnings are needed in stored procedures or triggers, use the RAISERROR or PRINT statements. RAISERROR is the preferred statement for indicating errors.
+
+Warning:
+Classical (n+1) query problem of ORM has been solved...yess
+
+Error:
+django.core.exceptions.ValidationError: ['“28/06/2021” value has an invalid date format. It must be in YYYY-MM-DD format.']
+
+Error:
+Rest of those i forgot to write in that moment
+
+
+
+
+
