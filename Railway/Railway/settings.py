@@ -59,8 +59,7 @@ ROOT_URLCONF = 'Railway.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -86,8 +85,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': 'orcl',
-        'USER': 'c##SuperMan',
-        'PASSWORD': 'MasumBhai',
+        'USER': 'c##Dark_Knight',
+        'PASSWORD': 'Masum044',
         'HOST': 'localhost',
         'PORT': '1521',
     }
@@ -169,3 +168,8 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

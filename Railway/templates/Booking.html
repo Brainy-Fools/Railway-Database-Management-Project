@@ -33,7 +33,9 @@
                                 <div class="tour_booking_tabs">
                                     <ul>
                                         <li {# style="display: none" #}><a href="#personal_info">Passenger Info</a></li>
-                                        <li {# style="display: none" {# class="{%  if activate_details is none %}{{ 'hidden' }}{% endif %}" #}><a href="#booking_details">Booking Details</a>
+                                        <li
+                                                {# style="display: none" {# class="{%  if activate_details is none %}{{ 'hidden' }}{% endif %}" #}>
+                                            <a href="#booking_details">Booking Details</a>
                                         </li>
                                         <li {# style="display: none" #}><a href="#payment_info">Payment Info</a></li>
                                         <li {# style="display: none" #}><a href="#confirmation">Confirmation</a></li>
@@ -120,7 +122,7 @@
                                         <!--  tab inner section two Start -->
                                         <div class="tab_inner_section flight_inner_section">
                                             <div class="heading_tab_inner">
-                                                <h5>Route Details</h5>
+                                                <h5>Train Route Details</h5>
                                                 <span><a href="{% url 'index-page' %}">Change Route</a></span></div>
                                             <div class="tab_inner_body full_width">
                                                 <div class="flight_review_area full_width">
@@ -133,8 +135,10 @@
                                                             <div class="col-lg-8 col-md-8">
                                                                 <div class="review_content">
                                                                     <div class="top_head_bar">
-                                                                        <h4>Dhaka - Chittagong</h4><br>
-                                                                        <b>Route: </b> Dhaka<span class="country_span"> Chittagong</span><br>
+                                                                        <h4>{{ departureStation }}
+                                                                            - {{ arrivalStation }}</h4><br>
+                                                                        <b>Route: </b><br>
+                                                                        {{ betweenStations }}<br>
                                                                         <b> One Way</b>
                                                                     </div>
                                                                 </div>
@@ -146,29 +150,28 @@
                                                     <!--  col-lg-9 -->
                                                     <div class="right_includes_flight col-lg-2 col-md-3">
                                                         <div class="doller_left">
-                                                            <h2>BDT 620 Tk</h2>
-                                                            <p>/Person</p>
+                                                            <h2>BDT {{ totalFare }} Tk</h2>
+                                                            {#                                                            <p>/Person</p>#}
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- tab include area Start -->
                                                 <div class="inludes_section flight_schedule_section"><span
-                                                        class="emirates_button btn-yellow">Shovon</span>
+                                                        class="emirates_button btn-yellow">shovon</span>
                                                     <div class="main_section_flight">
                                                         <div class="country_section_box">
-                                                            <p>Dhaka - Chittagonga</p>
-                                                            <h4>Dhaka 05:30</h4>
-                                                            <p class="shedule_d">20 Sep 2021</p>
+                                                            <p>Departure Station</p>
+                                                            <h4>{{ departureStation }} - {{ departureTime }}</h4>
+                                                            <p class="shedule_d">{{ departureDate }}</p>
                                                         </div>
                                                         <div class="middle_flight_section">
                                                             <h5>Total Time</h5>
-                                                            <p><!-- <i class="fa fa-clock-o"></i> --> 48 hours, 30
-                                                                Minutes</p>
+                                                            <p><i class="fa fa-clock-o"></i>{{ duration }}</p>
                                                         </div>
                                                         <div class="country_section_box">
-                                                            <p>Dhaka</p>
-                                                            <h4>Chittagong</h4>
-                                                            <p class="shedule_d">22 Sep 2021</p>
+                                                            <p>Destination Station</p>
+                                                            <h4>{{ arrivalStation }} - {{ arrivalTime }}</h4>
+                                                            <p class="shedule_d">{{ arrivalDate }}</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -182,9 +185,10 @@
                                                             <div class="airline_detail_list">
                                                                 <fieldset>
                                                                     <ul>
-                                                                        <li><span>Shovon</span><span>-</span><span>Chair Coach</span>
+                                                                        <li><span>Coach Type</span><span>-</span><span>{{ ticketClasS }}</span>
                                                                         </li>
-                                                                        <li><span>Train type</span><span>-</span><span>Economy</span>
+                                                                        <li>
+                                                                            <span>Train Service</span><span>-</span><span>{{ trainService }}</span>
                                                                         </li>
                                                                         <li><span>Fare type</span><span>-</span><span>Refundable</span>
                                                                         </li>
@@ -192,7 +196,7 @@
                                                                             <span>Cancellation</span><span>-</span><span>50tk/Person</span>
                                                                         </li>
                                                                         <li>
-                                                                            <span>Train Change</span><span>-</span><span>2tk5/Person</span>
+                                                                            <span>Train Change</span><span>-</span><span>25tk/Person</span>
                                                                         </li>
                                                                     </ul>
                                                                 </fieldset>
@@ -203,15 +207,18 @@
                                                                         <li><span>Baggage</span><span>-</span><span>Extra charge</span>
                                                                         </li>
                                                                         <li>
-                                                                            <span>Inflightfeature</span><span>-</span><span>Available</span>
+                                                                            <span>Train Name</span><span>-</span><span>{{ trainName }}</span>
                                                                         </li>
-                                                                        <li><span>Base fare</span><span>-</span><span
-                                                                                class="bold">320 tk</span></li>
+                                                                        <li><span>Base Fare</span><span>-</span><span
+                                                                                class="bold">{{ baseFare }} tk</span>
+                                                                        </li>
                                                                         <li>
                                                                             <span>Tax &amp; Fees</span><span>-</span><span
-                                                                                class="bold">300 tk</span></li>
+                                                                                class="bold">{{ vatFare }} tk</span>
+                                                                        </li>
                                                                         <li><span>Total Price</span><span>-</span><span
-                                                                                class="bold">620 tk</span></li>
+                                                                                class="bold">{{ totalFare }} tk</span>
+                                                                        </li>
                                                                     </ul>
                                                                 </fieldset>
                                                             </div>
@@ -230,16 +237,19 @@
                                     <!-- total row Start-->
                                     <div class="full_width total_price_row">
                                         <p>Total Price - </p>
-                                        <h2>960 tk</h2>
+                                        <h2>{{ totalFare }} tk</h2>
                                     </div>
                                     <!-- total row End-->
                                     <!-- proceed button -->
-                                    <div class="full_width t_align_c">
-                                        <button type="submit" name="proceed1" value="proceed to next step"
-                                                class="btn_green proceed_buttton btns">
-                                            <a href="#personal_info">Proceed to next step</a>
-                                        </button>
-                                    </div>
+                                    <form method="post" action="">
+                                        {% csrf_token %}
+                                        <div class="full_width t_align_c">
+                                            <button type="submit" name="ticketCreate" value="proceed to next step"
+                                                    class="btn_green proceed_buttton btns">
+                                                <a href="#personal_info">Proceed to next step</a>
+                                            </button>
+                                        </div>
+                                    </form>
                                     <!-- proceed button -->
                                 </div>
                                 <!-- booking_details End -->
@@ -305,21 +315,23 @@
                                                     <div id="credit_card" class="vertical_tab_content">
                                                         <!-- Inner Body Payment Start -->
                                                         <div class="inner_body_payment">
-                                                            <form class="payment_method_form" method="post" action="#">
+                                                            <form class="payment_method_form" method="post" action="">
                                                                 {% csrf_token %}
                                                                 <fieldset> {% csrf_token %}
-                                                                    <label>Nogod Account Holder's information should be
+                                                                    <label>Nogod/Bkash/Rocket Account Holder's
+                                                                        information should be
                                                                         genuine</label>
                                                                     <input type="text"
                                                                            placeholder="Name Of The Account Holder"
-                                                                           class="input_card" name="nogodAccountName">
+                                                                           class="input_card" name="mbAccountName"
+                                                                           required>
                                                                 </fieldset>
                                                                 <fieldset> {% csrf_token %}
-                                                                    <label>Nogod Account Number</label>
+                                                                    <label>Mobile Banking Account Number</label>
                                                                     <input type="text"
-                                                                           placeholder="Your Nogod Phone Number"
-                                                                           name="AccountNumber"
-                                                                           class="input_credit_card">
+                                                                           placeholder="Your Mobile Banking Phone Number"
+                                                                           name="mbAccountNumber"
+                                                                           class="input_credit_card" required>
                                                                     <a href="#"><img
                                                                             src="{% static 'images/tour-booking/card1.jpg' %}"
                                                                             alt="debit card"></a> <a
@@ -331,23 +343,30 @@
                                                                             src="{% static 'images/tour-booking/card2.jpg' %}"
                                                                             alt="debit card"></a>
                                                                 </fieldset>
+                                                                <div class="checkbox_section">
+                                                                    <input id="paymentClear" type="checkbox"
+                                                                           name="mbPaymentCheck" value="True">
+                                                                    <label for="paymentClear">Bill Cleared</label>
+                                                                </div>
                                                                 <fieldset>
                                                                     {% csrf_token %}
                                                                     <label>Transaction Pin</label>
                                                                     <input type="text"
                                                                            placeholder="Name Of The Account Holder"
-                                                                           class="input_card" name="transactionPin">
+                                                                           class="input_card" name="mbTransactionPin"
+                                                                           required>
                                                                 </fieldset>
                                                                 <div class="checkbox_section">
                                                                     <div class="checkbox_book">
                                                                         <input id="tabcheck" type="checkbox"
-                                                                               name="tabcheck" value="tabcheck">
+                                                                               name="tabcheck" value="tabcheck" checked
+                                                                               disabled>
                                                                         <label for="tabcheck">Yes, I have read and I
                                                                             agree to the booking conditions</label>
                                                                     </div>
                                                                     {% csrf_token %}
                                                                     <button type="submit" value="proceed payment"
-                                                                            name="NogodFinished"
+                                                                            name="mobileBanking"
                                                                             class="btn_green proceed_buttton btns">
                                                                         <a href="#payment_info">Proceed Next</a>
                                                                     </button>
@@ -361,17 +380,19 @@
                                                     <div id="debit_card" class="vertical_tab_content">
                                                         <!-- Inner Body Payment Start -->
                                                         <div class="inner_body_payment">
-                                                            <form class="payment_method_form">
+                                                            <form class="payment_method_form" method="post" action="">
                                                                 <fieldset>
                                                                     <label>Card Holder’s Name (please enter the same
                                                                         name which is written on your card)</label>
                                                                     <input type="text" placeholder="Name On Card"
-                                                                           class="input_card">
+                                                                           class="input_card" name="cardHolderName"
+                                                                           required>
                                                                 </fieldset>
                                                                 <fieldset>
-                                                                    <label>Credit Card Number</label>
+                                                                    <label>Credit/Debit Card Number</label>
                                                                     <input type="text" placeholder="Name On Card"
-                                                                           class="input_credit_card">
+                                                                           name="cardNumber"
+                                                                           class="input_credit_card" required>
                                                                     <a href="#"><img
                                                                             src="{% static 'images/tour-booking/card1.jpg' %}"
                                                                             alt="debit card"></a> <a
@@ -383,50 +404,46 @@
                                                                         src="{% static 'images/tour-booking/card2.jpg' %}"
                                                                         alt="debit card"></a>
                                                                 </fieldset>
+                                                                <div class="checkbox_section">
+                                                                    <input id="paymentClear" type="checkbox"
+                                                                           name="cardPaymentCheck" value="True">
+                                                                    <label for="paymentClear">Bill Cleared</label>
+                                                                </div>
                                                                 <fieldset>
-                                                                    <div class="select_tabs">
+                                                                    <div class="check_in_field select_tabs">
                                                                         <label>Expiry Date</label>
-                                                                        <select>
-                                                                            <option>month</option>
-                                                                            <option>january</option>
-                                                                            <option>fabuary</option>
-                                                                            <option>march</option>
-                                                                            <option>april</option>
-                                                                            <option>may</option>
-                                                                            <option>june</option>
-                                                                            <option>july</option>
-                                                                            <option>august</option>
-                                                                            <option>september</option>
-                                                                            <option>november</option>
-                                                                            <option>december</option>
-                                                                        </select>
-                                                                        <select>
-                                                                            <option>year</option>
-                                                                            <option>2020</option>
-                                                                            <option>2021</option>
-                                                                            <option>2022</option>
-                                                                            <option>2023</option>
-                                                                            <option>2024</option>
-                                                                            <option>2025</option>
-                                                                            <option>2026</option>
-                                                                        </select>
+                                                                        <input type="date" placeholder="YYYY-MM-DD"
+                                                                               required
+                                                                               pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                                                                               name="cardExpiryDate">
+                                                                        <i class="fa fa-calendar"></i>
                                                                     </div>
                                                                     <div class="cvv_input">
                                                                         <label>CVV</label>
-                                                                        <input type="text" class="cvv"
-                                                                               placeholder="cvv">
+                                                                        <input type="text" class="cvv" name="cardCvv"
+                                                                               placeholder="cvv" required>
                                                                     </div>
+                                                                </fieldset>
+                                                                <fieldset>
+                                                                    {% csrf_token %}
+                                                                    <label>Transaction Pin</label>
+                                                                    <input type="text"
+                                                                           placeholder="Card Transaction Pin Number"
+                                                                           class="input_card" name="cardTransactionPin"
+                                                                           required>
                                                                 </fieldset>
                                                                 <div class="checkbox_section">
                                                                     <div class="checkbox_book">
                                                                         <input id="tabcheck2" type="checkbox"
-                                                                               name="tabcheck" value="tabcheck">
+                                                                               name="tabcheck" value="tabcheck" checked
+                                                                               disabled>
                                                                         <label for="tabcheck2">Yes, I have read and I
                                                                             agree to the booking conditions</label>
                                                                     </div>
                                                                     <button type="submit" value="proceed payment"
+                                                                            name="cardBanking"
                                                                             class="btn_green proceed_buttton btns">
-                                                                        <a href="#confirmation">Payment Info</a>
+                                                                        <a href="#confirmation">Proceed Next</a>
                                                                     </button>
                                                                 </div>
                                                             </form>
@@ -451,120 +468,117 @@
                                         </div>
                                         <!-- confirmation message End-->
                                         <!--  tab inner section two Start -->
-                                        <div class="tab_inner_section flight_inner_section">
-                                            <div class="heading_tab_inner">
-                                                <h5>flight Details</h5>
-                                                <span>change flight</span></div>
-                                            <div class="tab_inner_body full_width">
-                                                <div class="flight_review_area full_width">
-                                                    <div class="col-lg-10 col-md-9">
-                                                        <!--  review area start -->
-                                                        <div class="row">
-                                                            <div class="col-lg-4 col-md-4"><img
-                                                                    src="{% static 'images/logo_transparent2.png' %}"
-                                                                    alt="review image"></div>
-                                                            <div class="col-lg-8 col-md-8">
-                                                                <div class="review_content">
-                                                                    <div class="top_head_bar">
-                                                                        <h4>Dhaka-Chittagong</h4>
-                                                                        <span class="country_span">Dhaka-Chittagong</span>
-                                                                        <span class="country_span"> One Way </span>
-                                                                    </div>
-                                                                    <div class="review_star_cover">
-                                                                        <div class="bottom_star_rating"><i
-                                                                                class="fa fa-star"></i> <i
-                                                                                class="fa fa-star"></i> <i
-                                                                                class="fa fa-star"></i> <i
-                                                                                class="fa fa-star"></i> <i
-                                                                                class="fa fa-star"></i></div>
-                                                                        <span>345 Reviews</span></div>
-                                                                </div>
-                                                            </div>
-                                                            <!--  review area end -->
-                                                        </div>
-                                                        <!-- row -->
-                                                    </div>
-                                                    <!--  col-lg-9 -->
-                                                    <div class="right_includes_flight col-lg-2 col-md-3">
-                                                        <div class="doller_left">
-                                                            <h2>$620</h2>
-                                                            <p>/Person</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- tab include area Start -->
-                                                <div class="inludes_section flight_schedule_section"><span
-                                                        class="emirates_button btn-yellow">emirates</span>
-                                                    <div class="main_section_flight">
-                                                        <div class="country_section_box">
-                                                            <p>Dhaka-Chittagong</p>
-                                                            <h4>Dhaka 05:30</h4>
-                                                            <p class="shedule_d">20 Sep 2021</p>
-                                                        </div>
-                                                        <div class="middle_flight_section">
-                                                            <h5>Total Time</h5>
-                                                            <p><!-- <i class="fa fa-clock-o"></i> --> 48 hours, 30
-                                                                Minutes</p>
-                                                        </div>
-                                                        <div class="country_section_box">
-                                                            <p>Dhaka-Chittagong</p>
-                                                            <h4>Chittagong</h4>
-                                                            <p class="shedule_d">22 Sep 2015</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- tab include area End -->
-                                                <!-- tab include area Start -->
-                                                <div class="inludes_section">
-                                                    <div class="flight_details_table full_width">
-                                                        <div class="table_heding_title">Other Details</div>
-                                                        <!-- table  start-->
-                                                        <div class="hotel_airlines_list">
-                                                            <div class="airline_detail_list">
-                                                                <fieldset>
-                                                                    <ul>
-                                                                        <li><span>Airline</span><span>-</span><span>Emirates</span>
-                                                                        </li>
-                                                                        <li><span>Train type</span><span>-</span><span>Economy</span>
-                                                                        </li>
-                                                                        <li><span>Fare type</span><span>-</span><span>Refundable</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>Cancellation</span><span>-</span><span>$50/Person</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>Train Change</span><span>-</span><span>$25/Person</span>
-                                                                        </li>
-                                                                    </ul>
-                                                                </fieldset>
-                                                            </div>
-                                                            <div class="airline_detail_list table_bold">
-                                                                <fieldset>
-                                                                    <ul>
-                                                                        <li><span>Baggage</span><span>-</span><span>Extra charge</span>
-                                                                        </li>
-                                                                        <li>
-                                                                            <span>Inflightfeature</span><span>-</span><span>Available</span>
-                                                                        </li>
-                                                                        <li><span>Base fare</span><span>-</span><span
-                                                                                class="bold">$320</span></li>
-                                                                        <li>
-                                                                            <span>Tax &amp; Fees</span><span>-</span><span
-                                                                                class="bold">$300</span></li>
-                                                                        <li><span>Total Price</span><span>-</span><span
-                                                                                class="bold">$620</span></li>
-                                                                    </ul>
-                                                                </fieldset>
-                                                            </div>
-                                                        </div>
-                                                        <!-- table end -->
-                                                    </div>
-                                                    <!-- flight_details_table End-->
-                                                </div>
-                                                <!-- tab include area End -->
-                                            </div>
-                                            <!--  tab inner body  End-->
-                                        </div>
+{#                                        <div class="tab_inner_section flight_inner_section">#}
+{#                                            <div class="heading_tab_inner">#}
+{#                                                <h5>Train Route Details</h5>#}
+{#                                                <span><a href="{% url 'index-page' %}" disabled>Change Route</a></span></div>#}
+{#                                            <div class="tab_inner_body full_width">#}
+{#                                                <div class="flight_review_area full_width">#}
+{#                                                    <div class="col-lg-10 col-md-9">#}
+{#                                                        <!--  review area start -->#}
+{#                                                        <div class="row">#}
+{#                                                            <div class="col-lg-4 col-md-4"><img#}
+{#                                                                    src="{% static '/images/Masum_Express.jpg' %}"#}
+{#                                                                    alt="review image"></div>#}
+{#                                                            <div class="col-lg-8 col-md-8">#}
+{#                                                                <div class="review_content">#}
+{#                                                                    <div class="top_head_bar">#}
+{#                                                                        <h4>{{ departureStation }}#}
+{#                                                                            - {{ arrivalStation }}</h4><br>#}
+{#                                                                        <b>Route: </b><br>#}
+{#                                                                        {{ betweenStations }}<br>#}
+{#                                                                        <b> One Way</b>#}
+{#                                                                    </div>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+{#                                                            <!--  review area end -->#}
+{#                                                        </div>#}
+{#                                                        <!-- row -->#}
+{#                                                    </div>#}
+{#                                                    <!--  col-lg-9 -->#}
+{#                                                    <div class="right_includes_flight col-lg-2 col-md-3">#}
+{#                                                        <div class="doller_left">#}
+{#                                                            <h2>BDT {{ totalFare }} Tk</h2>#}
+                                                            {#                                                            <p>/Person</p>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                                <!-- tab include area Start -->#}
+{#                                                <div class="inludes_section flight_schedule_section"><span#}
+{#                                                        class="emirates_button btn-yellow">{{ travellerClass }}</span>#}
+{#                                                    <div class="main_section_flight">#}
+{#                                                        <div class="country_section_box">#}
+{#                                                            <p>Departure Station</p>#}
+{#                                                            <h4>{{ departureStation }} - {{ departureTime }}</h4>#}
+{#                                                            <p class="shedule_d">{{ departureDate }}</p>#}
+{#                                                        </div>#}
+{#                                                        <div class="middle_flight_section">#}
+{#                                                            <h5>Total Time</h5>#}
+{#                                                            <p><i class="fa fa-clock-o"></i>{{ duration }}</p>#}
+{#                                                        </div>#}
+{#                                                        <div class="country_section_box">#}
+{#                                                            <p>Destination Station</p>#}
+{#                                                            <h4>{{ arrivalStation }} - {{ arrivalTime }}</h4>#}
+{#                                                            <p class="shedule_d">{{ arrivalDate }}</p>#}
+{#                                                        </div>#}
+{#                                                    </div>#}
+{#                                                </div>#}
+{#                                                <!-- tab include area End -->#}
+{#                                                <!-- tab include area Start -->#}
+{#                                                <div class="inludes_section">#}
+{#                                                    <div class="flight_details_table full_width">#}
+{#                                                        <div class="table_heding_title">Other Details</div>#}
+{#                                                        <!-- table  start-->#}
+{#                                                        <div class="hotel_airlines_list">#}
+{#                                                            <div class="airline_detail_list">#}
+{#                                                                <fieldset>#}
+{#                                                                    <ul>#}
+{#                                                                        <li><span>Coach Type</span><span>-</span><span>{{ travellerClass }}</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li>#}
+{#                                                                            <span>Train Service</span><span>-</span><span>{{ trainService }}</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li><span>Fare type</span><span>-</span><span>Refundable</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li>#}
+{#                                                                            <span>Cancellation</span><span>-</span><span>50tk/Person</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li>#}
+{#                                                                            <span>Train Change</span><span>-</span><span>25tk/Person</span>#}
+{#                                                                        </li>#}
+{#                                                                    </ul>#}
+{#                                                                </fieldset>#}
+{#                                                            </div>#}
+{#                                                            <div class="airline_detail_list table_bold">#}
+{#                                                                <fieldset>#}
+{#                                                                    <ul>#}
+{#                                                                        <li><span>Baggage</span><span>-</span><span>Extra Charge</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li>#}
+{#                                                                            <span>Train Name</span><span>-</span><span>{{ trainName }}</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li><span>Base Fare</span><span>-</span><span#}
+{#                                                                                class="bold">{{ baseFare }} tk</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li>#}
+{#                                                                            <span>Tax &amp; Fees</span><span>-</span><span#}
+{#                                                                                class="bold">{{ vatFare }} tk</span>#}
+{#                                                                        </li>#}
+{#                                                                        <li><span>Total Price</span><span>-</span><span#}
+{#                                                                                class="bold">{{ totalFare }} tk</span>#}
+{#                                                                        </li>#}
+{#                                                                    </ul>#}
+{#                                                                </fieldset>#}
+{#                                                            </div>#}
+{#                                                        </div>#}
+{#                                                        <!-- table end -->#}
+{#                                                    </div>#}
+{#                                                    <!-- flight_details_table End-->#}
+{#                                                </div>#}
+{#                                                <!-- tab include area End -->#}
+{#                                            </div>#}
+{#                                            <!--  tab inner body  End-->#}
+{#                                        </div>#}
                                         <!-- tab inner section end -->
                                         <!-- information_section start -->
                                         <div class="full_width information_section">
@@ -574,20 +588,24 @@
                                                     <div class="payment_table_package">
                                                         <table class="table">
                                                             <tr>
-                                                                <td>Booking Number :</td>
-                                                                <td>0090038968</td>
+                                                                <td>Traveler Name :</td>
+                                                                <td>{{ travellerName }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>First Name :</td>
-                                                                <td>Steve</td>
+                                                                <td>Departure Station :</td>
+                                                                <td>{{ travellerSource }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Last Name :</td>
-                                                                <td>Joseph</td>
+                                                                <td>Gender :</td>
+                                                                <td>{{ travellerGender }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Email :</td>
-                                                                <td>stevejoseph@host.com</td>
+                                                                <td>Traveler Phone :</td>
+                                                                <td>{{ travellerPhone }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Traveler Mail :</td>
+                                                                <td>{{ travellerMail }}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -597,20 +615,24 @@
                                                     <div class="payment_table_package">
                                                         <table class="table">
                                                             <tr>
-                                                                <td>Address :</td>
-                                                                <td>20 sep 2015</td>
+                                                                <td>Ticket Number :</td>
+                                                                <td>{{ travellerTicket }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Town/City :</td>
-                                                                <td>27 Jan 2015</td>
+                                                                <td>Arrival Station :</td>
+                                                                <td>{{ travellerDest }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Zip Code :</td>
-                                                                <td>63800</td>
+                                                                <td>Traveler Seat Number :</td>
+                                                                <td>{{ travellerSeat }}</td>
                                                             </tr>
                                                             <tr>
-                                                                <td>Country :</td>
-                                                                <td>stevejoseph@host.com</td>
+                                                                <td>Transaction Pin :</td>
+                                                                <td>{{ travellerTranx }}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Ticket Issued :</td>
+                                                                <td>{{ ticketIssueDate }}</td>
                                                             </tr>
                                                         </table>
                                                     </div>
@@ -622,32 +644,12 @@
                                         <!-- information_section End -->
                                         <!-- information_section start -->
                                         <div class="full_width information_section space_top_65">
-                                            <div class="information_title"> payment Information</div>
-                                            <!-- information_table End -->
-                                            <div class="full_width information_table_main">
-                                                <div class="paymentinfo_list">
-                                                    <ul>
-                                                        <li>You have now confirmed and guaranteed your booking by credit
-                                                            card.
-                                                        </li>
-                                                        <li>All payments are to be made at the hotel during your stay,
-                                                            unsess otherwise stated in the hotel policies or in the room
-                                                            conditions.
-                                                        </li>
-                                                        <li>Please note that your credit card may be pre-authorised
-                                                            prior to your arrival.
-                                                        </li>
-                                                    </ul>
-                                                    <p>This Package accepts the following forms of payment :</p>
-                                                    <span>Credit Card (Visa)</span></div>
-                                            </div>
-                                            <!-- information_table End -->
+                                            <div class="information_title"> Billing & Booking Information</div>
                                             <!-- information_table End -->
                                             <div class="full_width information_table_main">
                                                 <div class="booking_text t_align_c">
-                                                    <p>If you can change or cancel your booking via out online self
-                                                        service tool <a href="#">here. </a></p>
-                                                    <span>We Wish You a Pleasant stay</span></div>
+                                                    <p><img src="{% static 'images/qrCode/7aUgdNL5.png' %}" height="320px" width="320px"></p>
+                                                    <span>Just Scan the QR code</span></div>
                                             </div>
                                             <!-- information_table End -->
                                             <div class="full_width t_align_c">

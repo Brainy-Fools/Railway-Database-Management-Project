@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls.static import static
 from django.conf import settings
 from django.conf.urls import include,url
 from django.urls import NoReverseMatch, reverse
@@ -32,7 +33,7 @@ urlpatterns = [
     path('Contact/', views.contact, name='contact_us'),
     path('Coming-soon/', views.comingsoon, name='coming_soon'),
     path('<slug:anything>',views.error404, name='error404')
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 

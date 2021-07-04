@@ -27,15 +27,15 @@ class PassengerAdmin(admin.ModelAdmin):
 
 @admin.register(transection)
 class TransectionAdmin(admin.ModelAdmin):
-    list_display = ('transaction_id','payment_gateway','account_no','account_holder_name', 'transaction_pin', 'bill_cleared')
+    list_display = ('transaction_id','payment_gateway','account_no','account_holder_name','qr_code', 'transaction_pin', 'bill_cleared')
     list_filter = ['bill_cleared','payment_gateway']
     pass
 
 @admin.register(ticket)
 class TicketAdmin(admin.ModelAdmin):
-    list_display = ('ticket_of_passenger','ticket_train','ticket_source', 'ticket_dest', 'ticket_class','ticket_seat_no','ticket_fare')
-    list_filter = ['ticket_source','ticket_dest']
-    fields = ['ticket_id',('transaction_for_ticket','ticket_of_passenger'),'ticket_train',('ticket_source', 'ticket_dest'),('ticket_class','ticket_seat_no','ticket_fare')]
+    list_display = ('ticket_of_passenger','ticket_issue_date','ticket_train','ticket_id','ticket_source', 'ticket_dest', 'ticket_class','ticket_seat_no','ticket_fare')
+    list_filter = ['ticket_train','ticket_source','ticket_dest']
+    fields = ['ticket_id','ticket_of_passenger','ticket_train',('ticket_source', 'ticket_dest'),('ticket_class','ticket_seat_no','ticket_fare'),'ticket_issue_date']
     pass
 
 @admin.register(route)

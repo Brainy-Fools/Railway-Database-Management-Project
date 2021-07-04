@@ -295,12 +295,13 @@
                                 </div>
                                 <div class="pull_left timing_field">
                                     <label>Ticket Class</label>
-                                    <select class="form-control" id="search_adults" data-live-search="true" class="selectpicker">
-                                        {% for x in t_objects %}
-                                            <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>
-                                        {% endfor %}
-                                    </select>
-                                    <i class="fa fa-caret-down"></i>
+                                    <input class="form-control" name="seatQuality" type="text" class="selectpicker">
+{#                                    <select class="form-control" id="search_adults" data-live-search="true" class="selectpicker" name="seatQuality">#}
+{#                                        {% for x in t_objects %}#}
+{#                                            <option value="{{ x.ticket_class }}">{{ x.ticket_class }}</option>#}
+{#                                        {% endfor %}#}
+{#                                    </select>#}
+{#                                    <i class="fa fa-caret-down"></i>#}
                                 </div>
                                 <div class="pull_left room_select_field">
                                     <label>adults</label>
@@ -386,7 +387,7 @@
                                 <img src="{% static 'images/MasumBhai_Express_001.jpg' %}"
                                      class="img-responsive" alt="feature">
                                 <div class="feature_overlay_second">
-                                    <div class="bottom_first"><a href="#">Dhaka-Chittagong</a><span>750 Tk</span></div>
+                                    <div class="bottom_first"><a href="#">Dhaka-Rajshahi</a><span>750 Tk</span></div>
                                     <div class="bottom_second">one way train<span>/person</span></div>
                                 </div>
                             </div>

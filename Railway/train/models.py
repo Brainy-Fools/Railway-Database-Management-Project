@@ -29,13 +29,10 @@ class user(models.Model):
 
 
 class transection(models.Model):
-    B = 'Bkash'
-    D = 'Debi Card'
-    C = 'Credit Card'
-    N = 'Nogod'
-    R = 'Rocket'
+    mb = 'Mobile Banking'
+    cd = 'Credit/Debit Card'
 
-    payment_gateway =        models.CharField(choices=[(B,'Bkash'),(N,'Nogod'),(R,'Rocket'),(D,'Debit Card'),(C,'Credit Card')],default=N,max_length=32,help_text='Choose your favourable payment gateway')
+    payment_gateway =        models.CharField(choices=[(mb,'Mobile Banking'),(cd,'Credit/Debit Card')],default=mb,max_length=32,help_text='Choose your favourable payment gateway')
     transaction_id =         models.OneToOneField('ticket', on_delete=models.DO_NOTHING,related_name='transections')
     account_no =             models.CharField(max_length=60, help_text='type account number or Bkash phone Number',
                                   primary_key=True)
@@ -44,7 +41,7 @@ class transection(models.Model):
     expiry_date =            models.DateField(blank=True,null=True)
     transaction_pin =        models.CharField(max_length=32, help_text='Bkash transaction or Bank slip number')
     bill_cleared =           models.BooleanField(default=False)
-    qr_code =                models.ImageField(unique=True, blank=True,null=True)
+    qr_code =                models.ImageField(upload_to='qrcode/', blank=True,null=True)
 
 
     class Meta:
@@ -70,7 +67,7 @@ class route(models.Model):
         db_table = 'route'
 
     def __str__(self):
-        return "%d" %(self.r_id)
+        return f'{self.r_departure_station} : {self.r_arrival_station}'
 
 class train_info(models.Model):
     train_route =         models.ForeignKey(route,on_delete=models.DO_NOTHING,related_name='train_infos')
@@ -91,22 +88,23 @@ class ticket(models.Model):
     ticket_id =             models.CharField(primary_key=True,help_text='This should be auto generated',max_length=32)
     # transaction_for_ticket= models.OneToOneField(transection, on_delete=models.CASCADE,null=True)
     ticket_train =          models.ForeignKey(train_info,on_delete=models.CASCADE,blank=True) # ticket will be generated from train_info,ekhon train-i jodi na thake tobe ticket to ashbei na
-    ticket_of_passenger =   models.OneToOneField('passenger', on_delete=models.CASCADE, blank=True)
+    ticket_of_passenger =   models.ForeignKey('passenger', on_delete=models.CASCADE, blank=True)
     ticket_source =         models.CharField(max_length=32, help_text='Departure Station ', blank=True)
     ticket_dest =           models.CharField(max_length=32, help_text='Arrival Station ', blank=True)
     ticket_class =          models.CharField(max_length=64, help_text='Seat Quality')
     ticket_seat_no =        models.CharField(max_length=32)
     ticket_fare =           models.IntegerField()
+    ticket_issue_date =     models.DateTimeField(blank=True,null=True)
 
     class Meta:
-        ordering = ['-ticket_id'] # from top to bottom
+        ordering = ['-ticket_issue_date'] # from top to bottom
         db_table = 'ticket'
 
     def __str__(self):
         return "%s" %(self.ticket_of_passenger.p_name)
 
 class passenger(models.Model):
-    M = 'male'
+    M = 'Male'
     F = 'Female'
     T = 'Transgender'
     P = 'Prefer not to say'
@@ -116,10 +114,10 @@ class passenger(models.Model):
     p_age =            models.IntegerField(help_text='Give original age,no fake ages allowed')
     p_gender =         models.CharField(choices=[(M,'Male'),(F,'Female'),(T,'Transgender'),(P,'Prefer not to say')],default=M,max_length=64, blank=True)
     p_phone =          PhoneField(blank=True, help_text='Contact phone number')
-    p_transaction_id = models.ForeignKey(user, on_delete=models.CASCADE,blank=True) #if transaction deleted no longer will be passenger
+    p_transaction_id = models.ForeignKey(user, on_delete=models.CASCADE,blank=True,related_name='passengers') #if transaction deleted no longer will be passenger
 
     class Meta:
-        ordering = ['p_id']
+        ordering = ['p_name']
         db_table = 'passenger'
 
     def __str__(self):
